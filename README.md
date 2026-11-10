@@ -6,7 +6,15 @@ Pytania, materiały, fiszki i powtórki ze wszystkich przedmiotów PJATK. Strona
 
 ## Tryby nauki
 
-Powtórki (jak w Anki), fiszki, ucz się, test, pisanie, dopasowanie oraz prawda/fałsz. Każdy można zawęzić do całego przedmiotu, kolokwiów lub egzaminu.
+Powtórki (jak w Anki), fiszki, ucz się, test, pisanie, dopasowanie, prawda/fałsz oraz pytania otwarte, czyli pytania bez klucza odpowiedzi. Każdy tryb można zawęzić do całego przedmiotu, kolokwiów lub egzaminu.
+
+## Przedmioty
+
+Układ semestrów, kody i nazwy pochodzą z [programu studiów Informatyka I stopnia 2025/26](https://pja.edu.pl/wp-content/uploads/2025/07/Informatyka_stacjonarne_pierwszy_2025_PL.pdf) i są zapisane w `scripts/program.mjs`. Stare kody folderów (np. AM1, SKO1) są tam mapowane na kody z programu.
+
+## Pytania z materiałów
+
+`content/mined/<przedmiot>.json` zawiera pytania wyciągnięte automatycznie z dokumentów i skanów (OCR). Nie mają klucza, nie były sprawdzane i mogą zawierać błędy odczytu, dlatego trafiają tylko do trybu pytań otwartych. Pytania sprawdzone ręcznie są w `content/questions`.
 
 ## Uruchomienie
 

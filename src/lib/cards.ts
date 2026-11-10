@@ -18,6 +18,7 @@ export function questionToCard(q: RawQuestion, courseId: string, sourceId: strin
     scope: overrides[id] ?? q.scope ?? scope,
     tags: q.tags ?? [],
     comments: q.cm ?? [],
+    src: q.src,
   };
 }
 

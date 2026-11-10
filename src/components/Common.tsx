@@ -122,7 +122,7 @@ export function LoadError() {
 
 export function useTitle(title: string | undefined) {
   useEffect(() => {
-    document.title = title ? `${title} · Zdaj PJA` : 'Zdaj PJA';
+    document.title = title ? `${title} – Zdaj PJA` : 'Zdaj PJA';
   }, [title]);
 }
 

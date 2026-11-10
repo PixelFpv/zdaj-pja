@@ -1,5 +1,5 @@
-import '@fontsource-variable/bricolage-grotesque';
-import '@fontsource-variable/figtree';
+import '@fontsource-variable/caveat';
+import '@fontsource-variable/schibsted-grotesk';
 import '@fontsource-variable/jetbrains-mono';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';

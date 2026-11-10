@@ -13,6 +13,7 @@ import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, write
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { categorize, isUsable, MATERIAL_CATS, parsePpjQuestions } from './lib.mjs';
+import { ARCHIVE_NAMES, canonicalCode, PROGRAM, PROGRAM_URL } from './program.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const CACHE = join(ROOT, '.cache');
@@ -25,18 +26,12 @@ const BANK_COURSE = {
   fiz: 'FIZ', fizk1: 'FIZ', fizk2: 'FIZ', grk: 'GRK', mad: 'MAD', mad1: 'MAD', mad2012a: 'MAD',
   mas: 'MAS', ppb_ang: 'PPB', rbd: 'RBD', rbdz: 'RBD', rpg: 'RPG', sbd: 'SBD', sbd2015: 'SBD',
   modeling_and_analysis_of_it_systems: 'MAS', 'prawne_aspekty_zarządzania': 'PAZ', hur: 'HUR', apbd: 'APBD', wsi: 'WSI',
-  skj: 'SKJ', 'sko1-skj': 'SKO1', sko2: 'SKO2', sop: 'SOP', tak: 'TAK', tak_ang: 'TAK', tin: 'TIN', zpr: 'ZPR',
+  skj: 'SKJ', 'sko1-skj': 'SKJ', sko2: 'SKO2', sop: 'SOP', tak: 'TAK', tak_ang: 'TAK', tin: 'TIN', zpr: 'ZPR',
 };
 
-/** Only names we are sure of; anything else falls back to a bank title or the bare code. */
-const COURSE_NAMES = {
-  ABD: 'Administrowanie bazami danych', ALG: 'Algebra liniowa', AM: 'Analiza matematyczna',
-  AM1: 'Analiza matematyczna 1', AM2: 'Analiza matematyczna 2', ANG1: 'Język angielski 1', ANG2: 'Język angielski 2',
-  ASD: 'Algorytmy i struktury danych', AUG: 'Automaty i gramatyki', BSI: 'Bezpieczeństwo systemów informatycznych',
-  PAZ: 'Prawne aspekty zarządzania', FIZ: 'Fizyka', GRK: 'Grafika komputerowa', MAD: 'Matematyka dyskretna', PPJ: 'Podstawy programowania w języku Java',
-  RBD: 'Relacyjne bazy danych', SBD: 'Systemy baz danych', SKO1: 'Sieci komputerowe 1', SKO2: 'Sieci komputerowe 2',
-  SOP: 'Systemy operacyjne', TAK: 'Techniki i architektura komputerów',
-};
+const OFFICIAL = new Map(
+  Object.entries(PROGRAM).flatMap(([sem, list]) => list.map(([code, name, elective]) => [code, { sem, name, elective: !!elective }])),
+);
 
 function run(cmd, args, cwd) {
   execFileSync(cmd, args, { cwd, stdio: ['ignore', 'ignore', 'inherit'] });
@@ -141,18 +136,37 @@ async function main() {
   mkdirSync(OUT, { recursive: true });
 
   const courses = new Map();
-  const ensure = (code, init = {}) => {
+  const ensure = (rawCode, init = {}) => {
+    const code = canonicalCode(rawCode);
     const id = code.toLowerCase();
     if (!courses.has(id)) {
-      courses.set(id, { id, code, name: COURSE_NAMES[code] ?? '', level: 'inz', sem: null, banks: [], files: null, root: null, ...init });
+      const official = OFFICIAL.get(code);
+      courses.set(id, {
+        id, code, level: 'inz', sem: official?.sem ?? null, official: !!official, elective: official?.elective ?? false,
+        banks: [], files: null, ...init, name: official?.name ?? ARCHIVE_NAMES[code] ?? init.name ?? '',
+      });
     }
     return courses.get(id);
   };
+  for (const code of OFFICIAL.keys()) ensure(code);
+  /** Content files may still use an old course code. */
+  const courseFor = (id, name) => ensure(id.toUpperCase(), { name: name ?? '' });
 
+  const folders = new Map();
   for (const { level, sem, code, node, root } of courseFolders(tree)) {
     const course = ensure(code);
-    Object.assign(course, { level, sem, root });
-    const files = flatten(node, '', []).map((p) => [p, categorize(`${root}/${p}`)]);
+    if (!course.official) Object.assign(course, { level, sem: level === 'mgr' ? sem : null });
+    const relative = flatten(node, '', []);
+    const entry = folders.get(course.id) ?? { course, seen: new Set(), files: [] };
+    folders.set(course.id, entry);
+    // Some folders are exact copies under an old code; list them only once.
+    if (relative.length && relative.every((p) => entry.seen.has(p))) continue;
+    for (const p of relative) {
+      entry.seen.add(p);
+      entry.files.push([`${root}/${p}`, categorize(`${root}/${p}`)]);
+    }
+  }
+  for (const { course, files } of folders.values()) {
     const counts = { exam: 0, colloquium: 0, lecture: 0, lab: 0, other: 0, total: files.length, usable: 0 };
     for (const [p, cat] of files) {
       counts[cat] += 1;
@@ -202,9 +216,23 @@ async function main() {
     for (const file of readdirSync(contentDir).filter((f) => f.endsWith('.json'))) {
       const { courseId, courseName, questions } = readJson(join(contentDir, file));
       if (!questions?.length) continue;
-      const course = courses.get(courseId) ?? ensure(courseId.toUpperCase(), { name: courseName ?? '' });
+      const course = courseFor(courseId, courseName);
       const bankId = `community-${course.id}`;
       course.banks.push({ id: bankId, title: 'Społeczność', count: questions.length, scope: 'all', source: 'community' });
+      write(`banks/${bankId}.json`, questions);
+      totalQuestions += questions.length;
+    }
+  }
+
+  // Questions extracted from the study materials; most have no answer key.
+  const minedDir = join(ROOT, 'content', 'mined');
+  if (existsSync(minedDir)) {
+    for (const file of readdirSync(minedDir).filter((f) => f.endsWith('.json'))) {
+      const { courseId, questions } = readJson(join(minedDir, file));
+      if (!questions?.length) continue;
+      const course = courseFor(courseId);
+      const bankId = `mined-${course.id}`;
+      course.banks.push({ id: bankId, title: 'Z materiałów', count: questions.length, scope: 'all', source: 'mined' });
       write(`banks/${bankId}.json`, questions);
       totalQuestions += questions.length;
     }
@@ -219,7 +247,7 @@ async function main() {
         return existsSync(dir) ? readdirSync(dir).map((name) => [`@own/${cat}/${name}`, cat]) : [];
       });
       if (!own.length) continue;
-      const course = courses.get(courseId) ?? ensure(courseId.toUpperCase());
+      const course = courseFor(courseId);
       const listPath = join(OUT, 'files', `${course.id}.json`);
       const existing = existsSync(listPath) ? readJson(listPath) : [];
       const counts = course.files ?? { exam: 0, colloquium: 0, lecture: 0, lab: 0, other: 0, total: 0, usable: 0 };
@@ -234,7 +262,7 @@ async function main() {
   }
 
   const list = [...courses.values()].sort((a, b) => a.code.localeCompare(b.code));
-  write('catalog.json', { generatedAt: Date.now(), courses: list });
+  write('catalog.json', { generatedAt: Date.now(), programUrl: PROGRAM_URL, courses: list });
 
   cpSync(join(dataDir, 'images'), join(OUT, 'images'), { recursive: true });
   console.log(`Done: ${list.length} courses, ${totalQuestions} questions.`);

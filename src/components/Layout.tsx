@@ -1,4 +1,4 @@
-import { Languages, Moon, Sun } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useI18n } from '../i18n';
@@ -47,8 +47,7 @@ export function Layout() {
       <header className="topbar">
         <div className="wrap topbar-inner">
           <Link to="/" className="brand">
-            <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" width={30} height={30} />
-            <span>Zdaj PJA</span>
+            zdaj pja
           </Link>
           <nav className="nav">
             <NavLink to="/" end>{t('nav.courses')}</NavLink>
@@ -58,7 +57,7 @@ export function Layout() {
           </nav>
           <div className="topbar-tools">
             <button type="button" className="icon-btn" onClick={() => setLang(lang === 'pl' ? 'en' : 'pl')} title={t('lang.switch')} aria-label={t('lang.switch')}>
-              <Languages size={17} aria-hidden /> <span>{lang === 'pl' ? 'EN' : 'PL'}</span>
+              {lang === 'pl' ? 'EN' : 'PL'}
             </button>
             <button type="button" className="icon-btn" onClick={toggle} title={t(theme === 'dark' ? 'theme.toLight' : 'theme.toDark')} aria-label={t(theme === 'dark' ? 'theme.toLight' : 'theme.toDark')}>
               {theme === 'dark' ? <Sun size={17} aria-hidden /> : <Moon size={17} aria-hidden />}

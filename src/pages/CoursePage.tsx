@@ -1,4 +1,4 @@
-import { BookOpenCheck, ClipboardCheck, ExternalLink, Layers, Link2, Pencil, Plus, Repeat2, Scale, Sparkles, Trash2, Upload, type LucideIcon } from 'lucide-react';
+import { ExternalLink, Plus, Trash2, Upload } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { LoadError, Loading, Message, Rich, useTitle } from '../components/Common';
@@ -61,14 +61,15 @@ export function CoursePage() {
   );
 }
 
-const MODES: { mode: StudyMode; icon: LucideIcon; usable: (pool: Card[]) => boolean }[] = [
-  { mode: 'review', icon: Repeat2, usable: (p) => p.length > 0 },
-  { mode: 'flashcards', icon: Layers, usable: (p) => p.length > 0 },
-  { mode: 'learn', icon: BookOpenCheck, usable: (p) => p.some((c) => hasKey(c) && buildOptions(c, p).length >= 2) },
-  { mode: 'test', icon: ClipboardCheck, usable: (p) => p.some((c) => hasKey(c) && buildOptions(c, p).length >= 2) },
-  { mode: 'write', icon: Pencil, usable: (p) => p.some((c) => typedAnswer(c)) },
-  { mode: 'match', icon: Link2, usable: (p) => p.filter((c) => typedAnswer(c)).length >= 4 },
-  { mode: 'truefalse', icon: Scale, usable: (p) => p.some((c) => (c.answers.length >= 2 && correctAnswers(c).length > 0) || !!c.back?.trim()) },
+const MODES: { mode: StudyMode; usable: (keyed: Card[], unkeyed: Card[]) => boolean }[] = [
+  { mode: 'review', usable: (k) => k.length > 0 },
+  { mode: 'test', usable: (k) => k.some((c) => buildOptions(c, k).length >= 2) },
+  { mode: 'open', usable: (_, u) => u.length > 0 },
+  { mode: 'flashcards', usable: (k) => k.length > 0 },
+  { mode: 'learn', usable: (k) => k.some((c) => buildOptions(c, k).length >= 2) },
+  { mode: 'write', usable: (k) => k.some((c) => typedAnswer(c)) },
+  { mode: 'match', usable: (k) => k.filter((c) => typedAnswer(c)).length >= 4 },
+  { mode: 'truefalse', usable: (k) => k.some((c) => (c.answers.length >= 2 && correctAnswers(c).length > 0) || !!c.back?.trim()) },
 ];
 
 function LearnTab({ course, cards }: { course: Course; cards: Card[] }) {
@@ -91,6 +92,8 @@ function LearnTab({ course, cards }: { course: Course; cards: Card[] }) {
 
   const enabled = useMemo(() => cards.filter((c) => !off.has(c.sourceId)), [cards, off]);
   const pool = useMemo(() => filterScope(enabled, scope), [enabled, scope]);
+  const keyed = useMemo(() => pool.filter(hasKey), [pool]);
+  const unkeyed = useMemo(() => pool.filter((c) => !hasKey(c)), [pool]);
   const query = new URLSearchParams();
   query.set('scope', scope);
   if (off.size) query.set('off', [...off].join(','));
@@ -148,22 +151,14 @@ function LearnTab({ course, cards }: { course: Course; cards: Card[] }) {
       {pool.length > 0 && (
         <section>
           <h2 className="section-title">{t('course.modes')}</h2>
-          <div className="mode-grid">
-            {MODES.map(({ mode, icon: Icon, usable }) => {
-              const can = usable(pool);
-              const body = (
-                <>
-                  <span className="mode-icon"><Icon size={20} /></span>
-                  <span className="mode-name">{t(`mode.${mode}` as Key)}</span>
-                  <span className="mode-desc">{can ? t(`mode.${mode}.d` as Key) : t('course.needs')}</span>
-                </>
-              );
-              return can ? (
-                <Link key={mode} className="mode-card" to={`/c/${encodeURIComponent(course.id)}/study/${mode}?${query}`}>{body}</Link>
-              ) : (
-                <div key={mode} className="mode-card disabled" aria-disabled="true">{body}</div>
-              );
-            })}
+          <div className="mode-list">
+            {MODES.filter(({ usable }) => usable(keyed, unkeyed)).map(({ mode }) => (
+              <Link key={mode} className="mode-row" to={`/c/${encodeURIComponent(course.id)}/study/${mode}?${query}`}>
+                <span className="mode-name">{t(`mode.${mode}` as Key)}</span>
+                <span className="mode-desc">{t(`mode.${mode}.d` as Key)}</span>
+                {mode === 'open' && <span className="mode-count">{unkeyed.length}</span>}
+              </Link>
+            ))}
           </div>
         </section>
       )}
@@ -171,7 +166,7 @@ function LearnTab({ course, cards }: { course: Course; cards: Card[] }) {
       {files && files.usable > 0 && (
         <section className="panel generate-panel">
           <div>
-            <h2><Sparkles size={18} aria-hidden /> {t('course.generate')}</h2>
+            <h2>{t('course.generate')}</h2>
             <p className="muted">{t('course.generate.body')}</p>
           </div>
           <div className="row">
@@ -188,7 +183,7 @@ function LearnTab({ course, cards }: { course: Course; cards: Card[] }) {
           <ul className="deck-list">
             {courseDecks.map((d) => (
               <li key={d.id}>
-                <div><b>{d.name}</b><span className="muted"> · {d.cards.length} · {t(`scope.${d.scope}`)}</span></div>
+                <div><b>{d.name}</b> <span className="muted">({d.cards.length}, {t(`scope.${d.scope}`).toLowerCase()})</span></div>
                 <button type="button" className="icon-btn danger" aria-label={t('common.delete')} title={t('common.delete')} onClick={() => { if (confirm(t('course.deleteDeck', { name: d.name }))) removeDeck(d.id); }}><Trash2 size={16} aria-hidden /></button>
               </li>
             ))}
@@ -245,6 +240,7 @@ function QuestionRow({ card }: { card: Card }) {
       )}
       {card.back && !card.answers.length && <div className="plain-back"><Rich text={card.back} format={card.format === 'md' ? 'md' : 'text'} /></div>}
       {card.why && <p className="why">{card.why}</p>}
+      {card.src && <p className="hint left">{t('open.source')}: {card.src}</p>}
       {card.comments.length > 0 && (
         <details className="comments">
           <summary>{t('questions.comments', { n: card.comments.length })}</summary>
@@ -286,7 +282,7 @@ function MaterialsTab({ course }: { course: Course }) {
       </div>
       <div className="row between">
         <span className="muted">{t('materials.count', { n: visible.length })}</span>
-        <Link className="btn primary" to={`/c/${encodeURIComponent(course.id)}/generate?cat=${cat}`}><Sparkles size={16} aria-hidden /> {t('course.generate')}</Link>
+        <Link className="btn primary" to={`/c/${encodeURIComponent(course.id)}/generate?cat=${cat}`}>{t('course.generate')}</Link>
       </div>
       <ul className="file-list">
         {visible.slice(0, limit).map(([path]) => (

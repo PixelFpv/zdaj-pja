@@ -12,12 +12,12 @@ const encodePath = (path: string) => path.split('/').map(encodeURIComponent).joi
 const OWN_PREFIX = '@own/';
 export const isOwnMaterial = (path: string) => path.startsWith(OWN_PREFIX);
 
-type MaterialCourse = Pick<Course, 'id' | 'root'>;
+type MaterialCourse = Pick<Course, 'id'>;
 
 function locate(course: MaterialCourse, path: string) {
   return isOwnMaterial(path)
     ? { repo: REPO, ref: 'HEAD', file: `content/materials/${course.id}/${path.slice(OWN_PREFIX.length)}` }
-    : { repo: MATERIALS_REPO, ref: MATERIALS_BRANCH, file: `${course.root}/${path}` };
+    : { repo: MATERIALS_REPO, ref: MATERIALS_BRANCH, file: path };
 }
 
 export function rawUrl(course: MaterialCourse, path: string) {
@@ -32,7 +32,7 @@ export function viewUrl(course: MaterialCourse, path: string) {
 
 /** The folder shown before a file name; own materials are marked with a tag instead. */
 export const materialDir = (path: string) =>
-  isOwnMaterial(path) || !path.includes('/') ? '' : path.slice(0, path.lastIndexOf('/') + 1);
+  isOwnMaterial(path) ? '' : path.slice(0, path.lastIndexOf('/') + 1).replace(/^(?:mgr\/)?[^/]+\/[^/]+\//, '');
 
 export function materialIssueUrl(courseId: string, category: MaterialCat, instructions: string) {
   const title = `[material] ${courseId}: ${category}`;

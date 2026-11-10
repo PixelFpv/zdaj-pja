@@ -4,17 +4,18 @@ import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { LoadError, Loading, Message, useTitle } from '../components/Common';
 import { useCourse, useCourseCards } from '../data';
 import { useI18n, type Key } from '../i18n';
-import { filterScope } from '../lib/cards';
+import { filterScope, hasKey } from '../lib/cards';
 import { Flashcards } from '../modes/Flashcards';
 import { Learn } from '../modes/Learn';
 import { Match } from '../modes/Match';
+import { OpenQuestions } from '../modes/OpenQuestions';
 import { Review } from '../modes/Review';
 import { Test } from '../modes/Test';
 import { TrueFalse } from '../modes/TrueFalse';
 import { Write } from '../modes/Write';
 import type { Scope, StudyMode } from '../types';
 
-const MODES = { flashcards: Flashcards, review: Review, learn: Learn, write: Write, test: Test, match: Match, truefalse: TrueFalse };
+const MODES = { flashcards: Flashcards, review: Review, learn: Learn, write: Write, test: Test, match: Match, truefalse: TrueFalse, open: OpenQuestions };
 
 export function StudyPage() {
   const { courseId, mode } = useParams();
@@ -26,13 +27,15 @@ export function StudyPage() {
   const off = params.get('off') ?? '';
   const Mode = mode && Object.hasOwn(MODES, mode) ? MODES[mode as StudyMode] : null;
   const label = Mode ? t(`mode.${mode}` as Key) : '';
-  useTitle(course ? `${label} · ${course.code}` : undefined);
+  useTitle(course ? `${label}, ${course.code}` : undefined);
 
   // The pool is frozen for the session: rating a card must not rebuild it.
-  const signature = cards.length > 0 ? `${course?.id}|${scope}|${off}|${cards.length}` : '';
+  const signature = cards.length > 0 ? `${course?.id}|${mode}|${scope}|${off}|${cards.length}` : '';
   const pool = useMemo(() => {
     const disabled = new Set(off.split(',').filter(Boolean));
-    return filterScope(cards.filter((c) => !disabled.has(c.sourceId)), scope);
+    const inScope = filterScope(cards.filter((c) => !disabled.has(c.sourceId)), scope);
+    // Questions without an answer key can only be practised in the open questions mode.
+    return inScope.filter((c) => (mode === 'open' ? !hasKey(c) : hasKey(c)));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [signature]);
 

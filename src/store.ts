@@ -11,9 +11,16 @@ export interface State {
   scopes: Record<string, Scope>;
   days: Record<string, number>;
   matchBest: Record<string, number>;
+  open: Record<string, OpenProgress>;
 }
 
-const empty = (): State => ({ srs: {}, local: {}, decks: [], scopes: {}, days: {}, matchBest: {} });
+/** The student's own notes and status for a question that has no answer key. */
+export interface OpenProgress {
+  note?: string;
+  known?: boolean;
+}
+
+const empty = (): State => ({ srs: {}, local: {}, decks: [], scopes: {}, days: {}, matchBest: {}, open: {} });
 
 function load(): State {
   try {
@@ -93,6 +100,10 @@ export function setScope(id: string, scope: Scope) {
 
 export function saveLocalQuestions(courseId: string, questions: RawQuestion[]) {
   commit({ ...state, local: { ...state.local, [courseId]: questions } });
+}
+
+export function saveOpen(id: string, patch: OpenProgress) {
+  commit({ ...state, open: { ...state.open, [id]: { ...state.open[id], ...patch } } });
 }
 
 export function addDeck(deck: Deck) {

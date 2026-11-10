@@ -26,6 +26,8 @@ export interface RawQuestion {
   scope?: Scope;
   tags?: string[];
   cm?: QuestionComment[];
+  /** Material file the question was extracted from. */
+  src?: string;
 }
 
 export interface Bank {
@@ -33,7 +35,7 @@ export interface Bank {
   title: string;
   count: number;
   scope: Scope;
-  source: 'zdajse' | 'ppj' | 'community';
+  source: 'zdajse' | 'ppj' | 'community' | 'mined';
   url?: string;
 }
 
@@ -53,13 +55,15 @@ export interface Course {
   name: string;
   level: 'inz' | 'mgr';
   sem: string | null;
-  root: string | null;
+  official: boolean;
+  elective: boolean;
   banks: Bank[];
   files: FileCounts | null;
 }
 
 export interface Catalog {
   generatedAt: number;
+  programUrl: string;
   courses: Course[];
 }
 
@@ -80,6 +84,7 @@ export interface Card {
   scope: Scope;
   tags: string[];
   comments: QuestionComment[];
+  src?: string;
 }
 
 export type DraftType = 'qa' | 'mcq' | 'open' | 'definition' | 'outline' | 'cloze';
@@ -105,4 +110,4 @@ export interface Deck {
   cards: DeckCard[];
 }
 
-export type StudyMode = 'flashcards' | 'review' | 'learn' | 'write' | 'test' | 'match' | 'truefalse';
+export type StudyMode = 'flashcards' | 'review' | 'learn' | 'write' | 'test' | 'match' | 'truefalse' | 'open';

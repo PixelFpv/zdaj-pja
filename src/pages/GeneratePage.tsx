@@ -67,7 +67,7 @@ export function GeneratePage() {
   const [aiProblem, setAiProblem] = useState(false);
   const [copied, setCopied] = useState(false);
   const cancelled = useRef(false);
-  useTitle(course ? `${t('gen.title')} · ${course.code}` : t('gen.title'));
+  useTitle(course ? `${t('gen.title')}, ${course.code}` : t('gen.title'));
 
   const usable = useMemo(() => (materials ?? []).filter(([p]) => isExtractable(p)), [materials]);
   const visible = useMemo(() => usable.filter(([, c]) => cat === 'all' || c === cat), [usable, cat]);
@@ -137,7 +137,7 @@ export function GeneratePage() {
     setFailures(problems);
     setSourceText(texts.join('\n\n'));
     setRows(toRows(drafts));
-    setDeckName((name) => name || `${course.code} · ${t(`scope.${deckScope}`)}`);
+    setDeckName((name) => name || `${course.code}, ${t(`scope.${deckScope}`).toLowerCase()}`);
     window.scrollTo(0, 0);
   };
 
