@@ -1,0 +1,55 @@
+name: Add shared questions
+
+# Issues from the "Publish" button on the site. Trusted authors are applied right
+# away; anyone else's issue waits until a maintainer adds the "approved" label.
+on:
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: add-questions
+
+jobs:
+  apply:
+    if: >-
+      contains(github.event.issue.body, 'zdaj-pja:add-questions') && (
+        (github.event.action == 'opened' && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)) ||
+        (github.event.action == 'labeled' && github.event.label.name == 'approved')
+      )
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - id: apply
+        run: node scripts/apply-issue.mjs
+      - name: Commit and deploy
+        if: steps.apply.outputs.ok == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE: ${{ github.event.issue.number }}
+          ADDED: ${{ steps.apply.outputs.added }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/questions
+          if ! git diff --cached --quiet; then
+            git commit -m "Add questions from #$ISSUE"
+            git push
+            # Pushes made with GITHUB_TOKEN do not trigger workflows, so start the deploy explicitly.
+            gh workflow run deploy.yml --ref "$GITHUB_REF_NAME"
+          fi
+          gh issue close "$ISSUE" --comment "Added $ADDED question(s). The site will update in a few minutes."
+      - name: Report problem
+        if: steps.apply.outputs.ok == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE: ${{ github.event.issue.number }}
+          ERROR: ${{ steps.apply.outputs.error }}
+        run: gh issue comment "$ISSUE" --body "Could not add these questions. $ERROR"
