@@ -1,3 +1,4 @@
+export type StudyLanguage = 'pl' | 'en';
 export type Scope = 'all' | 'colloquium' | 'exam';
 export type MaterialCat = 'exam' | 'colloquium' | 'lecture' | 'lab' | 'other';
 export type Format = 'html' | 'md' | 'text';
@@ -28,12 +29,16 @@ export interface RawQuestion {
   cm?: QuestionComment[];
   /** Material file the question was extracted from. */
   src?: string;
+  /** Set only on English questions. */
+  l?: 'en';
 }
 
 export interface Bank {
   id: string;
   title: string;
   count: number;
+  /** How many of the questions are in English. */
+  en: number;
   scope: Scope;
   source: 'zdajse' | 'ppj' | 'community' | 'mined';
   url?: string;

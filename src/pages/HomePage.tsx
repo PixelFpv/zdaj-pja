@@ -1,20 +1,19 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BASED_ON_LINKS, Linked, LoadError, Loading, useTitle } from '../components/Common';
+import { BASED_ON_LINKS, bankCount, Linked, LoadError, Loading, StudyLanguagePicker, useTitle } from '../components/Common';
 import { useCatalog } from '../data';
 import { useI18n } from '../i18n';
 import { normalizeAnswer } from '../lib/text';
 import { useStore } from '../store';
-import type { Course } from '../types';
+import type { Course, StudyLanguage } from '../types';
 
 const SEMESTERS = ['1', '2', '3', '4', '5', '6', '7'];
 
-const questionCount = (c: Course) => c.banks.reduce((sum, b) => sum + b.count, 0);
-const byProgramOrder = (a: Course, b: Course) => Number(a.elective) - Number(b.elective) || questionCount(b) - questionCount(a);
+const questionCount = (c: Course, language: StudyLanguage) => c.banks.reduce((sum, b) => sum + bankCount(b, language), 0);
 
-function CourseEntry({ course }: { course: Course }) {
+function CourseEntry({ course, language }: { course: Course; language: StudyLanguage }) {
   const { t } = useI18n();
-  const questions = questionCount(course);
+  const questions = questionCount(course, language);
   const files = course.files?.total ?? 0;
   const empty = !questions && !files;
   return (
@@ -38,6 +37,7 @@ export function HomePage() {
   const { data, error } = useCatalog();
   const [query, setQuery] = useState('');
   const [onlyQuestions, setOnlyQuestions] = useState(false);
+  const language = useStore((s) => s.studyLang);
   const srs = useStore((s) => s.srs);
   const decks = useStore((s) => s.decks);
   useTitle(undefined);
@@ -46,10 +46,10 @@ export function HomePage() {
     if (!data) return [];
     const needle = normalizeAnswer(query);
     return data.courses.filter((c) => {
-      if (onlyQuestions && !c.banks.length) return false;
+      if (onlyQuestions && !questionCount(c, language)) return false;
       return !needle || normalizeAnswer(`${c.code} ${c.name} ${c.banks.map((b) => b.title).join(' ')}`).includes(needle);
     });
-  }, [data, query, onlyQuestions]);
+  }, [data, query, onlyQuestions, language]);
 
   const due = useMemo(() => {
     if (!data) return [];
@@ -87,6 +87,7 @@ export function HomePage() {
           <p className="plan-based"><Linked text={t('about.based')} links={BASED_ON_LINKS} /></p>
         </div>
         <div className="plan-tools">
+          <StudyLanguagePicker />
           <input className="input" type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t('home.search')} aria-label={t('common.search')} />
           <label className="check small"><input type="checkbox" checked={onlyQuestions} onChange={(e) => setOnlyQuestions(e.target.checked)} /> {t('home.onlyQuestions')}</label>
         </div>
@@ -105,11 +106,13 @@ export function HomePage() {
 
       <div className="plan">
         {SEMESTERS.map((sem) => {
-          const courses = visible.filter((c) => c.official && c.sem === sem).sort(byProgramOrder);
+          const courses = visible
+            .filter((c) => c.official && c.sem === sem)
+            .sort((a, b) => Number(a.elective) - Number(b.elective) || questionCount(b, language) - questionCount(a, language));
           return (
             <section key={sem} className="semester" aria-label={t('home.column', { n: sem })}>
               <h2><span aria-hidden>{sem}</span><span className="sr-only">{t('home.column', { n: sem })}</span></h2>
-              {courses.map((c) => <CourseEntry key={c.id} course={c} />)}
+              {courses.map((c) => <CourseEntry key={c.id} course={c} language={language} />)}
             </section>
           );
         })}
@@ -118,13 +121,13 @@ export function HomePage() {
       {archive.length > 0 && (
         <section className="shelf">
           <h2>{t('home.archive')}</h2>
-          <div className="shelf-list">{archive.map((c) => <CourseEntry key={c.id} course={c} />)}</div>
+          <div className="shelf-list">{archive.map((c) => <CourseEntry key={c.id} course={c} language={language} />)}</div>
         </section>
       )}
       {master.length > 0 && (
         <section className="shelf">
           <h2>{t('home.master')}</h2>
-          <div className="shelf-list">{master.map((c) => <CourseEntry key={c.id} course={c} />)}</div>
+          <div className="shelf-list">{master.map((c) => <CourseEntry key={c.id} course={c} language={language} />)}</div>
         </section>
       )}
     </>

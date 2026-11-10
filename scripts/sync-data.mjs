@@ -12,7 +12,7 @@ import { createHash } from 'node:crypto';
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { categorize, isUsable, MATERIAL_CATS, parsePpjQuestions } from './lib.mjs';
+import { categorize, isUsable, MATERIAL_CATS, parsePpjQuestions, tagLanguages } from './lib.mjs';
 import { ARCHIVE_NAMES, canonicalCode, PROGRAM, PROGRAM_URL } from './program.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -181,6 +181,12 @@ async function main() {
   const rootPatch = join(dataDir, 'overrides', 'patches', 'index.patch.json');
   const titles = new Map(existsSync(rootPatch) ? readJson(rootPatch).pages.map((p) => [p.id, p.title]) : []);
   let totalQuestions = 0;
+  const addBank = (course, bank, questions) => {
+    const tagged = tagLanguages(questions);
+    course.banks.push({ ...bank, count: tagged.length, en: tagged.filter((q) => q.l === 'en').length });
+    write(`banks/${bank.id}.json`, tagged);
+    totalQuestions += tagged.length;
+  };
 
   for (const page of index.pages) {
     const file = join(dataDir, `${page.id}.json`);
@@ -191,9 +197,7 @@ async function main() {
     const code = BANK_COURSE[page.id];
     const course = code ? ensure(code) : ensure(page.id.toUpperCase(), { name: title });
     if (!course.name) course.name = title.replace(/\s*[-–(].*$/, '');
-    course.banks.push({ id: page.id, title, count: questions.length, scope: bankScope(page.id, title), source: 'zdajse' });
-    write(`banks/${page.id}.json`, questions);
-    totalQuestions += questions.length;
+    addBank(course, { id: page.id, title, scope: bankScope(page.id, title), source: 'zdajse' }, questions);
   }
 
   // PPJ-Quiz
@@ -206,9 +210,7 @@ async function main() {
     tags: [q.category, q.source === 'canonical' ? 'kanoniczne' : 'dodatkowe'],
     a: q.opts.map((t, i) => ({ t, c: i === q.a, f: 'text' })),
   }));
-  ensure('PPJ').banks.push({ id: 'ppj-quiz', title: 'PPJ Quiz', count: ppj.length, scope: 'exam', source: 'ppj', url: 'https://ppj.p1xel.pl' });
-  write('banks/ppj-quiz.json', ppj);
-  totalQuestions += ppj.length;
+  addBank(ensure('PPJ'), { id: 'ppj-quiz', title: 'PPJ Quiz', scope: 'exam', source: 'ppj', url: 'https://ppj.p1xel.pl' }, ppj);
 
   // Questions shared through this site (see scripts/apply-issue.mjs)
   const contentDir = join(ROOT, 'content', 'questions');
@@ -217,10 +219,7 @@ async function main() {
       const { courseId, courseName, questions } = readJson(join(contentDir, file));
       if (!questions?.length) continue;
       const course = courseFor(courseId, courseName);
-      const bankId = `community-${course.id}`;
-      course.banks.push({ id: bankId, title: 'Społeczność', count: questions.length, scope: 'all', source: 'community' });
-      write(`banks/${bankId}.json`, questions);
-      totalQuestions += questions.length;
+      addBank(course, { id: `community-${course.id}`, title: 'Społeczność', scope: 'all', source: 'community' }, questions);
     }
   }
 
@@ -231,10 +230,7 @@ async function main() {
       const { courseId, questions } = readJson(join(minedDir, file));
       if (!questions?.length) continue;
       const course = courseFor(courseId);
-      const bankId = `mined-${course.id}`;
-      course.banks.push({ id: bankId, title: 'Z materiałów', count: questions.length, scope: 'all', source: 'mined' });
-      write(`banks/${bankId}.json`, questions);
-      totalQuestions += questions.length;
+      addBank(course, { id: `mined-${course.id}`, title: 'Z materiałów', scope: 'all', source: 'mined' }, questions);
     }
   }
 

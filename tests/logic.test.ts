@@ -3,7 +3,7 @@ import { existsSync, mkdtempSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { categorize, mergeQuestions, parseIssueBody, parseMaterialIssue, parsePpjQuestions, safeMaterialName, storeMaterials } from '../scripts/lib.mjs';
+import { categorize, detectLanguage, mergeQuestions, parseIssueBody, parseMaterialIssue, parsePpjQuestions, safeMaterialName, storeMaterials, tagLanguages } from '../scripts/lib.mjs';
 import { looksLikeUtf8 } from '../src/lib/extract';
 import { generateCards } from '../src/lib/generate';
 import { parseImport } from '../src/lib/importText';
@@ -103,6 +103,26 @@ describe('parseImport', () => {
     expect(parseImport('front :: back')[0].back).toBe('back');
     expect(parseImport('Q?\n- no\n+ yes\n\nQ2?\n+ a\n- b')).toHaveLength(2);
     expect(parseImport('Port?\n- 80\n+ 443\n\nACID :: Atomicity')[1]).toMatchObject({ front: 'ACID', back: 'Atomicity' });
+  });
+});
+
+describe('question language', () => {
+  const q = (text: string, answers: string[] = []) => ({ q: text, a: answers.map((t) => ({ t })) });
+
+  it('recognizes each language despite technical terms', () => {
+    expect(detectLanguage(q('Która instrukcja SELECT zwraca rekordy z tabeli?', ['SELECT * FROM emp', 'DELETE FROM emp']))).toBe('pl');
+    expect(detectLanguage(q('Which of the following statements are true?', ['SQL is a language']))).toBe('en');
+    expect(detectLanguage(q('<span>What is the role of a firewall?</span>'))).toBe('en');
+    expect(detectLanguage(q('SELECT 1'))).toBeNull();
+    expect(detectLanguage(q('Zaznacz poprawne odpowiedzi:', ['The data is stored in the table', 'What the system has']))).toBe('pl');
+    expect(detectLanguage(q('SELECT 1', ['What is the result of this query']))).toBe('en');
+  });
+
+  it('tags only English questions and resolves unclear ones by their bank', () => {
+    const tagged = tagLanguages([q('What are the layers of this model?'), q('Which of these can be used?'), q('TCP/IP')]);
+    expect(tagged.map((x) => x.l)).toEqual(['en', 'en', 'en']);
+    const polish = tagLanguages([q('Co to jest indeks?'), q('TCP/IP')]);
+    expect(polish.map((x) => x.l)).toEqual([undefined, undefined]);
   });
 });
 

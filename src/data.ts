@@ -55,6 +55,7 @@ export const useMaterials = (course: Course | null) =>
 export function useCourseCards(course: Course | null): { cards: Card[]; loading: boolean; error: boolean } {
   const [banks, setBanks] = useState<{ id: string | null; data: Record<string, RawQuestion[]>; error: boolean }>({ id: null, data: {}, error: false });
   const scopes = useStore((s) => s.scopes);
+  const studyLang = useStore((s) => s.studyLang);
   const allDecks = useStore((s) => s.decks);
   const local = useStore((s) => (course ? s.local[course.id] : undefined));
 
@@ -73,11 +74,12 @@ export function useCourseCards(course: Course | null): { cards: Card[]; loading:
   const ready = !!course && banks.id === course.id;
   const cards = useMemo(() => {
     if (!course || !ready) return [];
-    const fromBanks = course.banks.flatMap((b) => bankCards(b, course.id, banks.data[b.id] ?? [], scopes));
+    // The student's own questions and decks are always shown; only shared banks are filtered.
+    const fromBanks = course.banks.flatMap((b) => bankCards(b, course.id, (banks.data[b.id] ?? []).filter((q) => (q.l ?? 'pl') === studyLang), scopes));
     const mine = (local ?? []).map((q) => questionToCard(q, course.id, `local-${course.id}`, 'local', 'all', scopes));
     const decks = allDecks.filter((d) => d.courseId === course.id).flatMap((d) => deckCards(d, scopes));
     return [...fromBanks, ...mine, ...decks];
-  }, [course, ready, banks, scopes, local, allDecks]);
+  }, [course, ready, banks, scopes, local, allDecks, studyLang]);
 
   return { cards, loading: !!course && !ready, error: ready && banks.error };
 }

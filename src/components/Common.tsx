@@ -2,7 +2,27 @@ import { useEffect, useMemo, type ReactNode } from 'react';
 import { backPlain, correctAnswers } from '../lib/cards';
 import { renderRich } from '../lib/rich';
 import { useI18n } from '../i18n';
-import type { Answer, Card, Format } from '../types';
+import { setStudyLang, useStore } from '../store';
+import type { Answer, Bank, Card, Format, StudyLanguage } from '../types';
+
+/** Number of a bank's questions in the given study language. */
+export const bankCount = (bank: Bank, language: StudyLanguage) => (language === 'en' ? bank.en : bank.count - bank.en);
+
+/** Chooses which questions are shown. Independent of the interface language. */
+export function StudyLanguagePicker() {
+  const { t } = useI18n();
+  const current = useStore((s) => s.studyLang);
+  return (
+    <div className="study-lang">
+      <span className="label">{t('lang.study')}</span>
+      <div className="segmented" role="group" aria-label={t('lang.study')}>
+        {(['pl', 'en'] as const).map((language) => (
+          <button key={language} type="button" className={current === language ? 'on' : ''} aria-pressed={current === language} onClick={() => setStudyLang(language)}>{t(`lang.study.${language}`)}</button>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export function Rich({ text, format, inline }: { text: string; format: Format; inline?: boolean }) {
   const html = useMemo(() => renderRich(text, format), [text, format]);

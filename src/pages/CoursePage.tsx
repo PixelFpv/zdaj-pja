@@ -1,7 +1,7 @@
 import { BookOpenCheck, ClipboardCheck, ExternalLink, Layers, ListChecks, MessageCircleQuestion, PencilLine, Plus, Puzzle, Repeat2, Scale, Trash2, Upload, type LucideIcon } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
-import { LoadError, Loading, Message, Rich, useTitle } from '../components/Common';
+import { bankCount, LoadError, Loading, Message, Rich, StudyLanguagePicker, useTitle } from '../components/Common';
 import { useCourse, useCourseCards, useMaterials } from '../data';
 import { useI18n, type Key } from '../i18n';
 import { buildOptions, correctAnswers, filterScope, hasKey, typedAnswer } from '../lib/cards';
@@ -38,6 +38,7 @@ export function CoursePage() {
           {course.name && <h1>{course.name}</h1>}
         </div>
         <div className="course-head-actions">
+          <StudyLanguagePicker />
           {ppj?.url && <a className="btn" href={ppj.url} target="_blank" rel="noreferrer">{t('course.openPpj')} <ExternalLink size={15} aria-hidden /></a>}
           <Link className="btn" to={`/add?course=${encodeURIComponent(course.id)}`}><Plus size={16} aria-hidden /> {t('course.addOwn')}</Link>
           <Link className="btn" to={`/add-material?course=${encodeURIComponent(course.id)}`}><Upload size={16} aria-hidden /> {t('course.addMaterial')}</Link>
@@ -78,6 +79,8 @@ function LearnTab({ course, cards }: { course: Course; cards: Card[] }) {
   const scope = (SCOPES.find((s) => s === params.get('scope')) ?? 'all') as Scope;
   const off = useMemo(() => new Set((params.get('off') ?? '').split(',').filter(Boolean)), [params]);
   const decks = useStore((s) => s.decks);
+  const studyLang = useStore((s) => s.studyLang);
+  const otherLanguage = course.banks.reduce((sum, b) => sum + bankCount(b, studyLang === 'pl' ? 'en' : 'pl'), 0);
   const courseDecks = decks.filter((d) => d.courseId === course.id);
 
   const sources = useMemo(() => {
@@ -140,7 +143,10 @@ function LearnTab({ course, cards }: { course: Course; cards: Card[] }) {
         </div>
       )}
 
-      {cards.length === 0 && files && files.usable > 0 && (
+      {cards.length === 0 && otherLanguage > 0 && (
+        <Message title={t(`lang.none.${studyLang}`)}><p>{t('lang.none.body', { n: otherLanguage })}</p></Message>
+      )}
+      {cards.length === 0 && otherLanguage === 0 && files && files.usable > 0 && (
         <Message title={t('course.noBank.title')}><p>{t('course.noBank.body')}</p></Message>
       )}
       {cards.length === 0 && !files && <Message><p>{t('course.noMaterials')}</p></Message>}

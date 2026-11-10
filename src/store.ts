@@ -1,6 +1,6 @@
 import { useSyncExternalStore } from 'react';
 import { grade, type Rating, type SrsState } from './lib/srs';
-import type { Deck, RawQuestion, Scope } from './types';
+import type { Deck, RawQuestion, Scope, StudyLanguage } from './types';
 
 const KEY = 'zdaj-pja.v1';
 
@@ -12,6 +12,8 @@ export interface State {
   days: Record<string, number>;
   matchBest: Record<string, number>;
   open: Record<string, OpenProgress>;
+  /** Language of the student's programme; separate from the interface language. */
+  studyLang: StudyLanguage;
 }
 
 /** The student's own notes and status for a question that has no answer key. */
@@ -20,7 +22,7 @@ export interface OpenProgress {
   known?: boolean;
 }
 
-const empty = (): State => ({ srs: {}, local: {}, decks: [], scopes: {}, days: {}, matchBest: {}, open: {} });
+const empty = (): State => ({ srs: {}, local: {}, decks: [], scopes: {}, days: {}, matchBest: {}, open: {}, studyLang: 'pl' });
 
 function load(): State {
   try {
@@ -100,6 +102,10 @@ export function setScope(id: string, scope: Scope) {
 
 export function saveLocalQuestions(courseId: string, questions: RawQuestion[]) {
   commit({ ...state, local: { ...state.local, [courseId]: questions } });
+}
+
+export function setStudyLang(studyLang: StudyLanguage) {
+  commit({ ...state, studyLang });
 }
 
 export function saveOpen(id: string, patch: OpenProgress) {

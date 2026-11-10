@@ -95,6 +95,43 @@ export async function storeMaterials(body, root, fetchImpl = fetch) {
   return { courseId, category, added };
 }
 
+/*
+ * Function words only: technical terms and SQL keywords appear in both languages
+ * and say nothing. Words shared by both languages ("a", "i", "to", "do") are left out.
+ */
+const POLISH_WORDS = new Set('jest są się nie czy jaki jaka jakie który która które których oraz dla przez jak co na po od ze przy lub ale tak aby jeśli można należy zaznacz poniższych wszystkie tylko'.split(' '));
+const ENGLISH_WORDS = new Set('the of which what following are this that these can will has have was were an does when how true false using should must given'.split(' '));
+const POLISH_LETTERS = /[ąćęłńóśźż]/;
+
+function languageScore(text) {
+  const words = String(text).replace(/<[^>]+>/g, ' ').replace(/&\w+;/g, ' ').replace(/```[\s\S]*?```|`[^`]*`/g, ' ').toLowerCase().match(/\p{L}+/gu) ?? [];
+  let pl = 0;
+  let en = 0;
+  for (const word of words) {
+    if (POLISH_WORDS.has(word) || POLISH_LETTERS.test(word)) pl += 1;
+    else if (ENGLISH_WORDS.has(word)) en += 1;
+  }
+  return { pl, en };
+}
+
+/** Returns 'pl', 'en', or null when the text gives no evidence. Answers are only used when the question itself is unclear. */
+export function detectLanguage(question) {
+  const stem = languageScore(`${question.q ?? ''}`);
+  if (stem.pl !== stem.en) return stem.pl > stem.en ? 'pl' : 'en';
+  const rest = languageScore([...(question.a ?? []).map((a) => a.t), question.back ?? ''].join(' '));
+  if (rest.pl === rest.en) return null;
+  return rest.pl > rest.en ? 'pl' : 'en';
+}
+
+/** Marks English questions with l: 'en'. Undecided ones follow the rest of their bank. */
+export function tagLanguages(questions) {
+  const detected = questions.map(detectLanguage);
+  const english = detected.filter((l) => l === 'en').length;
+  const polish = detected.filter((l) => l === 'pl').length;
+  const fallback = english > polish ? 'en' : 'pl';
+  return questions.map((q, i) => ((detected[i] ?? fallback) === 'en' ? { ...q, l: 'en' } : q));
+}
+
 const USABLE = /\.(txt|md|pdf|docx|pptx|odt|sxw|html?|rtf|doc|ppt|pps|mht|jpe?g|png|bmp)$/i;
 
 export const isUsable = (path) => USABLE.test(path);
