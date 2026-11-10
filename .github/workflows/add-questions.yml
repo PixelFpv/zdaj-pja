@@ -12,7 +12,7 @@ permissions:
   actions: write
 
 concurrency:
-  group: add-questions
+  group: content-intake
 
 jobs:
   apply:

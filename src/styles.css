@@ -132,6 +132,7 @@ input[type='checkbox'] { accent-color: var(--brand); width: 17px; height: 17px; 
 .hero { padding-block: 14px 24px; }
 .hero h1 { font-size: clamp(2rem, 6.2vw, 3.4rem); font-weight: 750; letter-spacing: -0.025em; max-width: 18ch; }
 .hero-stats { font-family: var(--mono); font-size: 0.82rem; color: var(--accent); margin-top: 14px; }
+.steps { margin: 0; padding-left: 1.3em; display: grid; gap: 4px; font-size: 0.95rem; }
 .hero-based { margin-top: 6px; font-size: 0.875rem; color: var(--muted); }
 .footer-based { color: var(--ink); font-weight: 600; }
 .today { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; margin-bottom: 22px; border-radius: var(--radius); background: var(--brand-soft); }

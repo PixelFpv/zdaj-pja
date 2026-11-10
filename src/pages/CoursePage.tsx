@@ -1,11 +1,11 @@
-import { BookOpenCheck, ClipboardCheck, ExternalLink, Layers, Link2, Pencil, Plus, Repeat2, Scale, Sparkles, Trash2, type LucideIcon } from 'lucide-react';
+import { BookOpenCheck, ClipboardCheck, ExternalLink, Layers, Link2, Pencil, Plus, Repeat2, Scale, Sparkles, Trash2, Upload, type LucideIcon } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { LoadError, Loading, Message, Rich, useTitle } from '../components/Common';
 import { useCourse, useCourseCards, useMaterials } from '../data';
 import { useI18n, type Key } from '../i18n';
 import { buildOptions, correctAnswers, filterScope, hasKey, typedAnswer } from '../lib/cards';
-import { viewUrl } from '../lib/github';
+import { isOwnMaterial, materialDir, viewUrl } from '../lib/github';
 import { toPlain } from '../lib/rich';
 import { normalizeAnswer } from '../lib/text';
 import { removeDeck, setScope, useStore } from '../store';
@@ -40,6 +40,7 @@ export function CoursePage() {
         <div className="course-head-actions">
           {ppj?.url && <a className="btn" href={ppj.url} target="_blank" rel="noreferrer">{t('course.openPpj')} <ExternalLink size={15} aria-hidden /></a>}
           <Link className="btn" to={`/add?course=${encodeURIComponent(course.id)}`}><Plus size={16} aria-hidden /> {t('course.addOwn')}</Link>
+          <Link className="btn" to={`/add-material?course=${encodeURIComponent(course.id)}`}><Upload size={16} aria-hidden /> {t('course.addMaterial')}</Link>
         </div>
       </header>
 
@@ -290,8 +291,9 @@ function MaterialsTab({ course }: { course: Course }) {
       <ul className="file-list">
         {visible.slice(0, limit).map(([path]) => (
           <li key={path}>
-            <a href={viewUrl(course.root!, path)} target="_blank" rel="noreferrer" title={t('materials.open')}>
-              <span className="file-dir">{path.includes('/') ? path.slice(0, path.lastIndexOf('/') + 1) : ''}</span>
+            <a href={viewUrl(course, path)} target="_blank" rel="noreferrer" title={t('materials.open')}>
+              {isOwnMaterial(path) && <span className="tag">{t('materials.own')}</span>}{' '}
+              <span className="file-dir">{materialDir(path)}</span>
               {path.slice(path.lastIndexOf('/') + 1)}
             </a>
           </li>

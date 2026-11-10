@@ -6,6 +6,7 @@ import { createRoot } from 'react-dom/client';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { I18nProvider } from './i18n';
+import { AddMaterialPage } from './pages/AddMaterialPage';
 import { AddPage } from './pages/AddPage';
 import { CoursePage } from './pages/CoursePage';
 import { DataPage } from './pages/DataPage';
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')!).render(
             <Route path="c/:courseId/study/:mode" element={<StudyPage />} />
             <Route path="c/:courseId/generate" element={<GeneratePage />} />
             <Route path="add" element={<AddPage />} />
+            <Route path="add-material" element={<AddMaterialPage />} />
             <Route path="data" element={<DataPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>

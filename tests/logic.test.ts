@@ -1,6 +1,9 @@
 import { createHash } from 'node:crypto';
+import { existsSync, mkdtempSync, readdirSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { categorize, mergeQuestions, parseIssueBody, parsePpjQuestions } from '../scripts/lib.mjs';
+import { categorize, mergeQuestions, parseIssueBody, parseMaterialIssue, parsePpjQuestions, safeMaterialName, storeMaterials } from '../scripts/lib.mjs';
 import { generateCards } from '../src/lib/generate';
 import { parseImport } from '../src/lib/importText';
 import { grade, nextCardId, newState } from '../src/lib/srs';
@@ -107,6 +110,49 @@ describe('sync helpers', () => {
     const list = parsePpjQuestions('/* c */ const DB = [{"id":"S1","q":"t","opts":["a","b"],"a":1}];');
     expect(list[0].id).toBe('S1');
     expect(() => parsePpjQuestions('const DB = [alert(1)];')).toThrow();
+  });
+});
+
+describe('material intake', () => {
+  const PDF = new TextEncoder().encode('%PDF-1.7 hello');
+  const FILE_URL = 'https://github.com/user-attachments/files/123/kol.pdf';
+  const IMAGE_URL = 'https://github.com/user-attachments/assets/1b2c-3d';
+  const body = (attachments: string) => `<!-- zdaj-pja:add-material -->\n\`\`\`\ncourse: ppj\ncategory: colloquium\n\`\`\`\n\n${attachments}`;
+  const server = (bytes: Uint8Array, type = 'application/pdf') => (async () => new Response(bytes, { headers: { 'content-type': type } })) as typeof fetch;
+  const tempRoot = () => mkdtempSync(join(tmpdir(), 'zdaj-'));
+
+  it('reads files, images and ignores links outside GitHub attachments', () => {
+    const parsed = parseMaterialIssue(body(`[kol.pdf](${FILE_URL})\n<img width="10" alt="scan" src="${IMAGE_URL}">\n[x](https://evil.example/a.pdf)`));
+    expect(parsed).toMatchObject({ courseId: 'ppj', category: 'colloquium' });
+    expect(parsed.attachments).toEqual([{ url: FILE_URL, name: 'kol.pdf' }, { url: IMAGE_URL, name: 'scan' }]);
+  });
+
+  it('rejects bad metadata and issues with no files', () => {
+    expect(() => parseMaterialIssue(body(`[a](${FILE_URL})`).replace('course: ppj', 'course: ../../x'))).toThrow();
+    expect(() => parseMaterialIssue(body(`[a](${FILE_URL})`).replace('colloquium', 'secret'))).toThrow();
+    expect(() => parseMaterialIssue(body('nothing'))).toThrow();
+  });
+
+  it('builds safe file names', () => {
+    expect(safeMaterialName('../../evil.pdf', 'application/pdf')).toBe('evil.pdf');
+    expect(safeMaterialName('.hidden.pdf', '')).toBe('hidden.pdf');
+    expect(safeMaterialName('scan', 'image/png')).toBe('scan.png');
+    expect(() => safeMaterialName('virus.exe', 'application/octet-stream')).toThrow();
+  });
+
+  it('saves a valid file once and keeps different files with the same name', async () => {
+    const root = tempRoot();
+    const input = body(`[kol.pdf](${FILE_URL})`);
+    expect((await storeMaterials(input, root, server(PDF))).added).toBe(1);
+    expect((await storeMaterials(input, root, server(PDF))).added).toBe(0);
+    expect((await storeMaterials(input, root, server(new TextEncoder().encode('%PDF-2 other')))).added).toBe(1);
+    expect(readdirSync(join(root, 'content/materials/ppj/colloquium'))).toHaveLength(2);
+  });
+
+  it('rejects a program renamed to pdf and saves nothing from that issue', async () => {
+    const root = tempRoot();
+    await expect(storeMaterials(body(`[kol.pdf](${FILE_URL})`), root, server(new TextEncoder().encode('MZ program')))).rejects.toThrow(/does not match/);
+    expect(existsSync(join(root, 'content'))).toBe(false);
   });
 });
 

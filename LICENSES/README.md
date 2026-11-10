@@ -9,6 +9,7 @@ Projekt powstał na bazie [zdaj.se](https://pjatk.zdaj.se) ([zdaj-se-pjatk](http
 | Bazy pytań, [zdaj-se-pjatk-data](https://github.com/bibixx/zdaj-se-pjatk-data), © bibixx i współtwórcy | CC BY-SA 4.0 | [`CC-BY-SA-4.0.md`](./CC-BY-SA-4.0.md) |
 | Spis materiałów, [zdaj-se-pjatk-files](https://github.com/bibixx/zdaj-se-pjatk-files), © bibixx i współtwórcy | CC BY-SA 4.0 | [`CC-BY-SA-4.0.md`](./CC-BY-SA-4.0.md) |
 | Pytania w `content/questions` | CC BY-SA 4.0 | [`CC-BY-SA-4.0.md`](./CC-BY-SA-4.0.md) |
+| Pliki w `content/materials` | prawa należą do ich autorów, pliki udostępniają zgłaszający | |
 | Pytania z [PPJ-Quiz](https://github.com/PixelFpv/PPJ-Quiz) | wykorzystane przez autora projektu | |
 
 Licencja MIT obejmuje tylko kod. Nie obejmuje danych wymienionych powyżej, które zachowują swoje licencje.

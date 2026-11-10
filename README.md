@@ -48,6 +48,12 @@ Pytania można też dopisać do tych plików ręcznie:
 
 `scope` przyjmuje `all`, `colloquium` lub `exam`. Fiszka zamiast `a` ma pole `back` i pustą listę `a`.
 
+## Dodawanie i zatwierdzanie materiałów
+
+Na stronie: **Dodaj materiały**. Formularz otwiera zgłoszenie na GitHubie, do którego przeciąga się pliki. Pliki właściciela i współpracowników trafiają na stronę automatycznie. Cudze zgłoszenia czekają: otwórz plik w zgłoszeniu i nadaj etykietę `approved`, żeby go przyjąć, albo zamknij zgłoszenie, żeby odrzucić.
+
+Pliki są w `content/materials/<przedmiot>/<rodzaj>/`, gdzie rodzaj to `exam`, `colloquium`, `lecture`, `lab` lub `other`. Można je też dodać zwykłym commitem.
+
 ## Skąd są dane
 
 | Dane | Źródło | Licencja |

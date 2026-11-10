@@ -1,4 +1,99 @@
-/** Pure helpers shared by the sync script, the issue action and the tests. */
+/** Helpers shared by the sync script, the issue actions and the tests. */
+import { createHash } from 'node:crypto';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+export const MATERIAL_CATS = ['exam', 'colloquium', 'lecture', 'lab', 'other'];
+const MAX_ATTACHMENTS = 20;
+const MAX_ATTACHMENT_BYTES = 25 * 1024 * 1024;
+const ATTACHMENT_URL = /^https:\/\/github\.com\/user-attachments\/(?:files|assets)\/[\w./%-]+$/;
+const COURSE_ID = /^[a-z0-9][a-z0-9_-]{0,63}$/;
+const CONTENT_TYPE_EXT = { 'application/pdf': 'pdf', 'image/png': 'png', 'image/jpeg': 'jpg', 'text/plain': 'txt' };
+
+/** Allowed uploads and the leading bytes each must have, so a renamed program is rejected. */
+const startsWith = (...signature) => (b) => signature.every((value, i) => b[i] === value);
+const notBinary = (b) => !b.subarray(0, 8192).includes(0);
+const OOXML = startsWith(0x50, 0x4b, 0x03, 0x04);
+const OLE = startsWith(0xd0, 0xcf, 0x11, 0xe0);
+const JPEG = startsWith(0xff, 0xd8, 0xff);
+const MATERIAL_TYPES = {
+  pdf: startsWith(0x25, 0x50, 0x44, 0x46),
+  docx: OOXML, pptx: OOXML, odt: OOXML,
+  doc: OLE, ppt: OLE,
+  rtf: startsWith(0x7b, 0x5c, 0x72, 0x74, 0x66),
+  txt: notBinary, md: notBinary,
+  png: startsWith(0x89, 0x50, 0x4e, 0x47),
+  jpg: JPEG, jpeg: JPEG,
+};
+
+/** Reads course, category and GitHub attachment links from a "share materials" issue. */
+export function parseMaterialIssue(body) {
+  const text = body ?? '';
+  const courseId = /^course:\s*(\S+)\s*$/m.exec(text)?.[1];
+  const category = /^category:\s*(\S+)\s*$/m.exec(text)?.[1];
+  if (!COURSE_ID.test(courseId ?? '')) throw new Error('Invalid course.');
+  if (!MATERIAL_CATS.includes(category)) throw new Error('Invalid category.');
+
+  const found = new Map();
+  const add = (name, url) => {
+    if (ATTACHMENT_URL.test(url) && !found.has(url)) found.set(url, name || url.split('/').pop());
+  };
+  for (const m of text.matchAll(/!?\[([^\]]*)\]\((https:[^\s)]+)\)/g)) add(m[1], m[2]);
+  for (const m of text.matchAll(/<img\b[^>]*>/gi)) {
+    const src = /\bsrc="([^"]+)"/.exec(m[0])?.[1];
+    if (src) add(/\balt="([^"]*)"/.exec(m[0])?.[1], src);
+  }
+  if (!found.size) throw new Error('No attached files found.');
+  if (found.size > MAX_ATTACHMENTS) throw new Error(`At most ${MAX_ATTACHMENTS} files per issue.`);
+  return { courseId, category, attachments: [...found].map(([url, name]) => ({ url, name })) };
+}
+
+/** Builds a file name that cannot leave its folder and has an allowed extension. */
+export function safeMaterialName(name, contentType) {
+  let base = String(name).split(/[\\/]/).pop().normalize('NFC')
+    .replace(/[^\p{L}\p{N}._ -]/gu, '_').replace(/^[.\s]+/, '').trim().slice(-120);
+  const ext = base.includes('.') ? base.split('.').pop().toLowerCase() : '';
+  if (Object.hasOwn(MATERIAL_TYPES, ext)) return base;
+  const inferred = CONTENT_TYPE_EXT[contentType];
+  if (!inferred) throw new Error(`File type not allowed: ${base || 'unnamed'}`);
+  base = `${base.replace(/\.$/, '') || 'plik'}.${inferred}`;
+  return base;
+}
+
+const matchesType = (name, bytes) => MATERIAL_TYPES[name.split('.').pop().toLowerCase()](bytes);
+
+/** Downloads every attachment first, so one bad file means nothing from the issue is saved. */
+export async function storeMaterials(body, root, fetchImpl = fetch) {
+  const { courseId, category, attachments } = parseMaterialIssue(body);
+  const downloads = [];
+  for (const { url, name } of attachments) {
+    const response = await fetchImpl(url, { signal: AbortSignal.timeout(120_000) });
+    if (!response.ok) throw new Error(`Could not download ${name} (HTTP ${response.status}).`);
+    const bytes = new Uint8Array(await response.arrayBuffer());
+    if (bytes.length > MAX_ATTACHMENT_BYTES) throw new Error(`${name} is larger than 25 MB.`);
+    const contentType = (response.headers.get('content-type') ?? '').split(';')[0].trim();
+    const safeName = safeMaterialName(name, contentType);
+    if (!matchesType(safeName, bytes)) throw new Error(`${safeName}: content does not match its file type.`);
+    downloads.push({ safeName, bytes });
+  }
+
+  const dir = join(root, 'content', 'materials', courseId, category);
+  mkdirSync(dir, { recursive: true });
+  let added = 0;
+  for (const { safeName, bytes } of downloads) {
+    const digest = createHash('sha1').update(bytes).digest('hex').slice(0, 8);
+    let target = join(dir, safeName);
+    if (existsSync(target)) {
+      if (createHash('sha1').update(readFileSync(target)).digest('hex').startsWith(digest)) continue;
+      const dot = safeName.lastIndexOf('.');
+      target = join(dir, `${safeName.slice(0, dot)}-${digest}${safeName.slice(dot)}`);
+      if (existsSync(target)) continue;
+    }
+    writeFileSync(target, bytes);
+    added += 1;
+  }
+  return { courseId, category, added };
+}
 
 const USABLE = /\.(txt|md|pdf|docx|pptx|odt|sxw|html?|rtf|doc|ppt|pps|mht|jpe?g|png|bmp)$/i;
 

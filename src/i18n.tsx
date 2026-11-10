@@ -4,7 +4,11 @@ export type Lang = 'pl' | 'en';
 const KEY = 'zdaj-pja.lang';
 
 const pl = {
-  'nav.courses': 'Przedmioty', 'nav.add': 'Dodaj pytania', 'nav.data': 'Twoje dane',
+  'nav.courses': 'Przedmioty', 'nav.add': 'Dodaj pytania', 'nav.materials': 'Dodaj materiały', 'nav.data': 'Twoje dane',
+  'amat.title': 'Dodaj materiały', 'amat.lead': 'Kolokwia, egzaminy i notatki trafią do zakładki Materiały i do generatora fiszek.', 'amat.category': 'Rodzaj materiału', 'amat.open': 'Przejdź do wysyłania plików',
+  'amat.step1': 'Na GitHubie przeciągnij pliki do pola tekstowego i poczekaj, aż się wgrają.', 'amat.step2': 'Kliknij „Create” (albo „Submit new issue”).', 'amat.step3': 'Pliki właściciela pojawiają się po kilku minutach, a pozostałe po zatwierdzeniu.',
+  'amat.rules': 'Potrzebne jest konto GitHub. Dozwolone pliki: PDF, DOC, DOCX, PPT, PPTX, ODT, RTF, TXT, MD, JPG i PNG, do 25 MB każdy i najwyżej 20 naraz. Pliki są publiczne, więc dodawaj tylko te, które możesz udostępniać.', 'amat.pending': 'Zgłoszenia do zatwierdzenia',
+  'amat.issueBody': 'Przeciągnij pliki tutaj i nie zmieniaj bloku powyżej:', 'materials.own': 'dodane tutaj', 'course.addMaterial': 'Dodaj materiał',
   'theme.toLight': 'Włącz jasny motyw', 'theme.toDark': 'Włącz ciemny motyw', 'lang.switch': 'Switch to English',
   'common.loading': 'Ładowanie…', 'common.error': 'Nie udało się wczytać danych. Odśwież stronę.', 'common.back': 'Wróć',
   'common.delete': 'Usuń', 'common.edit': 'Edytuj', 'common.cancel': 'Anuluj', 'common.save': 'Zapisz', 'common.next': 'Dalej', 'common.prev': 'Wstecz',
@@ -69,7 +73,11 @@ const pl = {
 export type Key = keyof typeof pl;
 
 const en: Record<Key, string> = {
-  'nav.courses': 'Courses', 'nav.add': 'Add questions', 'nav.data': 'Your data',
+  'nav.courses': 'Courses', 'nav.add': 'Add questions', 'nav.materials': 'Add materials', 'nav.data': 'Your data',
+  'amat.title': 'Add materials', 'amat.lead': 'Colloquia, exams and notes go to the Materials tab and the flashcard generator.', 'amat.category': 'Material type', 'amat.open': 'Go to file upload',
+  'amat.step1': 'On GitHub, drag your files into the text box and wait for them to upload.', 'amat.step2': 'Click “Create” (or “Submit new issue”).', 'amat.step3': "The owner's files appear within a few minutes, and everyone else's after approval.",
+  'amat.rules': 'You need a GitHub account. Allowed files: PDF, DOC, DOCX, PPT, PPTX, ODT, RTF, TXT, MD, JPG and PNG, up to 25 MB each and 20 at a time. Files are public, so only add ones you are allowed to share.', 'amat.pending': 'Submissions awaiting approval',
+  'amat.issueBody': 'Drag your files here and leave the block above unchanged:', 'materials.own': 'added here', 'course.addMaterial': 'Add material',
   'theme.toLight': 'Switch to light theme', 'theme.toDark': 'Switch to dark theme', 'lang.switch': 'Przełącz na polski',
   'common.loading': 'Loading…', 'common.error': 'Could not load the data. Refresh the page.', 'common.back': 'Back',
   'common.delete': 'Delete', 'common.edit': 'Edit', 'common.cancel': 'Cancel', 'common.save': 'Save', 'common.next': 'Next', 'common.prev': 'Previous',

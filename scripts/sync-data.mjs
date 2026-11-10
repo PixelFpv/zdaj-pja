@@ -12,7 +12,7 @@ import { createHash } from 'node:crypto';
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { categorize, isUsable, parsePpjQuestions } from './lib.mjs';
+import { categorize, isUsable, MATERIAL_CATS, parsePpjQuestions } from './lib.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const CACHE = join(ROOT, '.cache');
@@ -207,6 +207,29 @@ async function main() {
       course.banks.push({ id: bankId, title: 'Społeczność', count: questions.length, scope: 'all', source: 'community' });
       write(`banks/${bankId}.json`, questions);
       totalQuestions += questions.length;
+    }
+  }
+
+  // Materials added through this site. Only listed here; the browser fetches them from the repo.
+  const materialsDir = join(ROOT, 'content', 'materials');
+  if (existsSync(materialsDir)) {
+    for (const courseId of readdirSync(materialsDir)) {
+      const own = MATERIAL_CATS.flatMap((cat) => {
+        const dir = join(materialsDir, courseId, cat);
+        return existsSync(dir) ? readdirSync(dir).map((name) => [`@own/${cat}/${name}`, cat]) : [];
+      });
+      if (!own.length) continue;
+      const course = courses.get(courseId) ?? ensure(courseId.toUpperCase());
+      const listPath = join(OUT, 'files', `${course.id}.json`);
+      const existing = existsSync(listPath) ? readJson(listPath) : [];
+      const counts = course.files ?? { exam: 0, colloquium: 0, lecture: 0, lab: 0, other: 0, total: 0, usable: 0 };
+      for (const [path, cat] of own) {
+        counts[cat] += 1;
+        counts.total += 1;
+        if (isUsable(path)) counts.usable += 1;
+      }
+      course.files = counts;
+      write(`files/${course.id}.json`, [...own, ...existing]);
     }
   }
 

@@ -53,6 +53,7 @@ export function Layout() {
           <nav className="nav">
             <NavLink to="/" end>{t('nav.courses')}</NavLink>
             <NavLink to="/add">{t('nav.add')}</NavLink>
+            <NavLink to="/add-material">{t('nav.materials')}</NavLink>
             <NavLink to="/data">{t('nav.data')}</NavLink>
           </nav>
           <div className="topbar-tools">

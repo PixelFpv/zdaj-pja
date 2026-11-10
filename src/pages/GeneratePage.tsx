@@ -6,7 +6,7 @@ import { useCourse, useMaterials } from '../data';
 import { useI18n, type Key } from '../i18n';
 import { extractText, formatRank, isExtractable, isImage } from '../lib/extract';
 import { cleanText, generateCards } from '../lib/generate';
-import { rawUrl } from '../lib/github';
+import { isOwnMaterial, materialDir, rawUrl } from '../lib/github';
 import { AI_PROMPT, parseImport } from '../lib/importText';
 import { addDeck, uid } from '../store';
 import type { Draft, MaterialCat, Scope } from '../types';
@@ -99,7 +99,7 @@ export function GeneratePage() {
       ...picks.map((path) => ({
         name: path,
         load: async () => {
-          const response = await fetch(rawUrl(course.root!, path));
+          const response = await fetch(rawUrl(course, path));
           if (!response.ok) throw new Error(String(response.status));
           return response.arrayBuffer();
         },
@@ -282,7 +282,7 @@ export function GeneratePage() {
               <li key={path}>
                 <label className="check">
                   <input type="checkbox" checked={selected.has(path)} onChange={() => toggle(path)} />
-                  <span className="pick-name"><span className="file-dir">{path.includes('/') ? path.slice(0, path.lastIndexOf('/') + 1) : ''}</span>{path.slice(path.lastIndexOf('/') + 1)}</span>
+                  <span className="pick-name">{isOwnMaterial(path) && <span className="tag">{t('materials.own')}</span>}{' '}<span className="file-dir">{materialDir(path)}</span>{path.slice(path.lastIndexOf('/') + 1)}</span>
                 </label>
               </li>
             ))}
