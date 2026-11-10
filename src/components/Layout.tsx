@@ -2,6 +2,7 @@ import { Moon, Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useI18n } from '../i18n';
+import { openConsentBanner, setConsent, trackedPath, trackPage, useConsent } from '../lib/analytics';
 import { REPO } from '../lib/github';
 import { BASED_ON_LINKS, Linked } from './Common';
 
@@ -30,6 +31,23 @@ function useTheme() {
   return { theme, toggle };
 }
 
+function ConsentBanner() {
+  const { t } = useI18n();
+  const { bannerOpen } = useConsent();
+  if (!bannerOpen) return null;
+  return (
+    <aside className="consent" role="dialog" aria-label={t('consent.title')}>
+      <h2>{t('consent.title')}</h2>
+      <p>{t('consent.text')}</p>
+      {/* Both choices are equally prominent, so rejecting is as easy as accepting. */}
+      <div className="row">
+        <button type="button" className="btn primary grow" onClick={() => setConsent('denied')}>{t('consent.reject')}</button>
+        <button type="button" className="btn primary grow" onClick={() => setConsent('granted')}>{t('consent.accept')}</button>
+      </div>
+    </aside>
+  );
+}
+
 export function Layout() {
   const { t, lang, setLang } = useI18n();
   const { theme, toggle } = useTheme();
@@ -41,6 +59,10 @@ export function Layout() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  useEffect(() => {
+    trackPage(trackedPath(pathname, search));
+  }, [pathname, search]);
 
   return (
     <div className="shell">
@@ -71,8 +93,9 @@ export function Layout() {
       <footer className="wrap footer">
         <p className="footer-based"><Linked text={t('about.based')} links={BASED_ON_LINKS} /></p>
         <p><Linked text={t('footer.credits')} links={CREDIT_LINKS} /></p>
-        <p>{t('footer.local')}</p>
+        <p>{t('footer.local')} <button type="button" className="link-btn" onClick={openConsentBanner}>{t('consent.settings')}</button></p>
       </footer>
+      <ConsentBanner />
     </div>
   );
 }

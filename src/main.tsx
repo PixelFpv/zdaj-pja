@@ -14,7 +14,10 @@ import { GeneratePage } from './pages/GeneratePage';
 import { HomePage } from './pages/HomePage';
 import { NotFound } from './pages/NotFound';
 import { StudyPage } from './pages/StudyPage';
+import { initAnalytics } from './lib/analytics';
 import './styles.css';
+
+initAnalytics();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

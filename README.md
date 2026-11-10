@@ -62,6 +62,10 @@ Na stronie: **Dodaj materiały**. Formularz otwiera zgłoszenie na GitHubie, do 
 
 Pliki są w `content/materials/<przedmiot>/<rodzaj>/`, gdzie rodzaj to `exam`, `colloquium`, `lecture`, `lab` lub `other`. Można je też dodać zwykłym commitem.
 
+## Statystyki
+
+Google Analytics (kontener `GTM-NBS4DT4J`) ładuje się dopiero po zgodzie użytkownika, z kodu w `src/lib/analytics.ts`. Nie wklejaj skryptu GTM do `index.html`, bo działałby bez zgody. Automatyczne odsłony kontenera są wyłączone, a strona wysyła własne `page_view` z prawdziwą ścieżką, np. `/zdaj-pja/c/sbd`.
+
 ## Skąd są dane
 
 | Dane | Źródło | Licencja |

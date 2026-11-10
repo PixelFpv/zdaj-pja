@@ -4,6 +4,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { categorize, detectLanguage, mergeQuestions, parseIssueBody, parseMaterialIssue, parsePpjQuestions, safeMaterialName, storeMaterials, tagLanguages } from '../scripts/lib.mjs';
+import { trackedPath } from '../src/lib/analytics';
 import { looksLikeUtf8 } from '../src/lib/extract';
 import { generateCards } from '../src/lib/generate';
 import { parseImport } from '../src/lib/importText';
@@ -103,6 +104,15 @@ describe('parseImport', () => {
     expect(parseImport('front :: back')[0].back).toBe('back');
     expect(parseImport('Q?\n- no\n+ yes\n\nQ2?\n+ a\n- b')).toHaveLength(2);
     expect(parseImport('Port?\n- 80\n+ 443\n\nACID :: Atomicity')[1]).toMatchObject({ front: 'ACID', back: 'Atomicity' });
+  });
+});
+
+describe('trackedPath', () => {
+  it('keeps course paths and real tabs, and ignores filters and the default tab', () => {
+    expect(trackedPath('/c/sbd', '')).toBe('/c/sbd');
+    expect(trackedPath('/c/sbd', '?tab=questions&scope=exam')).toBe('/c/sbd?tab=questions');
+    expect(trackedPath('/c/sbd', '?tab=learn')).toBe('/c/sbd');
+    expect(trackedPath('/c/sbd', '?scope=exam&off=bsi')).toBe('/c/sbd');
   });
 });
 

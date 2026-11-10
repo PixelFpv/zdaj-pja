@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { useTitle } from '../components/Common';
 import { useI18n } from '../i18n';
+import { setConsent, useConsent } from '../lib/analytics';
 import { exportState, importState, resetState, useStore } from '../store';
 
 export function DataPage() {
@@ -10,6 +11,7 @@ export function DataPage() {
   const cards = useStore((s) => Object.keys(s.srs).length);
   const own = useStore((s) => Object.values(s.local).reduce((sum, list) => sum + list.length, 0));
   const decks = useStore((s) => s.decks.length);
+  const { consent } = useConsent();
   useTitle(t('data.title'));
 
   const download = () => {
@@ -51,6 +53,15 @@ export function DataPage() {
         </div>
         {message && <p role="status">{message}</p>}
       </div>
+      <section className="panel stack" aria-labelledby="cookies-title">
+        <h2 id="cookies-title">{t('consent.title')}</h2>
+        <p>{t('consent.details')}</p>
+        <p className="consent-state" role="status">{t(consent === 'granted' ? 'consent.state.granted' : consent === 'denied' ? 'consent.state.denied' : 'consent.state.none')}</p>
+        <div className="row">
+          <button type="button" className="btn" disabled={consent === 'denied'} onClick={() => setConsent('denied')}>{t('consent.reject')}</button>
+          <button type="button" className="btn" disabled={consent === 'granted'} onClick={() => setConsent('granted')}>{t('consent.accept')}</button>
+        </div>
+      </section>
     </div>
   );
 }
