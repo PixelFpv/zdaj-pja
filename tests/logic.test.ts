@@ -4,6 +4,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { categorize, mergeQuestions, parseIssueBody, parseMaterialIssue, parsePpjQuestions, safeMaterialName, storeMaterials } from '../scripts/lib.mjs';
+import { looksLikeUtf8 } from '../src/lib/extract';
 import { generateCards } from '../src/lib/generate';
 import { parseImport } from '../src/lib/importText';
 import { grade, nextCardId, newState } from '../src/lib/srs';
@@ -38,6 +39,13 @@ describe('srs', () => {
     expect(nextCardId(['b', 'c', 'a'], states, 5, 1000)).toBe('a');
     expect(nextCardId(['b', 'c'], states, 5, 1000)).toBe('c');
     expect(nextCardId(['b', 'c'], states, 0, 1000)).toBeNull();
+  });
+});
+
+describe('looksLikeUtf8', () => {
+  it('tolerates a damaged byte in UTF-8 text but rejects CP1250 text', () => {
+    expect(looksLikeUtf8('Zażółć gęślą jaźń, liczba cylindrów �')).toBe(true);
+    expect(looksLikeUtf8('Za���� g��l� ja��')).toBe(false);
   });
 });
 

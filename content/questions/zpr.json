@@ -1,0 +1,16 @@
+{
+  "courseId": "zpr",
+  "questions": [
+    {
+      "id": "10d1de0950bd",
+      "q": "Co to jest postawa proaktywna?",
+      "f": "text",
+      "back": "Postawa osoby, która widzi szanse i możliwości rozwoju, bierze sprawy w swoje ręce i podejmuje wybory. Jej przeciwieństwem jest postawa reaktywna.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    }
+  ]
+}

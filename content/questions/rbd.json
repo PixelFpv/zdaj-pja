@@ -1,0 +1,275 @@
+{
+  "courseId": "rbd",
+  "questions": [
+    {
+      "id": "01599a64a80b",
+      "q": "Dany jest schemat relacyjny R={Miasto, Ulica, Kod}, F = {Miasto,Ulica->Kod; Kod->Miasto}. Schemat ten:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "jest w III postaci normalnej, ale nie jest w postaci normalnej Boyce'a-Codda",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "nie jest ani w III postaci normalnej, ani w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "a99264a31dae",
+      "q": "Dany jest schemat relacyjny R={Miasto, Ulica, Kod, Poczta}, F = {Miasto,Ulica->Kod; Kod->Miasto; Kod->Poczta}. Schemat ten:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "jest w III postaci normalnej, ale nie jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "nie jest ani w III postaci normalnej, ani w postaci normalnej Boyce'a-Codda",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "ae2d44a08a98",
+      "q": "Dany jest schemat relacyjny R={Miasto, Ulica, Kod, Poczta}, F = {Miasto,Ulica->Kod; Kod->Poczta}. Schemat ten:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "jest w III postaci normalnej, ale nie jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "nie jest ani w III postaci normalnej, ani w postaci normalnej Boyce'a-Codda",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "a588d1c04f87",
+      "q": "Dany jest schemat relacyjny R={Miasto, Ulica, Kod}, F = {Miasto,Ulica->Kod}. Schemat ten:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "jest w postaci normalnej Boyce'a-Codda",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "jest w III postaci normalnej, ale nie jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "nie jest ani w III postaci normalnej, ani w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "39450854b39e",
+      "q": "Dany jest schemat relacyjny R={Ulica, Kod, Sklep}, F = {Ulica->Kod; Sklep->Ulica}. Schemat ten:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "jest w III postaci normalnej, ale nie jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "nie jest ani w III postaci normalnej, ani w postaci normalnej Boyce'a-Codda",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "36e87e59417a",
+      "q": "Dany jest schemat relacyjny R={Ulica, Kod, Sklep, Numer}, F = {Ulica->Kod; Ulica, Numer ->Sklep}. Schemat ten:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "jest w III postaci normalnej, ale nie jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "nie jest ani w III postaci normalnej, ani w postaci normalnej Boyce'a-Codda",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "a0e16dfbbea4",
+      "q": "Dany jest schemat relacyjny R={Student,Adres,Akademik}, F = {Student->Adres; Akademik->Adres; Student->Akademik}. Schemat ten:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "jest w III postaci normalnej, ale nie jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "nie jest ani w III postaci normalnej, ani w postaci normalnej Boyce'a-Codda",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "ae43c2a23774",
+      "q": "Dany jest schemat relacyjny R={Student,Uczelnia,Adres,Klub}, F = {Student->Uczelnia; Klub->Adres}. Schemat ten:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "jest w III postaci normalnej, ale nie jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "nie jest ani w III postaci normalnej, ani w postaci normalnej Boyce'a-Codda",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "433a20988d2d",
+      "q": "Dany jest schemat relacyjny R={Student,Uczelnia,Adres,Klub}, F = {Student->Uczelnia; Klub->Adres; Uczelnia->Adres}. Schemat ten:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "jest w III postaci normalnej, ale nie jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "nie jest ani w III postaci normalnej, ani w postaci normalnej Boyce'a-Codda",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "e9c2606827f7",
+      "q": "Dany jest schemat relacyjny R={Student,Uczelnia,Adres,Klub}, F = {Student, Uczelnia->Klub; Klub->Adres}. Schemat ten:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "jest w III postaci normalnej, ale nie jest w postaci normalnej Boyce'a-Codda",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "nie jest ani w III postaci normalnej, ani w postaci normalnej Boyce'a-Codda",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    }
+  ]
+}

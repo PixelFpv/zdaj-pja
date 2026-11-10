@@ -1,0 +1,38 @@
+{
+  "courseId": "poz",
+  "questions": [
+    {
+      "id": "0886fde3b8a4",
+      "q": "Jakie są podstawowe założenia kierunku human relations?",
+      "f": "text",
+      "back": "Nacisk na psychospołeczne zachowanie uczestników organizacji. Pracownicy nie są narzędziami, lecz cennymi zasobami niezbędnymi do jej funkcjonowania.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "b524aa799d67",
+      "q": "Co to jest synergia?",
+      "f": "text",
+      "back": "Sytuacja, w której współpracujące systemy przynoszą więcej efektów niż łączna suma efektów każdego z nich działającego osobno.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "c8ca688cf099",
+      "q": "Co to jest certyfikat jakości?",
+      "f": "text",
+      "back": "Dokument potwierdzający wiarygodność systemu zapewnienia jakości i jego zgodność z odpowiednimi normami ISO.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    }
+  ]
+}

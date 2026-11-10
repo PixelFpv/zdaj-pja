@@ -1,0 +1,256 @@
+{
+  "courseId": "nai",
+  "questions": [
+    {
+      "id": "4249abbf60ee",
+      "q": "Metoda propagacji wstecznej może być użyta dla sieci zbudowanej z neuronów mających:",
+      "f": "text",
+      "a": [
+        {
+          "t": "dowolną funkcję aktywacji,",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "wyłącznie funkcję sigmoidalną,",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "funkcję unipolarną,",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "żadna z powyższych odpowiedzi, dlaczego? ............................................................................... . .............................................................................................................................................................",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "409e55c6cb8a",
+      "q": "Drzewa decyzyjne przedstawiane są w postaci:",
+      "f": "text",
+      "a": [
+        {
+          "t": "grafów,",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "grafów skierowanych,",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "grafów, w których z każdego wierzchołka wychodzą maksymalnie dwie krawędzie,",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "grafów nie zawierających cykli.",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "e58ca1d87e93",
+      "q": "Algorytm k-NN wiąże się z:",
+      "f": "text",
+      "a": [
+        {
+          "t": "obliczaniem średniej ważonej punktów reprezentujących dane uczące,",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "obliczaniem odległości między punktami reprezentującymi dane treningowe,",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "obliczaniem mediany i macierzy kowariancji,",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "żadna z powyższych odpowiedzi.",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "a0b43ceecf53",
+      "q": "Algorytm k-NN to:",
+      "f": "text",
+      "why": "Błąd 1-NN przy dużej próbie jest co najwyżej około dwa razy większy niż błąd klasyfikatora Bayesa.",
+      "a": [
+        {
+          "t": "algorytm k nienazwanych przykładów,",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "algorytm, który może być dwukrotnie gorszy od klasyfikatora Bayesa,",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "inna wersja algorytmu k średnich",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "żadna z powyższych odpowiedzi.",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "20c62c815b4f",
+      "q": "Liczba bitów potrzebna do reprezentowania liczby całkowitej z zakresu <–8, 8> w chromosomie powinna wynosić:",
+      "f": "text",
+      "why": "Zakres od -8 do 8 ma 17 wartości, a 4 bity kodują tylko 16.",
+      "a": [
+        {
+          "t": "3",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "5",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "żadna z odpowiedzi nie jest prawidłowa.",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "f0e54b9c97cb",
+      "q": "Które z poniższych zdań jest prawdziwe:",
+      "f": "text",
+      "a": [
+        {
+          "t": "Algorytmy genetyczne i algorytmy ewolucyjne to to samo.",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "Algorytmy ewolucyjne to szczególny przypadek algorytmów genetycznych",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "Algorytmy genetyczne to szczególny przypadek algorytmów ewolucyjnych.",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "Żadne ze zdań nie jest prawdziwe.",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "0aef24bc5761",
+      "q": "Metody mutacji wykorzystywane w algorytmach genetycznych to:",
+      "f": "text",
+      "why": "OX, PMX i CX to metody krzyżowania.",
+      "a": [
+        {
+          "t": "OX",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "PMYX",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "CX",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "żadna z odpowiedzi nie jest prawidłowa.",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "36f792137e99",
+      "q": "Wybierz pojęcia związane z algorytmami genetycznymi",
+      "f": "text",
+      "a": [
+        {
+          "t": "funkcja aktywacji",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "funkcja dopasowania",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "funkcja przystosowania",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "żadna z odpowiedzi nie jest prawidłowa.",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "courseId": "zso",
+  "questions": [
+    {
+      "id": "2839068d383a",
+      "q": "Na czym polega two-phase commit?",
+      "f": "text",
+      "back": "Koordynator pyta uczestników o gotowość do zatwierdzenia transakcji. Jeśli wszyscy potwierdzą, zleca commit, a w przeciwnym razie abort.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "edc024022f6b",
+      "q": "Na czym polega topologia sieci P2P Chord?",
+      "f": "text",
+      "back": "Węzły tworzą pierścień uporządkowany według identyfikatorów powstałych z funkcji skrótu (np. SHA-1 adresu IP), a obiekty są umieszczane na tym pierścieniu według swoich identyfikatorów.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    }
+  ]
+}

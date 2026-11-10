@@ -1,0 +1,293 @@
+{
+  "courseId": "sko1",
+  "questions": [
+    {
+      "id": "8551bd2d78e7",
+      "q": "PVC jest tworzone zazwyczaj dla połączeń:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "tymczasowych",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "stałych",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "na żądanie",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "06a3ceb0c6c9",
+      "q": "Interfejs warstwy 1. do połączenia kabla dla 10BASE-T to:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "RJ-12",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "RJ-44",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "RJ-54",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "RJ-45",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "adc1dbbb1c28",
+      "q": "Token Ring pracuje w topologii logicznej:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "żadne z powyższych wyjaśnień nie jest prawidłowe",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "szyny",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "pierścienia",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "drzewa",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "e0bbffe9b176",
+      "q": "Jakie protokoły rutingu używa się wewnątrz systemów autonomicznych:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "IS-IS",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "BGP",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "RIP",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "OSPF",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "25956c4d77f7",
+      "q": "Adres fizyczny karty sieciowej (adres MAC) ma:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "4 bajty",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "8 bajtów",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "32 bity",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "12 bitów",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "48 bitów",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "5c5a4e01be96",
+      "q": "Zastąpienie koncentratorów switchami powoduje w sieci:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "zmniejszenie liczby domen rozgłoszeniowych",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "zwiększenie liczby domen kolizyjnych",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "zwiększenie liczby domen rozgłoszeniowych",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "zmniejszenie liczby domen kolizyjnych",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "4e42aaaea708",
+      "q": "Warstwa najwyższa (warstwa aplikacji) modelu sieci OSI realizowana jest:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "jedynie poprzez protokół TCP/IP",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "sprzętowo",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "programowo",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "jedynie poprzez protokół IPX/SPX",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "839da032907a",
+      "q": "Z jakiego protokołu korzysta przede wszystkim DNS?",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "FTP",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "UTP",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "UDP",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "TCP",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "bbe99947190f",
+      "q": "Sieci radiowe w standardzie 802.11g pracują z następującą maksymalną teoretyczną szybkością przesyłania danych na kanał:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "11 Mb/s",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "54 Mb/s",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "512 Mb/s",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "2,1 Mb/s",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    }
+  ]
+}

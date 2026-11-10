@@ -1,0 +1,658 @@
+{
+  "courseId": "bsi",
+  "questions": [
+    {
+      "id": "0efea4427ce2",
+      "q": "W systemie WINDOWS udostępniono zasób o nazwie ALFA i zasób o nazwie BETA$ nadając grupie EVERYONE uprawnienia FULL CONTROL. Które spośród wymienionych niżej zasobów będą dostępne dla administratora systemu?:",
+      "f": "text",
+      "a": [
+        {
+          "t": "ALFA i ADMIN",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "ALFA, ADMIN$, BETA$ i C$",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "ALFA",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "ALFA, ADMIN$, BETA$",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "c15cf98eb7b8",
+      "q": "W Windows, uprawnienia dostępu do plików (permissions) można przyznawać przy pomocy programu:",
+      "f": "text",
+      "a": [
+        {
+          "t": "Policy Manager",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "Disk Administrator",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "User Manager lub Manager for Domains",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "Windows Explorer",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "12802719c1d9",
+      "q": "W wyniku enumeracji kont na komputerze zdalnym pozyskano informacje o koncie o nazwie ADMINISTRATOR i relatywnym identyfikatorze konta RID=1001. Który wniosek jest uprawniony?:",
+      "f": "text",
+      "why": "Wbudowane konto administratora ma RID 500, więc RID 1001 oznacza zwykłe konto o zmienionej nazwie.",
+      "a": [
+        {
+          "t": "jest to wbudowane konto administratora systemu zdalnego",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "jest to konto które NA PEWNO nie ma praw do administrowania systemem zdalnym",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "konto wbudowane administratora zostało zablokowane",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "jest to konto zwykłego użytkownika, którego nazwa została zmieniona na ADMINISTRATOR",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "41cddbcf7bac",
+      "q": "Który z programów nie może być wykorzystywany do skanowania portów?",
+      "f": "text",
+      "a": [
+        {
+          "t": "tracert",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "fscan",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "netscan",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "superscan",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "10b0aec36868",
+      "q": "W Windows uprawnienia (permissions):",
+      "f": "text",
+      "a": [
+        {
+          "t": "określają przywileje użytkownika w zakresie komunikacji międzykomputerowej",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "umożliwiają użytkownikom dostęp do zasobów takich jak np. katalogi, pliki, drukarki",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "określają działania jakie użytkownik może wykonać w systemie (np. zmiana czasu systemowego)",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "umożliwiają użytkownikowi zalogowanie się",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "e61300a601b4",
+      "q": "Konfigurowanie klienta połączenia VPN realizuje się poprzez:",
+      "f": "text",
+      "a": [
+        {
+          "t": "okno Network and Dial-up Connections",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "konsole VPN managments",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "konsole Routing and Remote acces",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "program Services",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "516a93aede1e",
+      "q": "Rozproszona baza danych dostarczająca hierarhicznego systemu nazw dla identyfikacji hostów w internecie to:",
+      "f": "text",
+      "a": [
+        {
+          "t": "WINS",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "DHCP",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "IIS",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "DNS",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "99e2fb6da4a5",
+      "q": "Do scentralizowanego zarządzania adresy IP w sieci TCP/IP jest wykorzystywany:",
+      "f": "text",
+      "a": [
+        {
+          "t": "WINS",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "IIS",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "DNS",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "DHCP",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "29575104a792",
+      "q": "Który wariant określa uporządkowanie poziomów bezpieczeństwa systemów od najbardziej do najmniej bezpiecznych:",
+      "f": "text",
+      "a": [
+        {
+          "t": "A1 B2 B1 C2 C1 D",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "A1 B1 B2 C1 C2 D",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "D C1 B1 A1",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "A1 B1 B2 C2 C1 D",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "06e814b1be79",
+      "q": "Kategorie bezpieczeństwa: Ochronę świadczonych usług przed zniekształceniem i uszkodzeniem nazywamy:",
+      "f": "text",
+      "a": [
+        {
+          "t": "zabezpieczeniem dostępności",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "zabezpieczeniem spójności danych",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "zabezpieczeniem poufności",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "audytem",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "6925693fc106",
+      "q": "Która z poniższych grup zawiera wyłącznie nazwy algorytmów szyfrowania z kluczem asymetrycznym:",
+      "f": "text",
+      "a": [
+        {
+          "t": "RSA, DSA, ElGamal",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "DSA, DES, ElGamal",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "DSA, RC4, IDEA",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "IDEA, DES, RC2",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "35d81c9e2127",
+      "q": "Zadaniem serwera przyznawania biletów (ticket-granting server) w systemie Kerberos jest:",
+      "f": "text",
+      "a": [
+        {
+          "t": "wydawanie zezwoleń na korzystanie z usług serwera aplikacji",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "sprawdzanie tożsamości użytkowników i wydawanie biletów uprawniających do korzystania z usługi przyznawania biletów",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "dostarczanie klientom żądanych przez nich usług w zakresie dostępu do plików",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "rejestrowanie realizowanych połączeń",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "d75aff4f6851",
+      "q": "Spoofing ARP powoduje fałszowanie:",
+      "f": "text",
+      "a": [
+        {
+          "t": "skojarzeń <adres sprzętowy-adres IP>",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "skojarzeń <adres sprzętowy-nazwa hosta>",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "skojarzeń <adres IP-nazwa hosta>",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "haseł użytkownika",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "810ab8ccc0c7",
+      "q": "W Windows NT zakres inspekcji plików i katalogów ustawiany jest przy pomocy programu:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "Windows NT Explorer",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "User Manager",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "Server Manager",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "Policy Editor",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "61c08c908f16",
+      "q": "Grupa lokalna w Windows NT może zawierać:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "konta i grupy globalne",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "inne grupy lokalne",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "konta, inne grupy lokalne i globalne",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "konta i inne grupy lokalne",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "020e4bbe47ac",
+      "q": "W Windows NT, do wyświetlania aktualnej konfiguracji TCP/IP służy polecenie:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "IPCONFIG",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "IFCONFIG",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "PING",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "ROUTE",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "bd5df25fc4d1",
+      "q": "W Windows NT, do rejestrowania NetBIOS-owych nazw komputerów i przypisywania im adresów IP służy:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "WINS",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "DNS",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "DHCP",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "IIS",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "22e7f431bd09",
+      "q": "W Windows 2000, przy przesuwaniu pliku pomiędzy woluminami NTFS zezwolenia (permissions):",
+      "f": "text",
+      "why": "Klucz w źródle był błędny. Plik przenoszony między woluminami jest tworzony na nowo i dziedziczy zezwolenia folderu docelowego.",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "+sa ustawiane na wartosc FULL CONTROL",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "sa zachowywane",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "sa pobierane z katalogu docelowego",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "sa ustawiane wg zawartosci zmiennej PERM",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "2379f2e20cfe",
+      "q": "Jak wykonuje się skanowanie pół-otwarte?",
+      "f": "text",
+      "back": "Wysyła się pakiet SYN, a po otrzymaniu SYN/ACK od razu RST, więc połączenie TCP nigdy nie zostaje w pełni nawiązane.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "1da7673a7fb1",
+      "q": "Dla kogo powinna być dostępna lista cofniętych certyfikatów (CRL)?",
+      "f": "text",
+      "back": "Publicznie dla wszystkich.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "2c68f83806d3",
+      "q": "Co otrzymamy po wysłaniu pakietu FIN na zamknięty port TCP?",
+      "f": "text",
+      "back": "Pakiet RST, niezależnie od systemu.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "4b217880c15c",
+      "q": "Co jest przechowywane w RBL (Realtime Blackhole List)?",
+      "f": "text",
+      "back": "Lista serwerów pocztowych rozsyłających spam.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "2df467f500e3",
+      "q": "Jaka odpowiedź przychodzi przy skanowaniu UDP, gdy port jest otwarty?",
+      "f": "text",
+      "back": "Zwykle żadna. Zamknięty port odpowiada komunikatem ICMP Port Unreachable.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "f92f86d58cdf",
+      "q": "Którym kluczem szyfruje się pocztę elektroniczną?",
+      "f": "text",
+      "back": "Kluczem publicznym odbiorcy.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "4c51dce95114",
+      "q": "Którym kluczem odszyfrowuje się pocztę elektroniczną?",
+      "f": "text",
+      "back": "Kluczem prywatnym odbiorcy.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "4879edc28ffb",
+      "q": "Którym kluczem podpisuje się pocztę elektroniczną?",
+      "f": "text",
+      "back": "Kluczem prywatnym nadawcy.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    }
+  ]
+}

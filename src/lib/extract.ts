@@ -33,11 +33,16 @@ function decode(buffer: ArrayBuffer): string {
   const bytes = new Uint8Array(buffer);
   if (bytes[0] === 0xff && bytes[1] === 0xfe) return new TextDecoder('utf-16le').decode(bytes);
   if (bytes[0] === 0xfe && bytes[1] === 0xff) return new TextDecoder('utf-16be').decode(bytes);
-  try {
-    return new TextDecoder('utf-8', { fatal: true }).decode(bytes);
-  } catch {
-    return new TextDecoder('windows-1250').decode(bytes);
-  }
+  const utf8 = new TextDecoder('utf-8').decode(bytes);
+  return looksLikeUtf8(utf8) ? utf8 : new TextDecoder('windows-1250').decode(bytes);
+}
+
+/** Tolerates a few damaged bytes: valid multi-byte letters must clearly outnumber broken ones. */
+export function looksLikeUtf8(decoded: string): boolean {
+  const broken = (decoded.match(/�/g) ?? []).length;
+  if (!broken) return true;
+  const valid = (decoded.match(/[^\x00-\x7f�]/g) ?? []).length;
+  return valid > broken * 5;
 }
 
 function htmlToText(html: string): string {

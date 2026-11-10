@@ -1,0 +1,284 @@
+{
+  "courseId": "byt",
+  "questions": [
+    {
+      "id": "8a1966dbef81",
+      "q": "Faza zwalniania blokad w protokole dwufazowego blokowania (2PL) sprowadzana jest w praktyce do operacji:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "SELECT;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "COMMIT;",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "ROLLBACK;",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "SET TRANSACTION.",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "f6d98745c45f",
+      "q": "Kaskadowy model cyklu życia oprogramowania:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "utrudnia klientowi walidację produktu na etapie wytwarzania;",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "w praktyce każda jego faza jest realizowana zgodnie z podejściem spiralnym;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "utrudnia sporządzenie harmonogramu projektu;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "w praktyce każda jego faza jest realizowana zgodnie z podejściem iteracyjnym.",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "de5ea0a64eb7",
+      "q": "O fazach i rodzajach testów możemy powiedzieć, że:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "testów integracyjnych nie ma sensu przeprowadzać przed testami akceptacyjnymi;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "testy akceptacyjne są zazwyczaj przeprowadzane na zasadzie „białej skrzynki”;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "nie ma sensu przeprowadzać testów regresyjnych przed testami akceptacyjnymi;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "żadna z powyższych odpowiedzi nie jest prawidłowa.",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "3c1c72d3c558",
+      "q": "Chcąc poprawić wydajność naszego kodu najczęściej:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "profilujemy kod;",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "wprowadzamy wywołania rekurencyjne;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "rezygnujemy z procedur składowanych na rzecz prostych zapytań;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "wprowadzamy nowe indeksy w bazie danych.",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "b3364e4f76d3",
+      "q": "W ogólności w trakcie tworzenia architektury rozwiązania należy dążyć do uzyskania:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "wysokiej kohezji komponentów;",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "niskiej kohezji komponentów;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "ścisłego powiązania komponentów;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "luźnego powiązania komponentów.",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "46789e5a0941",
+      "q": "Źle zdefiniowaną pozycją konfiguracji w projekcie informatycznym jest:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "dokument wymagań;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "instrukcja warunkowa w module XC;",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "dane do testów akceptacyjnych podsystemu;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "cały program dostarczany klientowi.",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "02a75c4ad8c3",
+      "q": "Usunięcie powiązań między abstrakcją a implementacją jest celem wzorca projektowego:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "mostu;",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "adaptera;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "fasady;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "MVC.",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "1e0e81d14c59",
+      "q": "Historia przetwarzania transakcji o następującej postaci:w1[x] r2[y] w1[y] w1[z] c1 r2[y] c2 jest historią, w której mogą wystąpić:",
+      "f": "text",
+      "why": "T2 czyta y dwukrotnie, a pomiędzy odczytami T1 zapisuje y i zatwierdza zmiany.",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "brak odtwarzania historii przetwarzania;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "kaskadowe odrzucenie transakcji;",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "anomalia powtórnego czytania;",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "historia przetwarzania z fantomami.",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "eb6c7f8913a8",
+      "q": "Z czego wynikają trudności z określeniem wymagań użytkownika?",
+      "f": "text",
+      "back": "Klient z reguły nie wie dokładnie, w jaki sposób osiągnąć założone cele, a cele te można osiągnąć na wiele sposobów.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "a4c058370704",
+      "q": "Jakie aktywności obejmuje zarządzanie konfiguracją oprogramowania?",
+      "f": "text",
+      "back": "Identyfikację pozycji konfiguracji, ich przechowywanie, kontrolę zmian, określanie statusu konfiguracji oraz przekazanie pozycji na zewnątrz (release).",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    }
+  ]
+}

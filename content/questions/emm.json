@@ -1,0 +1,27 @@
+{
+  "courseId": "emm",
+  "questions": [
+    {
+      "id": "fb363d5c573e",
+      "q": "Na zjeździe spotyka się 10 osób. Ile nastąpi powitań (uścisków dłoni)?",
+      "f": "text",
+      "back": "45, czyli liczba kombinacji 2 z 10.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "3870a7f41f7e",
+      "q": "Z talii 52 kart losujemy 4 karty. Ile jest wyników, w których są co najwyżej 3 kiery?",
+      "f": "text",
+      "back": "C(52,4) − C(13,4) = 270725 − 715 = 270010.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    }
+  ]
+}

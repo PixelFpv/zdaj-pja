@@ -1,0 +1,113 @@
+{
+  "courseId": "jps",
+  "questions": [
+    {
+      "id": "d538bb74f359",
+      "q": "Stos środowisk jest pomniejszany w sytuacji:",
+      "f": "text",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "wywolania procedury",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "wyjścia z procedury",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "ewaluacji operatora algebraicznego",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "c860917dac97",
+      "q": "Zasada otwarte-zamknięte mówi, że:",
+      "f": "text",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "klasę można modyfikować, ale nie można dodawać nowych obiektów",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "klasę można modyfikować, ale nie można jej rozszerzać",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "klasy nie można modyfikować, ale można ją rozszerzać",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "e6c9f29ce9e5",
+      "q": "Operatorami niealgebraicznymi sa",
+      "f": "text",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "join, ,(przecinek, .(kropka",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "where, forall, minus",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "where, .(kropka, join",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "cdcc16c370d7",
+      "q": "Zapytanie count(1,2,3) as x zwroci:",
+      "f": "text",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "x(3)",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "x(1)",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    }
+  ]
+}

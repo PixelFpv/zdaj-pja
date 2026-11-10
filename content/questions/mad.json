@@ -1,0 +1,54 @@
+{
+  "courseId": "mad",
+  "questions": [
+    {
+      "id": "e5102be28052",
+      "q": "Czy z tego, że relacja r nie jest przeciwzwrotna, wynika, że jest zwrotna?",
+      "f": "text",
+      "back": "Nie. Relacja może mieć pętle tylko przy niektórych elementach i wtedy nie jest ani zwrotna, ani przeciwzwrotna.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "5b7b2663b9a9",
+      "q": "Czy z tego, że relacja r nie jest przeciwsymetryczna, wynika, że jest symetryczna?",
+      "f": "text",
+      "back": "Nie. Te własności nie są swoimi zaprzeczeniami.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "dd2069f47445",
+      "q": "Które z podanych zbiorów są nieprzeliczalne?",
+      "f": "text",
+      "why": "Trzeci zbiór nie musi być nieprzeliczalny, bo N jest nieskończonym podzbiorem R.",
+      "a": [
+        {
+          "t": "zbiór wszystkich funkcji f : N → N",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "zbiór wszystkich (skończonych i nieskończonych) ciągów binarnych",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "każdy nieskończony podzbiór zbioru R",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "courseId": "tin",
+  "questions": [
+    {
+      "id": "99fbc2764659",
+      "q": "Adres 127.1.1.1 należy do puli adresów:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "multicast (rozgłaszania grupowego)",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "prywatnych (nierutowalnych)",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "pętli zwrotnej",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "broadcast",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "c35db12d8ec1",
+      "q": "Selektor CSS sformulowany jako ul ol selekcjonuje:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "<ol>...</ol> zawarte wewnątrz elementu <ul>...</ul>",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "<ul class=”ol”>...</ul>",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "wszystkie elementy <ol>..</ol> oraz elementy <ul>...</ul>",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "<ul>ol</ul>",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "6d301bb266de",
+      "q": "Ciasteczka (COOKIES) umożliwiają skryptom m.in.:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "prześledzenie aktywności użytkownika w innych serwisach",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "odczytanie bez ingerencji użytkownika jego loginu w systemie operacyjnym",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "uproszczenie autentykacji klienta przy kolejnej wizycie",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "instalację kodu uruchamianego przy starcie przeglądarki",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "4114e4a0e73e",
+      "q": "W aplikacji WWW realizującej w Javie wzorzec „model-widok-kontroler” funkcje kontrolera realizuje:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "Servlet",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "Strona JSP",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "Komponent Entity Bean",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "Adapter JDBC",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "b927349eebae",
+      "q": "Wyrażenie <?xml-stylesheet... ?> reprezentuje w dokumencie XML:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "Deklaracje XML",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "Instrukcję przetwarzania",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "Encję parametryczną",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "Element tekstowy",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "58b0c39aaad1",
+      "q": "Selektor CSS sformułowany jako h5.n1 selekcjonuje element[y]:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "<h5 id=”n1”>....</h5>",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "<h5>n1</h5>",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "<h5 n1=”true”>.... </h5>",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "<h5 class=”n1”>... </h5>",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "5943b97ae7db",
+      "q": "Ciasteczka (COOKIES) mogą być odczytywane i zapisywane:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "tylko przez kod działający po stronie serwera",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "tylko przez skrypt po stronie przeglądarki",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "zarówno po stronie serwera jak i przeglądarki",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "tworzenie i zapis tylko na serwerze, odczyt- po stronie klienta",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "8fdf4da7b588",
+      "q": "W jaki sposób definicje typu dokumentu (DTD) mogą być łączone z opisywanym dokumentem XML?",
+      "f": "text",
+      "back": "Mogą występować w pliku dokumentu lub w plikach zewnętrznych. W przeciwieństwie do SGML ich obecność nie jest obowiązkowa.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    }
+  ]
+}

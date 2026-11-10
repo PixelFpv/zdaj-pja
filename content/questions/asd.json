@@ -1,0 +1,16 @@
+{
+  "courseId": "asd",
+  "questions": [
+    {
+      "id": "f600f44955f3",
+      "q": "Ile porównań wykona InsertionSort dla ciągu 1,2,3,4,5,6,7?",
+      "f": "text",
+      "back": "6, czyli n − 1 dla ciągu już posortowanego.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    }
+  ]
+}

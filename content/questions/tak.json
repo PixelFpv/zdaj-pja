@@ -1,0 +1,531 @@
+{
+  "courseId": "tak",
+  "questions": [
+    {
+      "id": "264f2ac352df",
+      "q": "Procesory używają rejestrów do",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "zapamiętywania częsciowych wyników złozonych operacji arytmentycznych",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "komunikowania się z pamięcią RAM",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "optymalizacji pętli",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "archiwizacji uzyskanych rezultatów",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "095784fe5728",
+      "q": "Pamięć wirtualna, to koncepcja pozwalająca na",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "uzywanie większej ilosci pamięci, niz się faktycznie miesci w RAM",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "oprogramowanie rzeczywistosci wirtualnej",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "uzywanie chmury obliczeniowej",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "korzystanie z zewnętrznych nośników pamięci w celu rozszerzenia pamięci operacyjnej",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "0b232f5fa161",
+      "q": "Turek - automat szachowy von Kempelena",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "wykonywał fizycznie ruchy na szachownicy",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "wymagal operatora dobrze grającego w szachy",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "był pierwszą maszyną umiejącą samodzielnie podejmowac decyzje",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "2cf57e1465b8",
+      "q": "Algorytm Euklides3, z wykorzystaniem testu parzystości ma zlozonosć",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "kwadratową ze względu na rozmiar argumentów",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "szescienną ze względu na rozmiar argumentów",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "wykładniczą ze względu na rozmiar argumentów",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "42e2c56a6a50",
+      "q": "Pesymistyczną złożoność czasową algorytmów:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "uzależniamy od prędkości zegara procesora",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "wyrażamy w liczbie wykonań instrukcji dominującej",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "odnosimy do rozmiaru najbardziej złośliwych danych",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "16948bc9e3f7",
+      "q": "Pierwowzorem współczesnych komputerów było",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "zaprojektowana przez Charlesa Babbage'a maszyna analityczna",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "zaprojektowany przez Hermana Holleritha tabulator",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "zaprojektowana przez charlesa babbage pierwsza maszyna różnicowa",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "5ac709feae2e",
+      "q": "Następujące dzialania w kodzie uzupelnieniowym są poprawnie wykonane dla liczb calkowitych 8-bitowych",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "11110000 + 10001111 = 11111111",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "10000000 + 00000001 = 10000001",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "11111111 + 00000001 = 00000000",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "01111111 + 01111111 = 11111110",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "bea04c65cea4",
+      "q": "O marszrucie pakietu przez sieć decyduje:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "router",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "nadawca",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "sam pakiet",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "odbiorca",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "1819a4a205aa",
+      "q": "Następujące dzialania są poprawne w jednobajtowym kodzie uzupełnieniowym",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "11111111+00000001=00000000",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "11111111+11111111=11111110",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "01010101+01010101=10101010",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "10101010 + 10101010 = 11010100",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "10000000 + 00000001 = 10000001",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "01111111 + 01111111 = 11111110",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "1ef8996be004",
+      "q": "Notacja OMEGA",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "definiuje nieskończoną klasę funkcji ze zbioru liczb naturalnych w zbiór liczb rzeczywistych nieujemnych",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "pozwala uprościć obliczenia złożoności przez podanie asymptotycznego ograniczenia górnego",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "definiuje konkretną funkcję ze zbioru liczb naturalnych w zbiór liczb rzeczywistych nieujemnych.",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "e34604a86b55",
+      "q": "Reprezentujemy liczby rzeczywiste za pomocq 1 bajtu cechy i 7 bajtów mantysy w kodzie U2 z ukrytym jednym bitem.",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "wszystkie liczby calkowite w zakresie reprezentowalności są reprezentowane dokladnie",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "dodając do liczby drugą, której cecha jest mniejsza o 50, uzyskamy wynik równy tej pierwszej",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "dodając do liczby drugą, której cecha jest mniejsza o 60, uzyskamy wynik równy tej pierwszej",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "miedzy kazdymi dwiema liczbami istnieje liczba dokładnie reprezentowana i różna od nich",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "68591a7492aa",
+      "q": "Reprezentujemy liczby rzeczyswiste za pomocą 1 bajtu cechy i 7 bajtów mantysy w kodzie U2 z ukrytym jednym bitem",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "wszystkie liczby całkowite w zakresie reprezentowalności są reprezentowane dokładnie",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "Największa reprezentowana liczba jest większa od najmniejszej dodatniej ponad 10^30 razy",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "między każdymi dwiema liczbami istnieje liczba dokładnie reprezentowana i różna od nich",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "0fcec4ea1214",
+      "q": "W arytmetyce zmiennopozycyjnej procesora przy każdym ustalonym kodowaniu",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "istnieje najmniejsza liczba rzeczywista",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "najmniejsza liczba jest zero",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "liczba liczb rzeczywistych reprezentowanych dokładnie jest skończona",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "74c1dd15b7ac",
+      "q": "Metoda której użył Babbage do obliczania tablic metematycznych w swoich maszynach różnicowych",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "polegała na szybkim obliczaniu wielu wartości wielomianów",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "wymagała wielu dodawań - co najmniej tylu ile wartości chcieliśmy wyznaczyć",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "mogła być zastosowana do wyznaczenia wartości funkcji trygonometrycznych",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "276aa8cb9fcb",
+      "q": "Najstarsze znane i uzywane do dziś powszechne algorytmy pochodzą ze",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "Starożytności",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "XIX wieku",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "średniowiecza",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "8520076f08c2",
+      "q": "cylindry na dysku twardym to",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "równooddalone do środka fragmenty powierzchni na różnych talerzach powstałe w czasie formatowania",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "spieralnie ułożone fragmenty powierzchni nad którymi przesuwaja sie głowice",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "urządzenia o bardzo małym tarciu w którym kręci się oś dysku",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "8a65356afc64",
+      "q": "Al-Chwarizmi:",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "opracowal teorię rozwiązywania równań algebralcznych",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "utrzymywal się z nauki",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "pisal pierwsze programy komputerowe",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "fbb53017ddd4",
+      "q": "Za pomocą algorytmu Eratostenesa możemy",
+      "f": "text",
+      "scope": "exam",
+      "a": [
+        {
+          "t": "wyznaczyć wszystkie liczby pierwsze mniejsze od n uzywając dodatkowej pamięci liniowej względem rozmiaru liczby n",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "wyznaczyć liczbę liczb pierwszych nieprzekraczających danej wartości",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "wyznaczyc wszystkie liczby pierwsze mniejsze od n uzywając dodatkowej pamięci wykladniczej względem rozmiaru liczby n",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    }
+  ]
+}

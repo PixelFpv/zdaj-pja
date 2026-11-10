@@ -1,0 +1,68 @@
+{
+  "courseId": "grk",
+  "questions": [
+    {
+      "id": "06bbb5d0046e",
+      "q": "Które zdania o podstawowych algorytmach techniki rastrowej są prawdziwe?",
+      "f": "text",
+      "a": [
+        {
+          "t": "dwa przecinające się odcinki mogą nie mieć wspólnego piksela",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "odcinek o współrzędnych końcowych (2,0), (5,6) narysowany przy wykorzystaniu algorytmu Bresenhama składa się z 6 pikseli",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "efekt aliasingu można usunąć korzystając z metody Gourauda",
+          "c": false,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "18d868739227",
+      "q": "Które zdania o krzywych Béziera są prawdziwe?",
+      "f": "text",
+      "a": [
+        {
+          "t": "pierwsze 3 punkty kontrolne muszą leżeć na jednej prostej",
+          "c": false,
+          "f": "text"
+        },
+        {
+          "t": "stopień wielomianu zależy od liczby punktów kontrolnych",
+          "c": true,
+          "f": "text"
+        },
+        {
+          "t": "zmiana położenia dowolnego punku kontrolnego powoduje zmianę wyglądu całej krzywej",
+          "c": true,
+          "f": "text"
+        }
+      ],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    },
+    {
+      "id": "27c135a2eb03",
+      "q": "Co to są barwy monochromatyczne?",
+      "f": "text",
+      "back": "Barwy związane tylko z jedną długością fali świetlnej.",
+      "a": [],
+      "tags": [
+        "z materiałów",
+        "sprawdzone przez AI"
+      ]
+    }
+  ]
+}
