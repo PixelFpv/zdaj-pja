@@ -18,16 +18,18 @@ function CourseEntry({ course }: { course: Course }) {
   const files = course.files?.total ?? 0;
   const empty = !questions && !files;
   return (
-    <Link to={`/c/${encodeURIComponent(course.id)}`} className={`entry ${empty ? 'empty' : ''}`}>
-      <span className="entry-code">{course.code}</span>
-      {course.name && <span className="entry-name">{course.name}</span>}
+    <div className={`entry ${empty ? 'empty' : ''}`}>
+      <Link to={`/c/${encodeURIComponent(course.id)}`} className="entry-main">
+        <span className="entry-code">{course.code}</span>
+        {course.name && <span className="entry-name">{course.name}</span>}
+      </Link>
       <span className="entry-meta">
-        {questions > 0 && <b>{questions} {t('course.q')}</b>}
+        {questions > 0 && <Link className="entry-list" to={`/c/${encodeURIComponent(course.id)}?tab=questions`} title={t('home.openList')}>{questions} {t('course.q')}</Link>}
         {questions === 0 && files > 0 && <span>{t('course.onlyMaterials')}</span>}
         {empty && <span>{t('home.noContent')}</span>}
         {course.elective && <em>{t('home.elective')}</em>}
       </span>
-    </Link>
+    </div>
   );
 }
 

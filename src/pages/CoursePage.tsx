@@ -1,4 +1,4 @@
-import { ExternalLink, Plus, Trash2, Upload } from 'lucide-react';
+import { BookOpenCheck, ClipboardCheck, ExternalLink, Layers, ListChecks, MessageCircleQuestion, PencilLine, Plus, Puzzle, Repeat2, Scale, Trash2, Upload, type LucideIcon } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { LoadError, Loading, Message, Rich, useTitle } from '../components/Common';
@@ -61,15 +61,15 @@ export function CoursePage() {
   );
 }
 
-const MODES: { mode: StudyMode; usable: (keyed: Card[], unkeyed: Card[]) => boolean }[] = [
-  { mode: 'review', usable: (k) => k.length > 0 },
-  { mode: 'test', usable: (k) => k.some((c) => buildOptions(c, k).length >= 2) },
-  { mode: 'open', usable: (_, u) => u.length > 0 },
-  { mode: 'flashcards', usable: (k) => k.length > 0 },
-  { mode: 'learn', usable: (k) => k.some((c) => buildOptions(c, k).length >= 2) },
-  { mode: 'write', usable: (k) => k.some((c) => typedAnswer(c)) },
-  { mode: 'match', usable: (k) => k.filter((c) => typedAnswer(c)).length >= 4 },
-  { mode: 'truefalse', usable: (k) => k.some((c) => (c.answers.length >= 2 && correctAnswers(c).length > 0) || !!c.back?.trim()) },
+const MODES: { mode: StudyMode; icon: LucideIcon; usable: (keyed: Card[], unkeyed: Card[]) => boolean }[] = [
+  { mode: 'review', icon: Repeat2, usable: (k) => k.length > 0 },
+  { mode: 'test', icon: ClipboardCheck, usable: (k) => k.some((c) => buildOptions(c, k).length >= 2) },
+  { mode: 'open', icon: MessageCircleQuestion, usable: (_, u) => u.length > 0 },
+  { mode: 'flashcards', icon: Layers, usable: (k) => k.length > 0 },
+  { mode: 'learn', icon: BookOpenCheck, usable: (k) => k.some((c) => buildOptions(c, k).length >= 2) },
+  { mode: 'write', icon: PencilLine, usable: (k) => k.some((c) => typedAnswer(c)) },
+  { mode: 'match', icon: Puzzle, usable: (k) => k.filter((c) => typedAnswer(c)).length >= 4 },
+  { mode: 'truefalse', icon: Scale, usable: (k) => k.some((c) => (c.answers.length >= 2 && correctAnswers(c).length > 0) || !!c.back?.trim()) },
 ];
 
 function LearnTab({ course, cards }: { course: Course; cards: Card[] }) {
@@ -152,10 +152,21 @@ function LearnTab({ course, cards }: { course: Course; cards: Card[] }) {
         <section>
           <h2 className="section-title">{t('course.modes')}</h2>
           <div className="mode-list">
-            {MODES.filter(({ usable }) => usable(keyed, unkeyed)).map(({ mode }) => (
+            <Link className="mode-row" to={`/c/${encodeURIComponent(course.id)}?tab=questions`}>
+              <ListChecks className="mode-icon" size={26} strokeWidth={1.75} aria-hidden />
+              <span className="mode-text">
+                <span className="mode-name">{t('mode.list')}</span>
+                <span className="mode-desc">{t('mode.list.d')}</span>
+              </span>
+              <span className="mode-count">{pool.length}</span>
+            </Link>
+            {MODES.filter(({ usable }) => usable(keyed, unkeyed)).map(({ mode, icon: Icon }) => (
               <Link key={mode} className="mode-row" to={`/c/${encodeURIComponent(course.id)}/study/${mode}?${query}`}>
-                <span className="mode-name">{t(`mode.${mode}` as Key)}</span>
-                <span className="mode-desc">{t(`mode.${mode}.d` as Key)}</span>
+                <Icon className="mode-icon" size={26} strokeWidth={1.75} aria-hidden />
+                <span className="mode-text">
+                  <span className="mode-name">{t(`mode.${mode}` as Key)}</span>
+                  <span className="mode-desc">{t(`mode.${mode}.d` as Key)}</span>
+                </span>
                 {mode === 'open' && <span className="mode-count">{unkeyed.length}</span>}
               </Link>
             ))}
@@ -198,28 +209,43 @@ function QuestionsTab({ cards }: { cards: Card[] }) {
   const { t } = useI18n();
   const [query, setQuery] = useState('');
   const [limit, setLimit] = useState(PAGE);
+  const [kind, setKind] = useState<'all' | 'closed' | 'open'>('all');
+  const [showAnswers, setShowAnswers] = useState(true);
 
   const results = useMemo(() => {
     const needle = normalizeAnswer(query);
-    if (!needle) return cards;
-    return cards.filter((c) => normalizeAnswer(`${toPlain(c.front, c.format)} ${c.answers.map((a) => toPlain(a.t, a.f)).join(' ')} ${c.back ?? ''}`).includes(needle));
-  }, [cards, query]);
+    const ofKind = kind === 'all' ? cards : cards.filter((c) => hasKey(c) === (kind === 'closed'));
+    if (!needle) return ofKind;
+    return ofKind.filter((c) => normalizeAnswer(`${toPlain(c.front, c.format)} ${c.answers.map((a) => toPlain(a.t, a.f)).join(' ')} ${c.back ?? ''}`).includes(needle));
+  }, [cards, query, kind]);
 
   return (
     <div className="stack">
-      <div className="filters">
+      <div className="list-tools">
         <input className="input" type="search" value={query} onChange={(e) => { setQuery(e.target.value); setLimit(PAGE); }} placeholder={t('questions.search')} aria-label={t('questions.search')} />
+        <div className="segmented" role="group">
+          {(['all', 'closed', 'open'] as const).map((k) => (
+            <button key={k} type="button" className={kind === k ? 'on' : ''} aria-pressed={kind === k} onClick={() => { setKind(k); setLimit(PAGE); }}>{t(`questions.type.${k}`)}</button>
+          ))}
+        </div>
+        <label className="check small"><input type="checkbox" checked={showAnswers} onChange={(e) => setShowAnswers(e.target.checked)} /> {t('questions.showAnswers')}</label>
         <span className="muted">{t('questions.count', { n: results.length })}</span>
       </div>
+      {results.length === 0 && <p className="muted">{t('questions.none')}</p>}
       <div className="question-list">
-        {results.slice(0, limit).map((card) => <QuestionRow key={card.id} card={card} />)}
+        {results.slice(0, limit).map((card) => <QuestionRow key={card.id} card={card} showAnswers={showAnswers} />)}
       </div>
-      {limit < results.length && <button type="button" className="btn wide" onClick={() => setLimit(limit + PAGE)}>{t('common.showMore')}</button>}
+      {limit < results.length && (
+        <div className="row center">
+          <button type="button" className="btn" onClick={() => setLimit(limit + PAGE)}>{t('common.showMore')}</button>
+          <button type="button" className="btn" onClick={() => setLimit(results.length)}>{t('questions.showAll', { n: results.length })}</button>
+        </div>
+      )}
     </div>
   );
 }
 
-function QuestionRow({ card }: { card: Card }) {
+function QuestionRow({ card, showAnswers }: { card: Card; showAnswers: boolean }) {
   const { t } = useI18n();
   return (
     <article className="question-row">
@@ -235,11 +261,14 @@ function QuestionRow({ card }: { card: Card }) {
       {card.code && <pre className="code">{card.code}</pre>}
       {card.answers.length > 0 && (
         <ul className="answer-list">
-          {card.answers.map((a, i) => <li key={i} className={a.c ? 'yes' : ''}><span aria-hidden>{a.c ? '✓' : '·'}</span><Rich text={a.t} format={a.f} inline /></li>)}
+          {card.answers.map((a, i) => {
+            const marked = showAnswers && a.c;
+            return <li key={i} className={marked ? 'yes' : ''}><span aria-hidden>{marked ? '✓' : '·'}</span><Rich text={a.t} format={a.f} inline /></li>;
+          })}
         </ul>
       )}
-      {card.back && !card.answers.length && <div className="plain-back"><Rich text={card.back} format={card.format === 'md' ? 'md' : 'text'} /></div>}
-      {card.why && <p className="why">{card.why}</p>}
+      {showAnswers && card.back && !card.answers.length && <div className="plain-back"><Rich text={card.back} format={card.format === 'md' ? 'md' : 'text'} /></div>}
+      {showAnswers && card.why && <p className="why">{card.why}</p>}
       {card.src && <p className="hint left">{t('open.source')}: {card.src}</p>}
       {card.comments.length > 0 && (
         <details className="comments">
