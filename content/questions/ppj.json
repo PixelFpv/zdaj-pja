@@ -1,0 +1,3898 @@
+{
+  "courseId": "ppj",
+  "courseName": "Podstawy programowania w języku Java",
+  "questions": [
+    {
+      "id": "7fdfa56e9708",
+      "q": "Który typ prosty przechowuje wartości true i false?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "boolean",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "bool",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Boolean",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "bit",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "610e71e40dc5",
+      "q": "Która deklaracja zmiennej typu int jest poprawna?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "int liczba = 12;",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "integer liczba = 12;",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "int = liczba 12;",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "liczba int = 12;",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "968d824e7d93",
+      "q": "Który literał ma w Javie domyślnie typ double?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "3.14",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "3.14f",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3L",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "58dc32de93df",
+      "q": "Który zapis jest poprawnym literałem typu char?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "'Z'",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "\"Z\"",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "'ZZ'",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Z",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "7098a618a311",
+      "q": "Jakiego typu jest literał 123L?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "long",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "int",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "double",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "float",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "434d029d9483",
+      "q": "Która nazwa może być identyfikatorem zmiennej w Javie?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "wynik_2",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "2wynik",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "class",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "moj-wynik",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "9a90ca58e938",
+      "q": "Co wypisze: System.out.println(7 / 2);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "3",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "3.5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3.0",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "bf18a484356a",
+      "q": "Co wypisze: System.out.println(7 % 2);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "1",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "c3f9321f2b3e",
+      "q": "Co wypisze: System.out.println(2 + 3 * 4);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "14",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "20",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "24",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "9",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "136085ae8d82",
+      "q": "Co wypisze: System.out.println((2 + 3) * 4);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "20",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "14",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "24",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "9",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "c26b3b311737",
+      "q": "Co wypisze: System.out.println(\"A\" + 2 + 3);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "A23",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "A5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "5A",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "A 2 3",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "31fc6c537449",
+      "q": "Co wypisze: System.out.println(2 + 3 + \"A\");",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "5A",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "23A",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "A5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "A23",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "9771870e83ee",
+      "q": "Które przypisanie jest poprawne bez jawnego rzutowania?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "double x = 5;",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "int x = 5.8;",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "byte x = 200;",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "boolean x = 1;",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "a52cbe43c537",
+      "q": "Co wypisze: System.out.println((int) 8.9);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "8",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "9",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "8.9",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "0bc8b6ede4f9",
+      "q": "Co wypisze: System.out.println((int) -3.9);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "-3",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "-4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "2a93be8cfa2b",
+      "q": "Co wypisze: System.out.println(5 / 2.0);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "2.5",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "92acc651d08b",
+      "q": "Jakiego typu jest wynik wyrażenia 4 + 2.0?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "double",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "int",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "float",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "long",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "b9c2a322f328",
+      "q": "Która instrukcja zwiększa x o 1?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "x++;",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "x += 1;",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "x = x + 1;",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "x =+ 1;",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "c2c8d26f004d",
+      "q": "Co wypisze: int x = 4; System.out.println(x++);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "4",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "d1ed3cc08599",
+      "q": "Co wypisze: int x = 4; System.out.println(++x);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "5",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "4772e7cc043f",
+      "q": "Co wypisze: int x = 3; x *= 4; System.out.println(x);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "12",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "7",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "34",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "6ac8844ceeff",
+      "q": "Co wypisze: int x = 17; x %= 5; System.out.println(x);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "2",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "17",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "358d1a75073f",
+      "q": "Który operator oznacza logiczne OR z krótkim spięciem?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "||",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "|",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "&&",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "^",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5e4da3c2fd61",
+      "q": "Który operator oznacza logiczne AND z krótkim spięciem?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "&&",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "&",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "||",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "!",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "150af73fdbb5",
+      "q": "Co wypisze: System.out.println(!false);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "true",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "false",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "6064ea100dd0",
+      "q": "Co wypisze: System.out.println(3 > 2 && 2 > 5);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "false",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "true",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "86367950a830",
+      "q": "Co wypisze: System.out.println(3 > 2 || 2 > 5);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "true",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "false",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "a5631a5da9d3",
+      "q": "Co wypisze: System.out.println(5 == 5.0);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "true",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "false",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "bb31dfe5198f",
+      "q": "Który operator służy do porównania dwóch wartości pod kątem równości?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "==",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "=",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "===",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "!=",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5cbab27c2ef6",
+      "q": "Co wypisze: System.out.println(10 - 6 / 2);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "7",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "8",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "00baa78f3836",
+      "q": "Co wypisze: int a = 2, b = 5; System.out.println(a > b ? a : b);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "5",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "true",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "false",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "484b4a1b5322",
+      "q": "Co wypisze: System.out.println(11 / 4 * 2);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "4",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "5.5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5a2976b9f9a7",
+      "q": "Co wypisze: System.out.println(11 * 2 / 4);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "5",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "5.5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "31948266387e",
+      "q": "Co wypisze: System.out.println(1 + 2 + \"3\" + 4);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "334",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "1234",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "10",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "37",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "edc940061cbd",
+      "q": "Które zdanie o zmiennej lokalnej w Javie jest prawdziwe?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Przed odczytem musi mieć przypisaną wartość.",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Zawsze ma domyślnie wartość 0.",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zawsze jest widoczna w całym programie.",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nie można jej modyfikować.",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "3ae6198efd65",
+      "q": "Co wypisze: int x = 8; if (x % 2 == 0) System.out.println(\"P\"); else System.out.println(\"N\");",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "P",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "N",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "PN",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nic",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "a5da2f475c1f",
+      "q": "Co wypisze: int x = 0; if (x > 0) System.out.print(\"A\"); if (x >= 0) System.out.print(\"B\");",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "B",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "A",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "AB",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nic",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "274700a9eac0",
+      "q": "Co wypisze: int x = 5; if (x > 2) if (x > 10) System.out.print(\"A\"); else System.out.print(\"B\");",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "B",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "A",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "AB",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nic",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "d8a43fbec3aa",
+      "q": "Co wypisze: int x = 7; if (x < 5) System.out.print(1); else if (x < 10) System.out.print(2); else System.out.print(3);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "2",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "12",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "6c3a5bec4ab2",
+      "q": "Co wypisze: int x = 10; if (x > 5 && x < 10) System.out.print(\"T\"); else System.out.print(\"N\");",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "N",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "T",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "TN",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nic",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "df78b3e50a9c",
+      "q": "Co wypisze: int a = 4, b = 4; if (a == b) System.out.print(\"=\"); else System.out.print(\"!\");",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "=",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "!",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "==",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nic",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "c7da317e90bd",
+      "q": "Co wypisze: int x = -2; System.out.println(x >= 0 ? \"plus\" : \"minus\");",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "minus",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "plus",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "-2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "false",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "0e2edae1ea21",
+      "q": "Który typ NIE może być wyrażeniem sterującym w klasycznym switch w Javie?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "double",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "int",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "char",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "String",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "2d678ed7d0a5",
+      "q": "Co wypisze: int x = 2; switch(x) { case 1: System.out.print(\"A\"); break; case 2: System.out.print(\"B\"); break; default: System.out.print(\"C\"); }",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "B",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "A",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "C",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "BC",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "c21ec619c5ca",
+      "q": "Co wypisze: int x = 1; switch(x) { case 1: System.out.print(\"A\"); case 2: System.out.print(\"B\"); break; default: System.out.print(\"C\"); }",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "AB",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "A",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "B",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "ABC",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "e5e58a2e1116",
+      "q": "Co wypisze: int x = 9; switch(x) { case 1: System.out.print(\"A\"); break; default: System.out.print(\"D\"); }",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "D",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "A",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "AD",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nic",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "6098944d01ee",
+      "q": "Co wypisze: boolean b = false; if (!b) System.out.print(1); else System.out.print(0);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "1",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "true",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "false",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "75b7713863aa",
+      "q": "Co wypisze: int x = 3; if (x % 3 == 0 && x % 2 != 0) System.out.print(\"OK\");",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "OK",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Nic",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "false",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "44e618b97735",
+      "q": "Co wypisze: int x = 6; if (x > 3) { x -= 2; } if (x == 4) System.out.print(x);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "4",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nic",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "14c0ed963616",
+      "q": "Co wypisze: int x = 2; if (x == 1) System.out.print(\"A\"); else if (x == 2) System.out.print(\"B\"); else System.out.print(\"C\");",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "B",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "A",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "C",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "BC",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "ca0843ccae4a",
+      "q": "Który zapis warunku jest poprawny w Javie?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "if (x != 0) { System.out.println(x); }",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "if x != 0 { System.out.println(x); }",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "if (x = 0) { System.out.println(x); }",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "if (x <> 0) { System.out.println(x); }",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "f935cbfcc136",
+      "q": "Co wypisze: int a = 2, b = 7; System.out.println(a < b ? b - a : a - b);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "5",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "-5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "9",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "true",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "aa8f980f5c58",
+      "q": "Co wypisze: int x = 12; if (x % 2 == 0) System.out.print(\"A\"); if (x % 3 == 0) System.out.print(\"B\");",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "AB",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "A",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "B",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nic",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "4a61ae62161f",
+      "q": "Co wypisze: int x = 5; if (x < 0 || x > 3) System.out.print(\"T\"); else System.out.print(\"F\");",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "T",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "F",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "true",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nic",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "8e2d2bdf9183",
+      "q": "Co wypisze: int x = 1; if (x++ == 1) System.out.print(x);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "2",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nic",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "76509a1e2ec4",
+      "q": "Co wypisze: for (int i = 0; i < 3; i++) System.out.print(i);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "012",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "123",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0123",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "01",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "11d5b303794c",
+      "q": "Co wypisze: for (int i = 1; i <= 4; i++) System.out.print(i);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "1234",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "0123",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "123",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "12345",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "6551eb1060ec",
+      "q": "Co wypisze: for (int i = 5; i > 2; i--) System.out.print(i);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "543",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "5432",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "432",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "54",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "c4503c6b3978",
+      "q": "Co wypisze: for (int i = 0; i < 6; i += 2) System.out.print(i);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "024",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "0246",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "135",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "012345",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5800c99d5e43",
+      "q": "Co wypisze: int s = 0; for (int i = 1; i <= 4; i++) s += i; System.out.print(s);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "10",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "15",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "a46cd3e8f3af",
+      "q": "Co wypisze: int p = 1; for (int i = 1; i <= 4; i++) p *= i; System.out.print(p);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "24",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "10",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "16",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "22ca214fa9fb",
+      "q": "Ile razy wykona się pętla: for (int i = 0; i < 10; i += 3) { }?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "4",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "10",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "80898631da87",
+      "q": "Ile razy wykona się pętla: for (int i = 8; i >= 0; i -= 2) { }?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "5",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "8",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "b3afc76921cb",
+      "q": "Co wypisze: int i = 0; while (i < 3) { System.out.print(i); i++; }",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "012",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "123",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0123",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nic",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "dd1f058b268c",
+      "q": "Co wypisze: int i = 3; while (i > 0) { System.out.print(i); i--; }",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "321",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "3210",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "210",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "123",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "8549c9f8f690",
+      "q": "Co wypisze: int i = 5; while (i < 5) { System.out.print(\"A\"); }",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Nic",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "A",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "AAAAA",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "2f47750aa8ff",
+      "q": "Co wypisze: int i = 5; do { System.out.print(\"A\"); } while (i < 5);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "A",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Nic",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "AA",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "f8e592312b79",
+      "q": "Co wypisze: int i = 0; do { System.out.print(i); i++; } while (i < 3);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "012",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "123",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "01",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0123",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "c74a35cbd3cc",
+      "q": "Co wypisze: for (int i = 0; i < 5; i++) { if (i == 3) break; System.out.print(i); }",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "012",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "0123",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "01234",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "34",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "947824126f70",
+      "q": "Co wypisze: for (int i = 0; i < 5; i++) { if (i == 2) continue; System.out.print(i); }",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "0134",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "01234",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "01",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "234",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "83f8829fd77d",
+      "q": "Co wypisze: int x = 1; while (x < 20) x *= 2; System.out.print(x);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "32",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "16",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "20",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "64",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "8a3733386b3c",
+      "q": "Co wypisze: int x = 10; while (x > 1) x /= 2; System.out.print(x);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "1",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "f0087b8f52ca",
+      "q": "Ile razy wykona się: for (int i = 2; i < 2; i++) { }?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "0",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nieskończenie wiele",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "9ebb559a31e0",
+      "q": "Co wypisze: for (int i = 1; i < 8; i *= 2) System.out.print(i);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "124",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "1248",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "1234567",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "248",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "64d147fd0765",
+      "q": "Co wypisze: int s = 0; for (int i = 0; i <= 6; i += 2) s += i; System.out.print(s);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "12",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "9",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "20",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "fa1a0ffafd91",
+      "q": "Co wypisze: int n = 123; while (n > 0) { System.out.print(n % 10); n /= 10; }",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "321",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "123",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "312",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "111",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5389e82632ff",
+      "q": "Co wypisze: int n = 1234, c = 0; while (n > 0) { c++; n /= 10; } System.out.print(c);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "4",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "1234",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "8d618ec0fedb",
+      "q": "Co wypisze: int i = 0; for (; i < 3; ) { i++; } System.out.print(i);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "3",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "615dce69fc1f",
+      "q": "Co wypisze: for (int i = 0; i < 4; i++) { if (i % 2 == 0) System.out.print(\"X\"); }",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "XX",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "XXXX",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "X",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nic",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "992af52915ae",
+      "q": "Co wypisze: int a = 0; for (int i = 0; i < 3; i++) a = a * 10 + i; System.out.print(a);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "12",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "123",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "102",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "d010b802bbd0",
+      "q": "Ile znaków * wypisze: for (int i = 0; i < 3; i++) for (int j = 0; j < 2; j++) System.out.print(\"*\");?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "6",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "9",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5b2b5367decc",
+      "q": "Co wypisze: for (int i = 1; i <= 3; i++) for (int j = 1; j <= i; j++) System.out.print(\"*\");",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "******",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "***",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "*****",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "*********",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "e2b55250085c",
+      "q": "Co wypisze: for (int i = 0; i < 2; i++) { for (int j = 0; j < 3; j++) System.out.print(j); }",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "012012",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "012",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "001122",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "123123",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "4e9949630f53",
+      "q": "Ile razy wykona się instrukcja print: for (int i = 0; i < 4; i++) for (int j = i; j < 4; j++) System.out.print(\"X\");?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "10",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "16",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "def7ed37c6a6",
+      "q": "Co wypisze: for (int i = 1; i <= 3; i++) { for (int j = 0; j < i; j++) System.out.print(i); }",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "122333",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "123",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "111223",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "112233",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "4edbb0bbc267",
+      "q": "Co wypisze: int c = 0; for (int i = 0; i < 3; i++) for (int j = 0; j < 3; j++) if (i == j) c++; System.out.print(c);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "3",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "9",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "1db12fb2d629",
+      "q": "Co wypisze: int c = 0; for (int i = 0; i < 3; i++) for (int j = 0; j < 3; j++) if (i < j) c++; System.out.print(c);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "3",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "9",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5c8657db1274",
+      "q": "Co wypisze: int i = 0; while (i++ < 3) { } System.out.print(i);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "4",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "2ea10235dec8",
+      "q": "Co wypisze: int i = 0; while (++i < 3) { } System.out.print(i);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "3",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "99d91b05347c",
+      "q": "Co wypisze: int s = 0; for (int i = 1; i <= 5; i++) if (i % 2 != 0) s += i; System.out.print(s);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "9",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "15",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "f4a374490dd9",
+      "q": "Która deklaracja tworzy tablicę pięciu elementów typu int?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "int[] a = new int[5];",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "int a = new int[5];",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "int[] a = new int(5);",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "int[5] a = new int[];",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "29f84c9b883b",
+      "q": "Co wypisze: int[] a = new int[3]; System.out.print(a.length);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "3",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "8533a8492b14",
+      "q": "Co wypisze: int[] a = {4, 7, 9}; System.out.print(a[0]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "4",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "7",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "9",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "901d74bb9dac",
+      "q": "Co wypisze: int[] a = {4, 7, 9}; System.out.print(a[2]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "9",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "7",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "220d3a82a225",
+      "q": "Który jest ostatnim poprawnym indeksem tablicy int[] a = new int[8];?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "7",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "8",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "9",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "bada997c215b",
+      "q": "Co wypisze: int[] a = new int[2]; System.out.print(a[1]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "0",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "null",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "7af03d25e875",
+      "q": "Co wypisze: boolean[] a = new boolean[2]; System.out.print(a[0]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "false",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "true",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "null",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "42a0f97a1ebb",
+      "q": "Co wypisze: char[] a = {'A', 'B'}; System.out.print(a[1]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "B",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "A",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "66",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5f2408c8bb56",
+      "q": "Co wypisze: int[] a = {2, 5, 8}; a[1] = 10; System.out.print(a[1]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "10",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "8",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "1a41b34eeed3",
+      "q": "Co wypisze: int[] a = {1, 2, 3}; a[0] += a[2]; System.out.print(a[0]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "4",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "362935aa791f",
+      "q": "Co wypisze: int[] a = {3, 6, 9}; System.out.print(a.length - 1);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "2",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "9",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "b1c031157c6a",
+      "q": "Co wypisze: int[] a = {3, 6, 9}; System.out.print(a[a.length - 1]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "9",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "85a1cde127ab",
+      "q": "Co wypisze: int[] a = {1, 2, 3, 4}; int s = 0; for (int i = 0; i < a.length; i++) s += a[i]; System.out.print(s);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "10",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "24",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "3b3f5f0b1b54",
+      "q": "Co wypisze: int[] a = {2, 4, 6}; for (int x : a) System.out.print(x);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "246",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "012",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "264",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "123",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "c15d5ca9e57a",
+      "q": "Co wypisze: int[] a = {5, 1, 8}; int m = a[0]; for (int x : a) if (x > m) m = x; System.out.print(m);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "8",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "14",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "603266afece1",
+      "q": "Co wypisze: int[] a = {5, 1, 8}; int m = a[0]; for (int x : a) if (x < m) m = x; System.out.print(m);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "1",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "8",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "d68f4b4af9cf",
+      "q": "Co wypisze: int[] a = {1, 2, 3}; for (int i = 0; i < a.length; i++) a[i] *= 2; System.out.print(a[2]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "6",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "32e899abe7b7",
+      "q": "Co wypisze: int[] a = {1, 2, 3}; for (int x : a) x *= 2; System.out.print(a[2]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "3",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "dd897fb43b70",
+      "q": "Co wypisze: int[] a = {1, 2, 3, 4}; int c = 0; for (int x : a) if (x % 2 == 0) c++; System.out.print(c);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "2",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "0f01b8b5da3f",
+      "q": "Co wypisze: int[] a = {4, 1, 4, 2, 4}; int c = 0; for (int x : a) if (x == 4) c++; System.out.print(c);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "3",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "0e80085066bc",
+      "q": "Co wypisze: int[] a = {2, 3, 4}; System.out.print(a[0] * a[1] + a[2]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "10",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "14",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "24",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "9",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "598762336c6f",
+      "q": "Co wypisze: int[] a = {1, 2, 3}; int t = a[0]; a[0] = a[2]; a[2] = t; System.out.print(a[0]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "3",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "e21db74171d3",
+      "q": "Co wypisze: int[] a = {1, 2, 3}; int t = a[0]; a[0] = a[2]; a[2] = t; System.out.print(a[2]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "1",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "9576bff0cf8a",
+      "q": "Co wypisze: int[] a = {2, 4, 6, 8}; for (int i = a.length - 1; i >= 0; i--) System.out.print(a[i]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "8642",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "2468",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "86420",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "8426",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "e5c28698d7d5",
+      "q": "Co wypisze: int[] a = {1, 3, 5}; int[] b = a; b[0] = 9; System.out.print(a[0]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "9",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "212e20add1e2",
+      "q": "Co wypisze: int[] a = {1, 2}; int[] b = {1, 2}; System.out.print(a == b);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "false",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "true",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "4d608dc76e41",
+      "q": "Co wypisze: int[] a = {1, 2}; int[] b = a; System.out.print(a == b);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "true",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "false",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "57a783075ff4",
+      "q": "Co się stanie przy odczycie a[3] dla int[] a = new int[3];?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Zostanie zgłoszony ArrayIndexOutOfBoundsException.",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Zostanie zwrócone 0.",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zostanie zwrócone null.",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tablica automatycznie się powiększy.",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "21276c10e0be",
+      "q": "Co wypisze: int[] a = new int[4]; a[3] = 7; System.out.print(a[0] + a[3]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "7",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "11",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "97b8e2a694d7",
+      "q": "Co wypisze: int[] a = {9, 8, 7}; System.out.print(a[1] - a[2]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "1",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "-1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "8",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "da5e73a91c05",
+      "q": "Co wypisze: int[] a = {2, 4, 6, 8}; int s = 0; for (int i = 1; i < a.length; i += 2) s += a[i]; System.out.print(s);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "12",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "20",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "8",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "c577c3cda34c",
+      "q": "Co wypisze: int[] a = {1, 2, 3, 4}; for (int i = 1; i < a.length; i++) a[i] += a[i - 1]; System.out.print(a[3]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "10",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "7",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "9",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "b472656f29f4",
+      "q": "Co wypisze: int[] a = {1, 2, 3, 4}; for (int i = a.length - 1; i > 0; i--) a[i] += a[i - 1]; System.out.print(a[3]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "7",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "10",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "8c1c4b145d35",
+      "q": "Co wypisze: int[] a = {3, 3, 3}; int s = 0; for (int i = 0; i < a.length; i++) s += a[i] * i; System.out.print(s);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "9",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "18",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "f1efbd47e780",
+      "q": "Co wypisze: int[] a = {1, 2, 3}; int i = 0; while (i < a.length) { a[i]++; i++; } System.out.print(a[1]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "3",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "84547833f006",
+      "q": "Co wypisze: int[] a = {1, 0, 2, 0}; int c = 0; for (int x : a) if (x == 0) c++; System.out.print(c);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "2",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "d30f8ef2d64c",
+      "q": "Co wypisze: int[] a = {5, 6, 7}; System.out.print(a[a[0] - 4]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "6",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "7",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd wykonania",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "737b9a026c50",
+      "q": "Co wypisze: int[] a = {1, 2, 0}; System.out.print(a[a[2]]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "1",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd wykonania",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "aa9aa1f71d77",
+      "q": "Co wypisze: int[] a = {4, 5, 6}; a = new int[2]; System.out.print(a.length + a[0]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "2",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "09229164e437",
+      "q": "Które zdanie o długości tablicy w Javie jest prawdziwe?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Długość tablicy odczytuje się przez pole length.",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Długość tablicy odczytuje się przez length().",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tablica zawsze ma co najmniej jeden element.",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Długość tablicy rośnie automatycznie po przypisaniu poza zakresem.",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "62577c891bf1",
+      "q": "Co wypisze: int[] a = {}; System.out.print(a.length);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "0",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "null",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "e4d0d4a85300",
+      "q": "Co wypisze: int[] a = {2, 4, 6}; int s = 0; for (int i = 0; i < a.length - 1; i++) s += a[i]; System.out.print(s);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "6",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "12",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "448bbba03abe",
+      "q": "Co wypisze: int[] a = {7, 2, 9}; int k = 0; for (int i = 1; i < a.length; i++) if (a[i] > a[k]) k = i; System.out.print(k);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "2",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "9",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "ee7a44f7819e",
+      "q": "Co wypisze: int[] a = {4, 2, 8}; int k = 0; for (int i = 1; i < a.length; i++) if (a[i] < a[k]) k = i; System.out.print(k);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "1",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "8",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "983e02bacad1",
+      "q": "Co wypisze: int[] a = {1, 2, 3}; for (int i = 0; i < a.length / 2; i++) { int t = a[i]; a[i] = a[a.length - 1 - i]; a[a.length - 1 - i] = t; } System.out.print(a[0]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "3",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "3064b370ad9b",
+      "q": "Co wypisze: int[] a = {1, 2, 3, 4, 5}; System.out.print(a[a.length / 2]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "3",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "5",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "22f5e0cbbad3",
+      "q": "Co wypisze: int[] a = {2, 4, 6}; int s = 0; for (int x : a) if (x > 3) s += x; System.out.print(s);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "10",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "12",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "6",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "4",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "2ec8b66cccd5",
+      "q": "Co wypisze: int[] a = {1, 2, 3}; int[] b = a.clone(); b[0] = 9; System.out.print(a[0]);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "1",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "9",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Błąd kompilacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "0f5048b5fb7f",
+      "q": "Co wypisze: int[] a = {0, 1, 2, 3}; int c = 0; for (int i = 0; i < a.length; i++) if (a[i] == i) c++; System.out.print(c);",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "4",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "3",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "2",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    }
+  ]
+}
