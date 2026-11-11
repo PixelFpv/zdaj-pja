@@ -37,6 +37,8 @@ Workflow `deploy.yml` buduje stronę po każdym pushu i codziennie, więc nowe p
 
 Na stronie: **Dodaj pytania**. Pytania działają od razu w tej przeglądarce, a przycisk **Opublikuj dla wszystkich** tworzy zgłoszenie na GitHubie. Zgłoszenia właściciela i współpracowników są dodawane automatycznie, a pozostałe po nadaniu etykiety `approved`. Trafiają do `content/questions/<przedmiot>.json`.
 
+Małe zestawy trafiają do zgłoszenia bezpośrednio. Większe (np. 200 pytań) nie zmieszczą się w linku, więc strona pobiera plik `pytania-<przedmiot>.json`, który przeciąga się do zgłoszenia. Automat odczytuje pytania z tego pliku, do 500 pytań i 2 MB na zgłoszenie.
+
 Pytania można też dopisać do tych plików ręcznie:
 
 ```json

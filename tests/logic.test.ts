@@ -3,7 +3,8 @@ import { existsSync, mkdtempSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { categorize, detectLanguage, mergeQuestions, parseIssueBody, parseMaterialIssue, parsePpjQuestions, safeMaterialName, storeMaterials, tagLanguages } from '../scripts/lib.mjs';
+import { publishLink } from '../src/lib/github';
+import { categorize, detectLanguage, loadIssueQuestions, mergeQuestions, parseIssueBody, parseMaterialIssue, parsePpjQuestions, safeMaterialName, storeMaterials, tagLanguages } from '../scripts/lib.mjs';
 import { trackedPath } from '../src/lib/analytics';
 import { looksLikeUtf8 } from '../src/lib/extract';
 import { generateCards } from '../src/lib/generate';
@@ -191,6 +192,39 @@ describe('material intake', () => {
     const root = tempRoot();
     await expect(storeMaterials(body(`[kol.pdf](${FILE_URL})`), root, server(new TextEncoder().encode('MZ program')))).rejects.toThrow(/does not match/);
     expect(existsSync(join(root, 'content'))).toBe(false);
+  });
+});
+
+describe('large question sets', () => {
+  const FILE = 'https://github.com/user-attachments/files/987/pytania-ppj.json';
+  const many = Array.from({ length: 200 }, (_, i) => ({
+    id: `x${i}`, q: `Pytanie numer ${i}: co robi instrukcja nr ${i}?`, f: 'md' as const,
+    a: [{ t: `Odpowiedź poprawna ${i}`, c: true, f: 'md' as const }, { t: `Odpowiedź błędna ${i}`, c: false, f: 'md' as const }],
+  }));
+  const served = (text: string) => (async () => new Response(text)) as typeof fetch;
+
+  it('turns 200 questions into a file that the workflow accepts', async () => {
+    const link = publishLink('ppj', 'PPJ', many, 'Drag {file} here');
+    expect(link.file?.name).toBe('pytania-ppj.json');
+    expect(link.url.length).toBeLessThan(7500);
+    expect(decodeURIComponent(link.url)).toContain('zdaj-pja:add-questions');
+    const body = `${decodeURIComponent(link.url.split('body=')[1])}\n[pytania-ppj.json](${FILE})`;
+    const parsed = await loadIssueQuestions(body, served(link.file!.content));
+    expect(parsed.courseId).toBe('ppj');
+    expect(parsed.questions).toHaveLength(200);
+  });
+
+  it('keeps small sets inline in the issue', async () => {
+    const link = publishLink('ppj', 'PPJ', many.slice(0, 2), 'Drag {file} here');
+    expect(link.file).toBeUndefined();
+    const parsed = await loadIssueQuestions(decodeURIComponent(link.url.split('body=')[1]), served(''));
+    expect(parsed.questions).toHaveLength(2);
+  });
+
+  it('rejects missing, foreign and broken attachments', async () => {
+    await expect(loadIssueQuestions('<!-- zdaj-pja:add-questions -->\nnothing', served('{}'))).rejects.toThrow(/No/);
+    await expect(loadIssueQuestions('[a.json](https://evil.example/a.json)', served('{}'))).rejects.toThrow(/No/);
+    await expect(loadIssueQuestions(`[a.json](${FILE})`, served('not json'))).rejects.toThrow(/not valid JSON/);
   });
 });
 

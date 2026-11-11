@@ -45,19 +45,26 @@ export const pendingMaterialsUrl = () =>
 
 export interface PublishLink {
   url: string;
-  /** Set when the content did not fit the URL and has to be pasted into the issue by hand. */
-  clipboard?: string;
+  /** Set when the questions do not fit in a link: this file has to be attached to the issue. */
+  file?: { name: string; content: string };
 }
 
-export function publishLink(courseId: string, courseName: string, questions: RawQuestion[]): PublishLink {
+/**
+ * Small sets go straight into the prefilled issue. Larger ones would exceed what
+ * a link can carry, so they are saved as a file the user drags into the issue.
+ */
+export function publishLink(courseId: string, courseName: string, questions: RawQuestion[], attachHint: string): PublishLink {
   const payload = {
     courseId,
     courseName,
     questions: questions.map(({ q, a, code, why, back, scope }) => ({ q, a, code, why, back, scope })),
   };
-  const body = `<!-- zdaj-pja:add-questions -->\n\`\`\`json\n${JSON.stringify(payload, null, 1)}\n\`\`\`\n`;
+  const json = JSON.stringify(payload, null, 1);
   const title = `[questions] ${courseId}: +${questions.length}`;
   const base = `https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}`;
-  const url = `${base}&body=${encodeURIComponent(body)}`;
-  return url.length <= MAX_URL ? { url } : { url: base, clipboard: body };
+  const inline = `${base}&body=${encodeURIComponent(`<!-- zdaj-pja:add-questions -->\n\`\`\`json\n${json}\n\`\`\`\n`)}`;
+  if (inline.length <= MAX_URL) return { url: inline };
+  const name = `pytania-${courseId}.json`;
+  const body = `<!-- zdaj-pja:add-questions -->\n${attachHint.replace('{file}', name)}\n\n`;
+  return { url: `${base}&body=${encodeURIComponent(body)}`, file: { name, content: json } };
 }

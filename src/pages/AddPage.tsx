@@ -26,6 +26,7 @@ export function AddPage() {
   const courseId = params.get('course') ?? '';
   const [tab, setTab] = useState<'single' | 'bulk'>('single');
   const [notice, setNotice] = useState<{ text: string; bad?: boolean } | null>(null);
+  const [publishNote, setPublishNote] = useState('');
   useTitle(t('add.title'));
 
   const courses = useMemo(() => data?.courses ?? [], [data]);
@@ -50,11 +51,16 @@ export function AddPage() {
     if (confirm(t('add.deleteConfirm'))) store(mine.filter((q) => q.id !== id));
   };
 
-  const publish = async () => {
-    const link = publishLink(courseId, course?.name || course?.code || courseId, mine);
-    if (link.clipboard) {
-      await navigator.clipboard.writeText(link.clipboard);
-      alert(t('add.publishCopied'));
+  const publish = () => {
+    const link = publishLink(courseId, course?.name || course?.code || courseId, mine, t('add.issueAttach'));
+    if (link.file) {
+      const url = URL.createObjectURL(new Blob([link.file.content], { type: 'application/json' }));
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = link.file.name;
+      a.click();
+      URL.revokeObjectURL(url);
+      setPublishNote(t('add.publishFile', { file: link.file.name }));
     }
     window.open(link.url, '_blank', 'noopener');
   };
@@ -104,9 +110,10 @@ export function AddPage() {
         <section className="stack">
           <div className="row between">
             <h2 className="section-title">{t('add.mine', { n: mine.length })}</h2>
-            <button type="button" className="btn primary" onClick={() => void publish()}><Send size={15} aria-hidden /> {t('add.publish')}</button>
+            <button type="button" className="btn primary" onClick={publish}><Send size={15} aria-hidden /> {t('add.publish')}</button>
           </div>
           <p className="hint left">{t('add.publishHint')}</p>
+          {publishNote && <p className="notice" role="status">{publishNote}</p>}
           <ul className="mine-list">
             {mine.map((q) => (
               <li key={q.id}>

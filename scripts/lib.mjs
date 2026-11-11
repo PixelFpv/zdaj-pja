@@ -168,11 +168,40 @@ const SCOPES = ['all', 'colloquium', 'exam'];
 const isText = (v, max = LIMITS.text) => typeof v === 'string' && v.trim().length > 0 && v.length <= max;
 const optionalText = (v) => v === undefined || v === null || isText(v);
 
+const MAX_QUESTIONS_FILE = 2 * 1024 * 1024;
+
 /** Extracts and validates the JSON block of a "share questions" issue. Throws on anything unexpected. */
 export function parseIssueBody(body) {
   const match = /```json\s*([\s\S]*?)```/.exec(body ?? '');
   if (!match) throw new Error('No ```json block found in the issue body.');
-  const data = JSON.parse(match[1]);
+  return validateQuestionsPayload(JSON.parse(match[1]));
+}
+
+/**
+ * Questions come either inline in a ```json block (small sets) or as an attached
+ * .json file (large sets that do not fit in a prefilled issue link).
+ */
+export async function loadIssueQuestions(body, fetchImpl = fetch) {
+  const text = body ?? '';
+  if (/```json/.test(text)) return parseIssueBody(text);
+  const link = [...text.matchAll(/\[([^\]]*)\]\((https:[^\s)]+)\)/g)]
+    .find((m) => ATTACHMENT_URL.test(m[2]) && /\.(json|txt)$/i.test(m[1] || m[2]));
+  if (!link) throw new Error('No ```json block or attached .json file found.');
+  const response = await fetchImpl(link[2], { signal: AbortSignal.timeout(60_000) });
+  if (!response.ok) throw new Error(`Could not download the attached file (HTTP ${response.status}).`);
+  const content = await response.text();
+  if (content.length > MAX_QUESTIONS_FILE) throw new Error('The attached file is larger than 2 MB.');
+  let data;
+  try {
+    data = JSON.parse(content);
+  } catch {
+    throw new Error('The attached file is not valid JSON.');
+  }
+  return validateQuestionsPayload(data);
+}
+
+export function validateQuestionsPayload(data) {
+  if (!data || typeof data !== 'object') throw new Error('Expected a JSON object.');
   if (!/^[a-z0-9][a-z0-9_-]{0,63}$/.test(data.courseId ?? '')) throw new Error('Invalid courseId.');
   if (!optionalText(data.courseName)) throw new Error('Invalid courseName.');
   if (!Array.isArray(data.questions) || !data.questions.length || data.questions.length > LIMITS.questions) {

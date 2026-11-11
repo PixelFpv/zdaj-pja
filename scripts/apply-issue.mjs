@@ -3,13 +3,13 @@
 import { createHash } from 'node:crypto';
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { mergeQuestions, parseIssueBody } from './lib.mjs';
+import { loadIssueQuestions, mergeQuestions } from './lib.mjs';
 
 const event = JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
 const output = (key, value) => appendFileSync(process.env.GITHUB_OUTPUT, `${key}=${value}\n`);
 
 try {
-  const incoming = parseIssueBody(event.issue.body);
+  const incoming = await loadIssueQuestions(event.issue.body);
   const dir = join('content', 'questions');
   const path = join(dir, `${incoming.courseId}.json`);
   const existing = existsSync(path) ? JSON.parse(readFileSync(path, 'utf8')) : null;
