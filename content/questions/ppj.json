@@ -4089,6 +4089,123 @@
           "f": "md"
         }
       ]
+    },
+    {
+      "id": "e053394d4f8d",
+      "q": "Który z poniższych zapisów jest poprawnym literałem typu double w języku Java?",
+      "f": "md",
+      "scope": "all",
+      "a": [
+        {
+          "t": "'5,5'",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "5.5",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "\"5.5\"",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "5,5",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "44ee9bc02941",
+      "q": "Co się stanie, gdy poniższy kod będzie wykonany? int i = 0; while (i++ < 5) { System.out.print(i + \" \"); }",
+      "f": "md",
+      "scope": "all",
+      "a": [
+        {
+          "t": "0 1 2 3 4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "1 2 3 4",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "1 2 3 4 5",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "5 4 3 2 1",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "0 1 2 3 4 5",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5844140c5f74",
+      "q": "Która konstrukcja w instrukcji switch definiuje domyślną akcję?",
+      "f": "md",
+      "scope": "all",
+      "a": [
+        {
+          "t": "other",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "case",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "break",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "default",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "50b2605b747b",
+      "q": "Który zapis jest poprawną pętlą while dla zmiennej x, dopóki x jest mniejsze od 5?",
+      "f": "md",
+      "scope": "all",
+      "a": [
+        {
+          "t": "do ( x++ ); while (x < 5)",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "do { x++; } while (x < 5);",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "do { x++; } until (x < 5);",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "while (x < 5) { x++; }",
+          "c": true,
+          "f": "md"
+        }
+      ]
     }
   ]
 }
