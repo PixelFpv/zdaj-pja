@@ -1,0 +1,4486 @@
+{
+  "courseId": "wdz",
+  "courseName": "Wstęp do zarządzania",
+  "questions": [
+    {
+      "id": "b8eed57dfb11",
+      "q": "Czym jest zarządzanie według R.W. Griffina?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Jedynie kontrolowaniem finansów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie wydawaniem poleceń podwładnym",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Procesem niezależnym od zasobów organizacji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zestawem działań skierowanych na zasoby organizacji w celu sprawnego i skutecznego osiągania celów",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "e561f9be5521",
+      "q": "Które działania stanowią podstawowe funkcje zarządzania?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Marketing, księgowość, logistyka i magazynowanie",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Planowanie, organizowanie, kierowanie i kontrolowanie",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie planowanie i kontrolowanie",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Rekrutacja, produkcja, sprzedaż i transport",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "b6304eef0f3a",
+      "q": "Czym jest skuteczność działania?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Zwiększaniem liczby pracowników",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Minimalizacją nakładów bez względu na rezultat",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Osiąganiem zamierzonego celu",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Przestrzeganiem każdej procedury bez wyjątku",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "e8ba7eee0818",
+      "q": "Czym jest sprawność (efektywność wykorzystania zasobów) w zarządzaniu?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Zwiększaniem liczby szczebli kierowania",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Rezygnacją z kontroli działań",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Mądrym wykorzystaniem zasobów bez zbędnego marnotrawstwa",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Osiąganiem celów niezależnie od kosztów",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5da81f492e31",
+      "q": "Na czym polega planowanie?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Na wyznaczaniu celów i określaniu sposobów ich osiągnięcia",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Na tworzeniu wyłącznie opisów stanowisk",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na porównywaniu wyników z normami po zakończeniu pracy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na zatrudnianiu kandydatów",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "c4eab9aad483",
+      "q": "Na czym polega organizowanie?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Na ocenie historycznych wyników finansowych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na wyłącznie zewnętrznym marketingu",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na logicznym grupowaniu działań i zasobów",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Na samym nagradzaniu pracowników",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "fb7df2276c9f",
+      "q": "Na czym polega kontrolowanie?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Na wprowadzaniu zakazu delegowania",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na obserwowaniu działań i wprowadzaniu korekt ułatwiających osiągnięcie celu",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Na wyborze pracowników w rekrutacji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na ustalaniu wyłącznie misji organizacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "a06dfb83da1b",
+      "q": "Które zbiory są podstawowymi zasobami organizacji?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Tylko ludzie oraz środki pieniężne",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie finansowe i budowlane",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Ludzkie, rzeczowe, finansowe i informacyjne",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Polityczne, militarne, religijne i turystyczne",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "92b203b4274b",
+      "q": "Kim jest menedżer?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Każdym klientem organizacji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Osobą odpowiadającą za innych ludzi i zasoby oraz realizację procesu zarządzania",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie właścicielem firmy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Pracownikiem, który nigdy nie podejmuje decyzji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "c7378bf6dfe0",
+      "q": "Którzy menedżerowie zwykle najbardziej potrzebują umiejętności technicznych?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Menedżerowie pierwszej linii",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie menedżerowie najwyższego szczebla",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tylko właściciele organizacji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie członkowie rady nadzorczej",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "a38f15090db0",
+      "q": "Czego dotyczą umiejętności społeczne menedżera?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Rozumienia ludzi, komunikowania się i motywowania",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Jedynie prognozowania kursów walut",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Sporządzania tylko dokumentacji podatkowej",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie obsługi specjalistycznych maszyn",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "ee3ee61a23f7",
+      "q": "Czego dotyczą umiejętności koncepcyjne?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Jedynie prowadzenia rozmów z kandydatami",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Myślenia abstrakcyjnego i rozumienia organizacji jako całości",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wprowadzania danych do systemu kadrowego",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie wykonywania czynności manualnych",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "f7e31e2457cc",
+      "q": "Która grupa umiejętności ma szczególne znaczenie na najwyższych szczeblach zarządzania?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wyłącznie technologiczne",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tylko obsługi kasy fiskalnej",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Koncepcyjne",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie manualne",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "fe7742771055",
+      "q": "Kto wyróżnił interpersonalne, informacyjne i decyzyjne role kierownicze?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Frederick Herzberg",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Henry Mintzberg",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Max Weber",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Abraham Maslow",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "b1503030e4de",
+      "q": "Która rola Mintzberga należy do interpersonalnych?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Monitor",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Łącznik",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Przedsiębiorca",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Rzecznik",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "2b838e36f680",
+      "q": "Która rola Mintzberga należy do informacyjnych?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Negocjator",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Monitor",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Przywódca",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Dysponent zasobów",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "675a86c46226",
+      "q": "Która rola Mintzberga należy do decyzyjnych?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Negocjator",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Rzecznik",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Łącznik",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Reprezentant",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "946803526932",
+      "q": "Co należy do roli reprezentanta?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Tylko gromadzenie danych produkcyjnych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie negocjowanie kontraktów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wykonywanie funkcji ceremonialnych i reprezentacyjnych",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Przydzielanie budżetu inwestycyjnego jako jedyne zadanie",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "3f4e87b09594",
+      "q": "Czym zajmuje się menedżer w roli rzecznika?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Prowadzeniem inwentaryzacji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie szkoleniem pracowników",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wykonywaniem zadań bez kontaktów z otoczeniem",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Przekazywaniem informacji na zewnątrz organizacji",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "3d5059206b08",
+      "q": "Czym charakteryzuje się rola przedsiębiorcy według Mintzberga?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Inicjowaniem zmian i poszukiwaniem usprawnień",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Jedynie organizowaniem uroczystości",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie rutynowym przepisywaniem dokumentów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tylko przekazywaniem wiadomości pracownikom",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "a1cdf450b34b",
+      "q": "Kto sformułował klasyczne funkcje zarządzania?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Douglas McGregor",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Henri Fayol",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Elton Mayo",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Victor Vroom",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "b7890bfe85b0",
+      "q": "Czego przede wszystkim dotyczy zarządzanie według P.F. Druckera w prezentacji?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Ludzi",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Maszyn",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Rachunków bankowych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Budynków",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "95fae61bd4da",
+      "q": "W czym według P.F. Druckera głęboko osadzone jest zarządzanie?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wyłącznie w technologii",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "W kulturze",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "W polityce cenowej",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie w prawie podatkowym",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "94881d52f4b5",
+      "q": "Co oznacza etyka zarządzania?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Metodę maksymalizacji liczby zwolnień",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Normy etyczne kierujące zachowaniem organizacji i jej uczestników",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie zgodność z budżetem",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Działanie niezwiązane z klientami",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "f9853ae683df",
+      "q": "Co charakteryzuje mobbing w ujęciu omawianym na ćwiczeniach?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Każda rozmowa o wynikach pracy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Uporczywe nękanie pracownika i zachowania wymierzone w jego godność",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Jednorazowa rzeczowa krytyka wykonania zadania",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wydanie uzasadnionego polecenia służbowego",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "919cd453d123",
+      "q": "Co oznacza mobbing poziomy?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Nękanie przez przełożonego",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nękanie podwładnego wyłącznie przez klienta",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nękanie przez współpracowników na podobnym szczeblu",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Nękanie przełożonego przez podwładnego",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "748198bc9402",
+      "q": "Co oznacza mobbing pochyły w terminologii ćwiczeń?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Konflikt między klientami",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nękanie pracownika przez przełożonego",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Nękanie przez współpracowników",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nękanie przełożonego przez podwładnego",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "66ddd75fa62f",
+      "q": "Kto ma obowiązek przeciwdziałania mobbingowi zgodnie z przytoczonym Kodeksem pracy?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Jedynie osoba nękana",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Pracodawca",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie inspektor BHP",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie klient firmy",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "3f118df3f89d",
+      "q": "Czym jest kultura organizacyjna?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Jedynie schematem hierarchii",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie regulaminem wynagrodzeń",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tylko wystrojem biura",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zbiorem podstawowych wartości i norm dominujących w organizacji, opartych na założeniach i przejawiających się w artefaktach",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "78e616cc1b53",
+      "q": "Kto opracował model trzech poziomów kultury organizacyjnej?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Henry Gantt",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Henri Fayol",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Edgar Schein",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Frederick Taylor",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "ad9a064e0e9d",
+      "q": "Jakie poziomy wyróżnia model Scheina?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Planowanie, organizowanie, kontrolowanie",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Strategia, budżet, produkt",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Artefakty, normy i wartości, podstawowe założenia",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Kierownictwo, dostawcy, odbiorcy",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "2c40cce43f6e",
+      "q": "Który poziom kultury organizacyjnej jest najłatwiej obserwowalny?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Ukryte wartości",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Artefakty",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Podstawowe założenia",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nieświadome przekonania",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "442defc9ad75",
+      "q": "Który poziom kultury organizacyjnej jest najtrudniej dostrzegalny?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Językowe symbole",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Artefakty fizyczne",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Ubiór pracowników",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Podstawowe założenia",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "d68802264a47",
+      "q": "Do czego odnosi się metafora góry lodowej kultury organizacyjnej?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Duża część kultury pozostaje niewidoczna dla obserwatora",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Kultura jest niezależna od zachowań ludzi",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Kultura obejmuje tylko formalne dokumenty",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wszystkie elementy kultury są łatwo dostrzegalne",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "f4c6186a0a51",
+      "q": "Czym jest artefakt kultury organizacyjnej?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Nieformalnym rodzajem kapitału finansowego",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie kosztem działalności",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Obserwowalnym przejawem funkcjonowania kultury",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Procesem delegowania władzy",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "a65cf9a1d6f7",
+      "q": "Który przykład jest artefaktem językowym?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Długoterminowa strategia finansowa",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Specyficzny firmowy żargon",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Hierarchia potrzeb fizjologicznych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nieświadome przekonanie o naturze człowieka",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "75fb8a80dc34",
+      "q": "Który przykład jest artefaktem fizycznym?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "System wartości jako taki",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wystrój biura i logo firmy",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Nieświadomy pogląd na relacje",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Przekonanie o naturze ludzi",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "83e003f9e8d2",
+      "q": "Który przykład jest artefaktem behawioralnym?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Firmowy rytuał powitania nowego pracownika",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Bilans księgowy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wielkość kapitału zakładowego",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nieświadome założenie o czasie",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "9655b0a2dbbd",
+      "q": "Jaką rolę pełnią wartości w kulturze organizacyjnej?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Automatycznie eliminują każdą niezgodność",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zastępują wszystkie cele organizacji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Ukierunkowują uczestników na pożądane zachowania",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Służą wyłącznie do planowania podatków",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "ab6c79c1676f",
+      "q": "Co opisują podstawowe założenia kulturowe?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Jedynie urządzenia w biurze",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tylko bieżący harmonogram zadań",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie kolorystykę marki",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Głęboko zakorzenione przekonania m.in. o ludziach, relacjach i rzeczywistości",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5b8d8d69fbf5",
+      "q": "Czym różnią się normy od wartości w kulturze organizacyjnej?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Nie istnieje między nimi żaden związek",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wartości są przepisami podatkowymi",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Normy są zawsze nieświadome, a wartości to wyłącznie logo",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Normy wskazują wzorce zachowania, a wartości określają to, co jest uznawane za ważne",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "2d29ebacb9e9",
+      "q": "Jak kultura organizacyjna może wpływać na organizację?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Nie ma żadnego związku z pracownikami",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Dotyczy wyłącznie firm zatrudniających ponad tysiąc osób",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Może kształtować zachowania i długofalową efektywność",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Zawsze całkowicie zastępuje zarządzanie",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "c62183ffd0b2",
+      "q": "Który kierunek obejmuje naukowe zarządzanie (tayloryzm) i zarządzanie administracyjne?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Behawioralny",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Sytuacyjny",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Klasyczny",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Systemowy",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5a7a5b2c7fda",
+      "q": "Z kim kojarzony jest tayloryzm?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Frederickiem Winslowem Taylorem",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Victorem Vroomem",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Edgarem Scheinem",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Staceyem Adamsem",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "ce9c64e3a239",
+      "q": "Jaka była podstawowa idea naukowego zarządzania Taylora?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Naukowe badanie pracy i dobór najlepszych metod wykonywania zadań",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Rezygnacja z podziału pracy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zastąpienie planowania intuicją każdego robotnika",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Całkowite odrzucenie pomiaru wydajności",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "f8d6dd906a0c",
+      "q": "Na czym polega naukowy dobór pracowników według Taylora?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Na likwidowaniu szkoleń",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na ignorowaniu predyspozycji pracowników",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na losowym przydzielaniu stanowisk",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na doborze i szkoleniu ludzi do zadań według opracowanych metod",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "aac5f621e53a",
+      "q": "Z jaką innowacją w organizacji produkcji łączy się Henry Ford?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Produkcją taśmową i standaryzacją",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Metodą oceny 360 stopni",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Modelem kultury organizacyjnej",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Teorią ERG",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "05a38dc760ed",
+      "q": "Z czego znany jest Henry Gantt?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Z modelu biurokracji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Z teorii sprawiedliwości",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Z piramidy potrzeb",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Z wykresu służącego do harmonogramowania prac",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "1219051094bb",
+      "q": "Kto jest autorem klasycznych zasad zarządzania administracyjnego?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Clayton Alderfer",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Elton Mayo",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "B.F. Skinner",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Henri Fayol",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "462a89e7ca3d",
+      "q": "Kto stworzył idealny model biurokracji?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Frederick Herzberg",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Robert McNamara",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Max Weber",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Douglas McGregor",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "26bc38d097d4",
+      "q": "Co charakteryzuje biurokrację według Webera?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Losowy dobór przełożonych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Hierarchia, bezosobowe reguły i formalne kompetencje",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Brak podziału obowiązków",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Całkowity brak zasad",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "49e38899b1f2",
+      "q": "Która szkoła podkreśla znaczenie relacji społecznych i zachowań pracowników?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Klasyczne zarządzanie administracyjne",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie mechanistyczna",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Behawioralna (human relations)",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie ilościowa",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "036467d38a48",
+      "q": "Z kim wiążą się eksperymenty w Hawthorne i rozwój human relations?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Henrym Ganttem",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Maxem Weberem",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Eltonem Mayo",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Henrim Fayolem",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "71bacddbe68c",
+      "q": "Co podkreśla efekt Hawthorne w kontekście zarządzania?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Całkowitą niezależność wydajności od ludzi",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłączną rolę temperatury w wydajności",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wpływ czynników społecznych i zainteresowania pracownikami na ich zachowanie",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Brak znaczenia relacji grupowych",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "d8acfa56c0ad",
+      "q": "Czym charakteryzuje się kierunek ilościowy?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Badaniem tylko firmowego języka",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Rezygnacją z analizy danych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Oparciem decyzji wyłącznie na emocjach",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wykorzystaniem modeli matematycznych i metod ilościowych w decyzjach",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "78d955a2cf1c",
+      "q": "Czym zajmuje się podejście systemowe?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wyłącznie zachowaniem pojedynczego pracownika",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Organizacją jako zbiorem powiązanych elementów i relacjami z otoczeniem",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Jedynie dokumentacją biurową",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tylko ustalaniem płac",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "6c179856911f",
+      "q": "Co oznacza synergia w podejściu systemowym?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Każde współdziałanie obniża wynik",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wspólne działanie elementów daje efekt większy niż suma odrębnych efektów",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Organizacja nie zależy od otoczenia",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Każdy element musi działać całkowicie osobno",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "2ecc954a680e",
+      "q": "Co oznacza homeostaza systemu?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Zdolność do zachowania względnej stabilności dzięki samoregulacji",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Rozdzielenie wszystkich działów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Całkowitą rezygnację z przystosowania",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie rozwój liczby pracowników",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "7c8c460eb883",
+      "q": "Co oznacza ekwifinalność?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Możliwość osiągnięcia podobnego celu różnymi drogami",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie zgodność z budżetem",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Konieczność stosowania identycznej metody w każdej firmie",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Brak zależności między celami i metodami",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "e0e1c321151a",
+      "q": "Co oznacza entropia ujemna w podejściu systemowym?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Przeciwdziałanie dezorganizacji systemu dzięki zasilaniu i odnawianiu zasobów",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Celowe zwiększanie chaosu",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Likwidowanie komunikacji z otoczeniem",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Całkowitą izolację organizacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "b138653d4cb3",
+      "q": "Jaką zasadę głosi podejście sytuacyjne?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wszystkie problemy rozwiązuje wyłącznie kontrola",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Jedna struktura zawsze jest najlepsza",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nie ma jednej uniwersalnej metody zarządzania odpowiedniej do każdej sytuacji",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Każda firma musi być maksymalnie scentralizowana",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "20996a4fee14",
+      "q": "Co wyróżnia organizację organiczną?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Elastyczność, współpraca i mniej sztywne podziały ról",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Sztywna hierarchia bez komunikacji poziomej",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie zadania rutynowe",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Brak możliwości reagowania na zmiany",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "2c097c0f1e87",
+      "q": "Co wyróżnia organizację mechanistyczną?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Stały brak zasad i stanowisk",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Formalne procedury, hierarchia i wyraźny podział obowiązków",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Całkowity brak szczebli kierowniczych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Pełna dowolność decyzji wszystkich pracowników",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "1d2e0d0c2a89",
+      "q": "W jakich warunkach struktura organiczna jest zwykle bardziej odpowiednia?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "W zmiennym i niepewnym otoczeniu",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Tylko w mikrofirmach bez pracowników",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie przy całkowicie niezmiennym otoczeniu",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zawsze niezależnie od kontekstu",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "d8fe6464b5c3",
+      "q": "Czym jest organizowanie?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wyłącznie wydawaniem wynagrodzeń",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tylko oceną konkurencji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie tworzeniem reklamy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Grupowaniem zasobów i wyznaczaniem relacji, zadań oraz koordynacją działań",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "8b98e9d6ac49",
+      "q": "Czym jest struktura organizacyjna?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Układem elementów organizacyjnych oraz ich powiązań",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie spisem produktów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tylko zestawieniem kosztów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Jedynie listą płac",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "629c44b05589",
+      "q": "Ile głównych elementów konstrukcyjnych struktury organizacyjnej wymieniono na ćwiczeniach?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Dwa",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Dwanaście",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Dziesięć",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Sześć",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "a4b1dfe8f9af",
+      "q": "Czym jest specjalizacja stanowiska pracy?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Zmianą formy prawnej spółki",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie budową nowych biur",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Łączeniem wszystkich zadań w jednej osobie",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Podziałem ogólnego zadania na mniejsze części składowe",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "25389b8b6d97",
+      "q": "Z jakim przykładem specjalizacji pracy związany jest Adam Smith?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Badaniami Hawthorne",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Produkcją samochodów Model T",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Produkcją szpilek",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Oceną 360 stopni",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "9463aa629dd9",
+      "q": "Czym jest departamentalizacja?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Ocenianiem pracowników",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Grupowaniem stanowisk według określonego kryterium",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Likwidacją podziału pracy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie przenoszeniem siedziby firmy",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "99aea2776fd3",
+      "q": "Które kryterium może służyć departamentalizacji?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wyłącznie kolor stroju",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tylko losowanie",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Funkcja, produkt, klient lub lokalizacja",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie wiek pracowników",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "fdacb71d7b65",
+      "q": "Co oznacza jedność rozkazodawstwa?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Nie ma żadnych przełożonych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Każdy pracownik ma zawsze trzech szefów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Klienci wydają polecenia wszystkim pracownikom",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Każdy pracownik ma jednego bezpośredniego przełożonego",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "645a7524aead",
+      "q": "Czym jest linia podporządkowania?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Sposobem wypłaty premii",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zestawieniem kursów walut",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Połączeniem wyłącznie informatycznych serwerów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nieprzerwaną linią władzy określającą, kto komu podlega",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "1a82d91193f6",
+      "q": "Czym jest rozpiętość kierowania?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Liczbą dokumentów kadrowych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Liczbą wszystkich klientów firmy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Liczbą podwładnych bezpośrednio podlegających kierownikowi",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Liczbą lat istnienia organizacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "ca0af5cdf4ba",
+      "q": "Co charakteryzuje strukturę płaską?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Całkowity brak podziału pracy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Duża liczba szczebli i mała rozpiętość",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zawsze dwóch szefów dla każdego pracownika",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Mała liczba szczebli i duża rozpiętość kierowania",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "9d602695f24a",
+      "q": "Co charakteryzuje strukturę smukłą?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Mała liczba szczebli i duża rozpiętość",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Brak pionowych możliwości awansu",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Duża liczba szczebli i mała rozpiętość kierowania",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Zawsze najwyższa decentralizacja",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "f1934e6e39ec",
+      "q": "Która cecha jest typowa dla struktury płaskiej według wykładu?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Duża samodzielność pracowników i delegowanie uprawnień",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Bardzo długa droga przepływu informacji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zawsze duża liczba szczebli",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Niski stopień delegowania",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "d7dd49d55288",
+      "q": "Która cecha jest typowa dla struktury smukłej według wykładu?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Zawsze brak przełożonych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Duże możliwości dokładnej i bieżącej kontroli podwładnych",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Zawsze najszybszy przepływ informacji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie pozioma koordynacja",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "de2f2cfbed3f",
+      "q": "Czym jest centralizacja?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Koncentracją władzy decyzyjnej na wyższych szczeblach",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Delegowaniem decyzji na najniższy szczebel",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Przekazywaniem wszystkich decyzji klientom",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Likwidacją formalnego kierownictwa",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "9e3b55ab6033",
+      "q": "Czym jest decentralizacja?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Przekazywaniem władzy i uprawnień na niższe szczeble",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Skupieniem wszystkich decyzji u prezesa",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zwiększeniem wyłącznie liczby dokumentów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zniesieniem obowiązku odpowiedzialności",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "f4f62506b9d6",
+      "q": "Jakie są trzy podstawowe kroki delegowania uprawnień?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Nabór, zwolnienie, kontrola jakości",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Reklama, sprzedaż, fakturowanie",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Przydzielenie obowiązków, przyznanie uprawnień, stworzenie odpowiedzialności za wyniki",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Analiza rynku, audyt, likwidacja firmy",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "0cc837a18260",
+      "q": "Co oznacza formalizacja w organizacji?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Całkowity brak zasad pisemnych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Przenoszenie firmy do innego miasta",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Stopień zapisania celów, zadań i sposobów działania w dokumentach i procedurach",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie tworzenie logo",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "35d202946cd7",
+      "q": "Która korzyść wynika z formalizacji?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Zawsze całkowity brak biurokracji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Usunięcie potrzeby planowania",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Gwarancja pełnej elastyczności",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Większa przewidywalność i mniejsza liczba konfliktów kompetencyjnych",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "e656505eda9e",
+      "q": "Która wada może wynikać z nadmiernej formalizacji?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Zanik wszelkich procedur",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Usztywnienie organizacji i mniejsza zdolność reakcji",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Automatyczny wzrost innowacyjności",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Brak możliwości zapisania zasad",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "d87d5bcc26e1",
+      "q": "Na czym opiera się struktura funkcjonalna typu U?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wyłącznie grupowaniu według wyrobów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Braku działów funkcjonalnych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Grupowaniu stanowisk według funkcji",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Tylko podziale według projektów",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "c8b72bf9730d",
+      "q": "Na czym opiera się struktura wielowydziałowa typu M?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Na jednostkach wyodrębnionych np. według produktów",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Na braku odpowiedzialności kierowników",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na losowym przydziale zadań",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie na jednej komórce funkcjonalnej",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "84694771fff5",
+      "q": "Co charakteryzuje strukturę holdingową typu H w ujęciu materiałów?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Zawsze brak spółek zależnych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Jedno stanowisko pracy bez podziału",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie podział na działy według funkcji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wiele jednostek gospodarczych pod wspólnym kierownictwem holdingowym",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "d454ab70284c",
+      "q": "Co charakteryzuje strukturę macierzową?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Brak koordynacji między działami",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nakładanie się dwóch kryteriów podporządkowania, np. funkcji i projektu",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Zawsze jeden tylko wymiar grupowania",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie struktura bez kierowników",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "cef796a10888",
+      "q": "Jakie ryzyko wiąże się ze strukturą macierzową?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Zawsze zerowe koszty zarządzania",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Całkowity brak potrzeby koordynacji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Brak możliwości tworzenia zespołów projektowych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Konflikty wynikające z podwójnego podporządkowania",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "f69c93e1dbf0",
+      "q": "Co wyróżnia strukturę liniową?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wyłącznie dwuwymiarowa macierz",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Stały brak przypisania odpowiedzialności",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Całkowity brak przełożonych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zasadniczo jednoznaczna hierarchia i zależność służbowa",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "ee4f3a2e2ace",
+      "q": "Jaką rolę pełnia komórki sztabowe w strukturze liniowo-sztabowej?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wyłącznie obsługują klientów jako jedyna funkcja",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zawsze zastępują wszystkich kierowników liniowych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Doradzają i wspierają kierowników liniowych",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Usuwają hierarchię organizacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "a5e2760c0602",
+      "q": "Co jest cechą podejścia procesowego w organizowaniu?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Rezygnacja z patrzenia na klienta",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Koncentrowanie się tylko na liczbie stanowisk",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie izolowanie wydziałów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Orientacja na przebieg procesów przekraczających granice działów",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "3923965e09de",
+      "q": "Na czym polega outsourcing?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Powierzeniu realizacji określonych działań podmiotowi zewnętrznemu",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie awansowaniu pracowników",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zawsze całkowitym zakończeniu działalności firmy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zakazie korzystania z dostawców",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "909180d0af0a",
+      "q": "Jakie czynniki mogą determinować strukturę organizacyjną?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Jedynie nazwisko założyciela",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Strategia, technologia, wielkość organizacji i otoczenie",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Tylko liczba urlopów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie kolor logo",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5a1abeb64cb7",
+      "q": "Jaki jest główny cel zarządzania zasobami ludzkimi (ZZL)?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wyłącznie minimalizacja liczby zatrudnionych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zapewnienie odpowiedniej liczby pracowników z właściwymi kwalifikacjami we właściwym miejscu i czasie",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Zastąpienie zarządzania finansami",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie przygotowywanie kampanii reklamowych",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "3dc2c43ef98a",
+      "q": "Które działania należą do procesu ZZL?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Planowanie kadr, rekrutacja, selekcja, adaptacja, rozwój i ocenianie pracowników",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Tylko zakup wyposażenia",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Jedynie budowa magazynów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie sprzedaż i dystrybucja",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "2256ab91a4e6",
+      "q": "Czym jest rekrutacja?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Procesem pozyskiwania kandydatów do pracy",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Ostateczną oceną wyników wszystkich pracowników",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie rozwiązaniem umowy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Procesem obniżania liczby stanowisk",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "e7f7d3691552",
+      "q": "Czym jest selekcja kandydatów?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wyborem odpowiednich kandydatów spośród osób ubiegających się o pracę",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie wdrożeniem nowo zatrudnionego",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Pozyskiwaniem możliwie największej liczby zgłoszeń bez wyboru",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tworzeniem hierarchii organizacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5f7e825214c0",
+      "q": "Czym jest rekrutacja wewnętrzna?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Pozyskiwaniem kandydatów spośród obecnych pracowników",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Losowym zwolnieniem pracownika",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zatrudnianiem bez określonego stanowiska",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Pozyskiwaniem kandydatów wyłącznie z rynku zewnętrznego",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "196d307d837d",
+      "q": "Jaka jest typowa zaleta rekrutacji wewnętrznej?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Znajomość kandydatów i możliwość awansu pracowników",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Zawsze całkowity brak kosztów wdrożenia",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Gwarancja napływu nowych kompetencji z rynku",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Brak ryzyka niezadowolenia innych pracowników",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "24fcadba21cb",
+      "q": "Jaka jest typowa zaleta rekrutacji zewnętrznej?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Brak kosztów naboru",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zawsze krótszy czas adaptacji niż u pracownika wewnętrznego",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Możliwość pozyskania nowych kompetencji i pomysłów",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Pełna znajomość każdego kandydata przed kontaktem",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "26e64983b4de",
+      "q": "Co jest podstawowym celem rozmowy kwalifikacyjnej?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Zastąpienie wszelkich innych etapów oceny",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Ocena wyglądu bez związku z pracą",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Ocena kompetencji, motywacji i dopasowania kandydata do organizacji",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie poznanie życia prywatnego kandydata",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "ebce812ec856",
+      "q": "Czego dotyczy model sita w polityce personalnej?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Selekcji i zastępowania mniej dopasowanych pracowników, przy mniejszym nacisku na ich rozwój",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Założenia, że wszyscy pracownicy stale pozostają bez oceny",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie długofalowego szkolenia bez selekcji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Braku możliwości rozwiązania umowy",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "47d51d280e38",
+      "q": "Czego dotyczy model kapitału ludzkiego?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Losowego dobierania stanowisk",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Całkowitej rezygnacji ze szkoleń",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Traktowania pracowników jako zasobu, w który warto inwestować poprzez rozwój",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Postrzegania pracownika wyłącznie jako kosztu do natychmiastowego obniżenia",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "a0051ea2dd97",
+      "q": "Czym jest adaptacja pracownika?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Bilansem rocznym przedsiębiorstwa",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zakończeniem współpracy z pracownikiem",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie rekrutacją zewnętrzną",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Procesem wprowadzenia nowej osoby do organizacji i jej pracy",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "22d41e6356eb",
+      "q": "Co oznacza adaptacja zorganizowana?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Proces bez żadnego udziału organizacji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Planowe wprowadzanie nowego pracownika z określonym wsparciem",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Pozostawienie nowego pracownika całkowicie samemu sobie",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie zastąpienie rozmowy kwalifikacyjnej",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5f17a33814e4",
+      "q": "Jakie są podstawowe rodzaje ocen pracowniczych?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Bieżące nieformalne i okresowe formalne",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie techniczne i informatyczne",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Jedynie jawne i tajne",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie roczne i pięcioletnie",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "0ae6b6ec466d",
+      "q": "Na czym polega metoda oceny 360 stopni?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Ocenianiu wyłącznie przez jednego klienta",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie mierzeniu szybkości pracy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zbieraniu ocen pracownika z wielu perspektyw, np. przełożonych, współpracowników i podwładnych",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Losowym przyznawaniu punktów",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "ca6951336499",
+      "q": "Czego dotyczą kryteria behawioralne w ocenie pracownika?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wyłącznie stażu pracy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie warunków pogodowych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Jedynie liczby patentów firmy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zachowań i sposobu wykonywania pracy",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "065a38bd8a16",
+      "q": "Czego dotyczą kryteria efektywnościowe w ocenie?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wyników i rezultatów pracy",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Tylko danych osobowych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie stroju pracownika",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie rodzaju zawartej umowy",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "3573ed4e5ebf",
+      "q": "Co oznacza efekt aureoli w ocenie pracowników?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Przenoszenie ogólnego wrażenia lub jednej cechy na ocenę innych cech",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Dokładną analizę wyników z całego okresu",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Porównywanie wyników z założonym celem",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zbieranie informacji z wielu źródeł",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "0dcb58067388",
+      "q": "Co oznacza błąd łagodności w ocenianiu?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Zawsze stosowanie oceny 360 stopni",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Ocenianie wyłącznie wyników liczbowych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nadmiernie pozytywne ocenianie pracowników",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Konsekwentne zaniżanie wszystkich ocen",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "e5553bad4bb6",
+      "q": "Co oznacza błąd surowości w ocenianiu?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Brak wystawiania ocen",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Ocena bazująca na wielu źródłach",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Systematyczne zaniżanie ocen i nadmierny krytycyzm",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Nadmierne zawyżanie wszystkich ocen",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "149631cac168",
+      "q": "Na czym polega efekt ostatnich dokonań?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wybieraniu losowych kryteriów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nadmiernym uwzględnianiu niedawnych zachowań podczas oceny całego okresu",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Równym analizowaniu wszystkich zdarzeń",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Ocenianiu wyłącznie przyszłych celów",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "35d644c11e2a",
+      "q": "Czym jest błąd projekcji w ocenie?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Porównywaniem z obiektywnym standardem",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Systematycznym zbieraniem danych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Przypisywaniem innym własnych cech, postaw lub motywów",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Odwoływaniem się do wielu oceniających",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "21937c18aedd",
+      "q": "Które zjawisko jest współczesnym wyzwaniem ZZL wymienionym w wykładzie?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Zastąpienie ocen wyłącznie intuicją",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Likwidacja adaptacji pracowników",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zarządzanie różnorodnością",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Rezygnacja z poszanowania pracowników",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "77645ba96607",
+      "q": "Które zasoby zaliczono w wykładzie do tradycyjnych czynników produkcji?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Ziemia, kapitał i praca",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie informacja i marka",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie relacje i kultura",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tylko technologia i patenty",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "9d9c98ba145d",
+      "q": "Co jest przykładem zasobów rynkowych organizacji?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Jedynie wyposażenie biura",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie gotówka w kasie",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Marka, reputacja i lojalni klienci",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie budynki magazynowe",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "facf35d0e5b5",
+      "q": "Co jest przykładem zasobów organizacyjnych?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Jedynie maszyny i pojazdy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie surowce",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Struktura, kultura i systemy zarządzania",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie rachunki bankowe",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "3ec3e715674f",
+      "q": "Czym jest motywacja według ćwiczeń?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Stanem gotowości człowieka do podjęcia określonego działania",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie wysokością wynagrodzenia",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Samą formalną oceną roczną",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Rodzajem struktury organizacyjnej",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5113e9f10804",
+      "q": "Czym jest motywowanie według ćwiczeń?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Układem sił skłaniających ludzi do określonego zachowania",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Jedynie doborem dostawców",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tylko pisaniem procedur",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie kontrolą księgową",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "77d7e0543590",
+      "q": "Jakie trzy podejścia do motywowania wskazano w ćwiczeniach?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Liniowe, macierzowe i holdingowe",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Finansowe, prawne i podatkowe",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Od strony treści, procesu i wzmocnień",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Techniczne, produkcyjne i magazynowe",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "d2ce685afcea",
+      "q": "Czego dotyczą teorie motywowania od strony treści?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Tylko tworzenia schematów organizacyjnych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie rozliczeń finansowych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie podziału pracy na stanowiska",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Potrzeb i czynników pobudzających ludzi do działania",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "dd41fb7e6009",
+      "q": "Czego dotyczą teorie motywowania od strony procesu?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wyłącznie przepisów bezpieczeństwa",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyboru zachowań i oceny skutków ich realizacji",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie liczby szczebli organizacji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tylko wyglądu siedziby firmy",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "6be2ff37909c",
+      "q": "Czego dotyczą teorie motywowania od strony wzmocnień?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Tylko liczby jednostek w holdingu",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie ukrytych założeń kulturowych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wpływu konsekwencji zachowania na jego powtarzanie lub zmianę",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie podziału na funkcje",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "67160677ce74",
+      "q": "Kto opracował hierarchię potrzeb?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Max Weber",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Frederick Taylor",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Henry Gantt",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Abraham Maslow",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "762594b087f7",
+      "q": "Która potrzeba znajduje się u podstaw piramidy Maslowa?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Uznania",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Estetyczna jako jedyna",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Fizjologiczna",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Samorealizacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "9872714695e8",
+      "q": "Co znajduje się na szczycie klasycznej hierarchii Maslowa?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Potrzeba fizjologiczna",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Potrzeba bezpieczeństwa",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Potrzeba samorealizacji",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Potrzeba przynależności",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "51e4065cf979",
+      "q": "Kto opracował teorię ERG?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Clayton Alderfer",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Stacey Adams",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Elton Mayo",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Victor Vroom",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "46b3df8c01ce",
+      "q": "Co oznaczają litery ERG?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Existence, Relatedness, Growth",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Efficiency, Revenue, Governance",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Evaluation, Risk, Growth",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Equity, Recruitment, Goals",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "6f9ceeed7ce5",
+      "q": "Czym jest regresja frustracyjna w teorii ERG?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Zawsze przejściem do samorealizacji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Całkowitą niezależnością poziomów potrzeb",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Automatycznym zanikiem wszystkich potrzeb",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Powrotem do potrzeb niższego poziomu, gdy zaspokojenie wyższych jest utrudnione",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "85109c3feed3",
+      "q": "Kto opracował teorię dwuczynnikową motywacji?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Frederick Herzberg",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Max Weber",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Henri Fayol",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Henry Mintzberg",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "e254b06fb66c",
+      "q": "Który czynnik należy do motywatorów według Herzberga?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Tylko podstawowa pensja",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie polityka administracyjna firmy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Osiągnięcia i uznanie",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie warunki sanitarne",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "a579bb7d7b1a",
+      "q": "Który czynnik jest czynnikiem higieny według Herzberga?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Odpowiedzialność i rozwój jako motywator",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Warunki pracy i polityka firmy",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Uznanie za wyjątkowy sukces",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Samorealizacja jako osiągnięcie",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "1eeb03cccefd",
+      "q": "Co wynika z teorii dwuczynnikowej Herzberga?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Usunięcie niezadowolenia nie musi samo w sobie zwiększać satysfakcji i motywacji",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Rozwój pracownika zawsze jest bez znaczenia",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Motywatory i czynniki higieny są tym samym",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Podwyżka zawsze w pełni zastępuje sens pracy",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "1bae3ec46115",
+      "q": "Kto opracował teorię oczekiwań?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Henry Ford",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Frederick Taylor",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Victor Vroom",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Edgar Schein",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "fe11a199574f",
+      "q": "Na czym koncentruje się teoria oczekiwań Vrooma?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Na związku wysiłku z wynikami, wyników z nagrodami i wartości nagród",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie na liczbie szczebli kierowania",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie na firmowych artefaktach",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na podziale pracy według Smitha",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5b806377f304",
+      "q": "Kto opracował teorię sprawiedliwości?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Abraham Maslow",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Stacey Adams",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Max Weber",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Henry Gantt",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "b9f5f208ba5e",
+      "q": "Na czym koncentruje się teoria sprawiedliwości Adamsa?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Na liczbie jednostek podległych prezesowi",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na porównywaniu relacji wkładu i nagród z sytuacją innych osób",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Na wyłącznie indywidualnej ocenie warunków technicznych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie na zaspokajaniu potrzeb fizjologicznych",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "5ee371d234f3",
+      "q": "Z kim związana jest teoria wzmocnienia?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Henrym Fordem",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Edgarem Scheinem",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Henrim Fayolem",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "B.F. Skinnerem",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "a8e9309800f7",
+      "q": "Który ciąg przedstawia mechanizm teorii wzmocnienia?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Plan, budżet, podatek",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Bodziec, reakcja, konsekwencja",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Selekcja, adaptacja, emerytura",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Funkcja, produkt, lokalizacja",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "9321610a70dd",
+      "q": "Co jest przykładem wzmocnienia pozytywnego?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Przyznanie nagrody po pożądanym zachowaniu",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Karanie za prawidłowe wykonanie zadania",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zignorowanie każdego rezultatu",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Odebranie premii za osiągnięcie celu",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "6ef987e4dd95",
+      "q": "Jakie potrzeby wskazuje model McClellanda?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Jedynie stanowiska i awansu",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Władzy, osiągnięć i przynależności",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Tylko zasobów i kapitału",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie egzystencji i bezpieczeństwa",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "c1e48110d0cf",
+      "q": "Czym jest upełnomocnienie (empowerment)?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Zakazem rozwiązywania problemów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Odebraniem pracownikom odpowiedzialności",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie zwiększeniem kontroli przełożonego nad każdym ruchem",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Umożliwieniem pracownikom samodzielnego ustalania celów i podejmowania decyzji w zakresie kompetencji",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "0c698cdaa5d7",
+      "q": "Co wspiera skuteczność stosowania nagród i kar według ćwiczeń?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Adekwatność, szybkość, konsekwencja i indywidualizacja",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Brak znajomości zasad",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Niezależność reakcji od zachowania",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Losowość i nieprzewidywalność",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "14f8974ae454",
+      "q": "Czym jest władza w rozumieniu wykładu o przywództwie?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Tylko formalnym tytułem zawodowym",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Brakiem możliwości podejmowania decyzji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zdolnością wpływania na działania innych ludzi",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie posiadaniem majątku",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "183b1d3f5892",
+      "q": "Co jest źródłem władzy formalnej?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Uprawnienia wynikające z zajmowanego stanowiska",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Tylko wiedza specjalistyczna",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie osobisty urok",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Jedynie sympatia współpracowników",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "4704a66a9474",
+      "q": "Na czym polega władza nagradzania?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Na posiadaniu wyłącznie wiedzy fachowej",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na wyłącznie towarzyskich relacjach",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na możliwości przyznawania cenionych korzyści",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Na grożeniu karą jako jedynym środku",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "c1a4865d2dcf",
+      "q": "Na czym polega władza wymuszania?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Na udzielaniu nagród",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na atrakcyjności osobistej przywódcy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na możliwości stosowania sankcji i kar",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Na dobrowolnym podziwie pracowników",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "2ab2bb80c601",
+      "q": "Na czym opiera się władza ekspercka?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Na wiedzy i kompetencjach osoby",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Tylko na wysokości pensji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie na sile fizycznej",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Na przypadkowym przydziale stanowiska",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "bf5820151d17",
+      "q": "Na czym opiera się władza odniesienia?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Na identyfikacji, szacunku i podziwie wobec danej osoby",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Na strukturze rachunku kosztów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Wyłącznie na karach finansowych",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Tylko na zapisach umowy o pracę",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "924a7af67541",
+      "q": "Czym wyróżnia się autokratyczny styl kierowania?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Brakiem jakiejkolwiek kontroli kierownictwa",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Pełnym przekazywaniem każdej decyzji pracownikom",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Całkowitym brakiem poleceń",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Silną koncentracją decyzji u kierownika",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "71e5cc9b7c17",
+      "q": "Czym wyróżnia się demokratyczny styl kierowania?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Włączaniem podwładnych do podejmowania decyzji",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Podejmowaniem wszystkich decyzji bez informacji od zespołu",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Całkowitym zakazem współpracy",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zawsze wykluczaniem konsultacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "551198c3027b",
+      "q": "Czym wyróżnia się styl liberalny (laissez-faire)?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Dużą swobodą działania podwładnych i ograniczoną ingerencją kierownika",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Stałą kontrolą każdej czynności",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Jednoosobowym rozstrzyganiem każdej kwestii",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Brakiem jakiejkolwiek samodzielności pracowników",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "552c0a4d8e3a",
+      "q": "Co oznacza wysoki wynik LPC w modelu Fiedlera według wykładu?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Brak roli sytuacji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Orientację lidera na relacje",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Brak jakiegokolwiek stylu lidera",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Orientację lidera na zadania",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "925c8f942ffe",
+      "q": "Co oznacza niski wynik LPC w modelu Fiedlera?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Orientację wyłącznie na relacje",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Styl bez jakichkolwiek celów",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Orientację lidera na zadania",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Pełną rezygnację z kierowania",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "4301b534d37a",
+      "q": "Jakie założenie dotyczące stylu lidera przyjmuje model Fiedlera?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Styl lidera jest względnie stały, a jego skuteczność zależy od sytuacji",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Styl musi zmieniać się co godzinę",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Zawsze najlepszy jest jeden styl dla wszystkich",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Warunki sytuacyjne nie mają znaczenia",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "bf6a7b35650e",
+      "q": "Jaką ideę wyraża teoria ścieżki do celu?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Lider pomaga podwładnym dostrzec drogę do celu i usuwać przeszkody",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Pracownicy nie powinni znać oczekiwań",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Nagrody są niezależne od wyników",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Lider powinien ukrywać cele przed pracownikami",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "623a6fe2bcaa",
+      "q": "Kiedy styl nakazowy w teorii ścieżki do celu może być szczególnie przydatny?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wyłącznie przy braku jakichkolwiek zadań",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Gdy zadania są niejasne i trzeba sprecyzować sposób działania",
+          "c": true,
+          "f": "md"
+        },
+        {
+          "t": "Gdy każda procedura jest już całkowicie jasna, a zespół nie potrzebuje wskazówek",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Gdy kierownik nie ma możliwości komunikacji",
+          "c": false,
+          "f": "md"
+        }
+      ]
+    },
+    {
+      "id": "df48b98cfbf4",
+      "q": "Co wyróżnia przywództwo charyzmatyczno-wizjonerskie w wykładzie?",
+      "f": "md",
+      "scope": "colloquium",
+      "a": [
+        {
+          "t": "Wyłącznie bieżące księgowanie wydatków",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Odrzucenie wszelkich celów organizacji",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Całkowity brak wpływu na ludzi",
+          "c": false,
+          "f": "md"
+        },
+        {
+          "t": "Mobilizacja ludzi wokół atrakcyjnej wizji, zwłaszcza w niepewnych warunkach",
+          "c": true,
+          "f": "md"
+        }
+      ]
+    }
+  ]
+}
