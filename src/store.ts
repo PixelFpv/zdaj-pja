@@ -14,6 +14,8 @@ export interface State {
   open: Record<string, OpenProgress>;
   /** Language of the student's programme; separate from the interface language. */
   studyLang: StudyLanguage;
+  /** Whether Learn mode asks to type an answer after it was picked correctly once. */
+  learnTyping: boolean;
 }
 
 /** The student's own notes and status for a question that has no answer key. */
@@ -22,7 +24,7 @@ export interface OpenProgress {
   known?: boolean;
 }
 
-const empty = (): State => ({ srs: {}, local: {}, decks: [], scopes: {}, days: {}, matchBest: {}, open: {}, studyLang: 'pl' });
+const empty = (): State => ({ srs: {}, local: {}, decks: [], scopes: {}, days: {}, matchBest: {}, open: {}, studyLang: 'pl', learnTyping: true });
 
 function load(): State {
   try {
@@ -106,6 +108,10 @@ export function saveLocalQuestions(courseId: string, questions: RawQuestion[]) {
 
 export function setStudyLang(studyLang: StudyLanguage) {
   commit({ ...state, studyLang });
+}
+
+export function setLearnTyping(learnTyping: boolean) {
+  commit({ ...state, learnTyping });
 }
 
 export function saveOpen(id: string, patch: OpenProgress) {

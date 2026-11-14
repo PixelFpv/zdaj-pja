@@ -4,7 +4,7 @@ import { CardBack, CardFront, Choices, isSelectionCorrect, Message, ProgressBar,
 import { useI18n } from '../i18n';
 import { buildOptions, hasKey, isMulti, typedAnswer } from '../lib/cards';
 import { answersMatch, shuffle } from '../lib/text';
-import { countStudied } from '../store';
+import { countStudied, setLearnTyping, useStore } from '../store';
 import type { Answer, Card } from '../types';
 import type { ModeProps } from './types';
 
@@ -18,12 +18,12 @@ interface Step {
   options: Answer[];
 }
 
-function pickNext(cards: Card[], levels: Record<string, number>, pool: Card[], lastId: string | null): Step | null {
+function pickNext(cards: Card[], levels: Record<string, number>, pool: Card[], lastId: string | null, typing: boolean): Step | null {
   const active = cards.filter((c) => (levels[c.id] ?? 0) < MASTERED).slice(0, WINDOW);
   if (!active.length) return null;
   const candidates = active.length > 1 ? active.filter((c) => c.id !== lastId) : active;
   const card = candidates[Math.floor(Math.random() * candidates.length)];
-  const typed = (levels[card.id] ?? 0) >= 1 && typedAnswer(card);
+  const typed = typing && (levels[card.id] ?? 0) >= 1 && typedAnswer(card);
   return typed ? { card, kind: 'write', options: [] } : { card, kind: 'choice', options: buildOptions(card, pool) };
 }
 
@@ -34,7 +34,8 @@ export function Learn({ pool, backTo }: ModeProps) {
   const [offset, setOffset] = useState(0);
   const round = useMemo(() => order.slice(offset, offset + ROUND), [order, offset]);
   const levels = useRef<Record<string, number>>({});
-  const [step, setStep] = useState<Step | null>(() => pickNext(order.slice(0, ROUND), {}, pool, null));
+  const typing = useStore((s) => s.learnTyping);
+  const [step, setStep] = useState<Step | null>(() => pickNext(order.slice(0, ROUND), {}, pool, null, typing));
   const [selected, setSelected] = useState<number[]>([]);
   const [typed, setTyped] = useState('');
   const [result, setResult] = useState<boolean | null>(null);
@@ -65,10 +66,19 @@ export function Learn({ pool, backTo }: ModeProps) {
   };
 
   const advance = () => {
-    setStep(pickNext(round, levels.current, pool, step?.card.id ?? null));
+    setStep(pickNext(round, levels.current, pool, step?.card.id ?? null, typing));
     setSelected([]);
     setTyped('');
     setResult(null);
+  };
+
+  const changeTyping = (on: boolean) => {
+    setLearnTyping(on);
+    // A pending typed question turns into a choice one straight away.
+    if (!on && step?.kind === 'write' && !revealed) {
+      setStep({ card: step.card, kind: 'choice', options: buildOptions(step.card, pool) });
+      setTyped('');
+    }
   };
 
   const nextRound = () => {
@@ -79,7 +89,7 @@ export function Learn({ pool, backTo }: ModeProps) {
     levels.current = {};
     setOrder(nextOrder);
     setOffset(start);
-    setStep(pickNext(nextOrder.slice(start, start + ROUND), {}, pool, null));
+    setStep(pickNext(nextOrder.slice(start, start + ROUND), {}, pool, null, typing));
     setSelected([]);
     setTyped('');
     setResult(null);
@@ -118,6 +128,7 @@ export function Learn({ pool, backTo }: ModeProps) {
       <div className="study-bar">
         <span className="muted">{t('learn.mastered', { a: mastered, b: round.length })}</span>
         <ProgressBar value={mastered} max={round.length} />
+        <label className="check small"><input type="checkbox" checked={typing} onChange={(e) => changeTyping(e.target.checked)} /> {t('learn.typing')}</label>
       </div>
       <article className="study-card">
         <CardFront card={step.card} />
