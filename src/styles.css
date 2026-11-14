@@ -72,7 +72,7 @@ small { font-size: 0.8em; font-weight: 500; opacity: 0.75; }
 
 .wrap { width: min(1320px, 100% - 32px); margin-inline: auto; }
 .narrow { max-width: 760px; margin-inline: auto; }
-.shell { min-height: 100dvh; display: flex; flex-direction: column; }
+.shell { min-height: 100dvh; display: flex; flex-direction: column; overflow-x: clip; }
 .main { flex: 1; padding-block: 28px 56px; }
 .stack { display: flex; flex-direction: column; gap: 16px; }
 .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
@@ -250,6 +250,37 @@ span.rich { display: inline; min-width: 0; }
 .study-card hr { border: 0; border-top: 1px dashed var(--line); margin: 2px 0; width: 100%; }
 .back-list { display: grid; gap: 4px; font-weight: 600; }
 .back-list li::before { content: '✓ '; color: var(--good); }
+/* True/false deck: the top card follows the finger through --dx, set from script. */
+.deck { position: relative; --dx: 0; --p: 0; --from: 0; }
+.study-card.swipe { z-index: 1; touch-action: pan-y; will-change: transform; transform: translateX(calc(var(--dx) * 1px)) rotate(calc(var(--dx) * 0.045deg)); transform-origin: 50% 120%; transition: transform 0.42s cubic-bezier(0.2, 1.5, 0.4, 1), border-color 0.15s; }
+.deck.dragging .study-card.swipe { transition: none; user-select: none; -webkit-user-select: none; }
+.deck.exiting .study-card.swipe { transition: transform 0.26s cubic-bezier(0.5, 0, 0.9, 0.5); }
+.study-card.swipe.right { border-color: var(--good); }
+.study-card.swipe.rejected { border-color: var(--red); animation: swipe-reject 0.5s cubic-bezier(0.3, 0.7, 0.4, 1); }
+@keyframes swipe-reject {
+  0% { transform: translateX(calc(var(--from) * 1px)) rotate(calc(var(--from) * 0.045deg)); }
+  35% { transform: translateX(calc(var(--from) * -0.16px)); }
+  58% { transform: translateX(calc(var(--from) * 0.09px)); }
+  80% { transform: translateX(calc(var(--from) * -0.04px)); }
+  100% { transform: none; }
+}
+.deck-next { position: absolute; inset: 0; overflow: hidden; pointer-events: none; opacity: calc(var(--p) * 0.9); transform: scale(calc(0.94 + var(--p) * 0.06)); transition: transform 0.3s, opacity 0.3s; }
+.deck.dragging .deck-next { transition: none; }
+.swipe-tint, .swipe-tint::before, .swipe-tint::after { position: absolute; inset: 0; pointer-events: none; }
+.swipe-tint::before, .swipe-tint::after { content: ""; }
+.swipe-tint::before { background: var(--good); opacity: calc(clamp(0, var(--dx) / 140, 1) * 0.16); }
+.swipe-tint::after { background: var(--red); opacity: calc(clamp(0, var(--dx) / -140, 1) * 0.16); }
+.swipe-tint.neutral { display: none; }
+.swipe-stamp { position: absolute; top: 14px; z-index: 2; padding: 2px 11px; border: 3px solid; border-radius: 4px; background: var(--sheet); font-size: 1.25rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; pointer-events: none; transition: scale 0.16s cubic-bezier(0.2, 2, 0.4, 1); }
+.swipe-stamp.true { left: 14px; color: var(--good); rotate: -11deg; opacity: clamp(0, calc(var(--dx) / 70), 1); }
+.swipe-stamp.false { right: 14px; color: var(--red); rotate: 11deg; opacity: clamp(0, calc(var(--dx) / -70), 1); }
+.swipe-stamp.neutral { color: var(--pen); }
+.deck[data-armed] .swipe-stamp { scale: 1.18; }
+.tally { font-weight: 700; color: var(--good); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tally.pop { animation: tally-pop 0.4s cubic-bezier(0.2, 2, 0.4, 1); }
+@keyframes tally-pop { 0% { scale: 1; } 40% { scale: 1.45; } 100% { scale: 1; } }
+.touch-only { display: none; }
+@media (pointer: coarse) { .touch-only { display: block; } }
 .claim { font-weight: 600; padding: 11px 13px; background: var(--sheet-2); }
 .choices { display: grid; gap: 7px; }
 .choice { display: flex; gap: 11px; align-items: flex-start; text-align: left; padding: 9px 11px; background: none; border: 1.5px solid var(--line); border-radius: 3px; cursor: pointer; font-size: 0.98rem; }
